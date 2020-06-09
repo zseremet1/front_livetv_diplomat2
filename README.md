@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Repositroy for Live TV show in office
+* Repositroy for Live TV view in office
 * Version 2.0
 
 
