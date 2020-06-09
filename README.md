@@ -4,18 +4,17 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Repositroy for Live TV show in office
+* Version 2.0
+
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Clone repo
+* Chose environment, and run: npm start
+* Dependencies: axios, sass_node
+* Database configuration: get data from API
+* Deployment instructions: 
 
 ### Contribution guidelines ###
 
@@ -25,5 +24,4 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Diplomat front team
