@@ -1,0 +1,10 @@
+export const ADD_EVENTS = 'ADD_EVENTS';
+export const UPDATE_EVENTS = 'UPDATE_EVENTS';
+
+export const ADD_STATIC_LIVE = 'ADD_STATIC_LIVE';
+
+export const CLEAR_MATCHES = "CLEAR_MATCHES";
+export const CLOSE_ALL = 'CLOSE_ALL';
+
+export const CLEAR_CLOSED_BETS = 'CLEAR_CLOSED_BETS';
+export const CLEAR_NEW_MARKETS = 'CLEAR_NEW_MARKETS';
