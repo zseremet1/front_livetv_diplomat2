@@ -1,11 +1,14 @@
 import { initStore } from "../useLive";
 const configureStore = () => {
   const actions = {
-    
-    ADD_STATIC_LIVE: (curState, newMarkets) => {
+    /*akcija*/ ADD_STATIC_LIVE: (curState, newMarkets) => {
+      //curstate nove podatke puniti ,
       const headMarkets = [...newMarkets.head]; // ;
       // const markets = {...newMarkets.all}; // ;
       let markets = {};
+
+      let possTyp = newMarkets.possTyp;
+      let typTrans = newMarkets.typTrans;
 
       let sports = [...newMarkets.sports]; // ;
 
@@ -22,7 +25,7 @@ const configureStore = () => {
         indSport++;
       });
 
-      console.log("markets", markets);
+      // console.log("markets", markets);
       let indMarket = 0;
       Object.keys(newMarkets.all).forEach((el) => {
         if (markets[newMarkets.all[el].ids])
@@ -32,9 +35,15 @@ const configureStore = () => {
           };
       });
 
-      return { markets: markets, headMarkets: headMarkets, sports: sports };
+      return {
+        markets: markets,
+        headMarkets: headMarkets,
+        sports: sports,
+        possTyp,
+        typTrans
+      };
     },
-    
+
     CLEAR_NEW_MARKETS: (curState, data) => {
       return { newMarkets: [] };
     },
@@ -42,7 +51,7 @@ const configureStore = () => {
   initStore(actions, {
     markets: {},
     headMarkets: [],
-    sports: []
+    sports: [],
   });
 };
 

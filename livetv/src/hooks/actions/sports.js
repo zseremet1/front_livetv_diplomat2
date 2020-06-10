@@ -4,6 +4,7 @@ import { mapEvent } from "../functions/mapEvent";
 const configureStore = () => {
   const actions = {
     ADD_EVENTS: (curState, data) => {
+      //iz message livvefetch novi podaci one sa 2 sec
       let returnEvents = [...curState.spEvents];
       let returnSports = [...curState.sports];
 
@@ -24,7 +25,7 @@ const configureStore = () => {
               active: true,
               video: false /*favorite: false*/,
             };
-           
+
             //ako ne postoji dodaj par
             returnEvents.push({ ...element, ...emptyElement });
 
@@ -58,12 +59,13 @@ const configureStore = () => {
       // //     }
       // //   });
 
-       return {
+      return {
         spEvents: returnEvents,
         sports: returnSports,
       };
     },
     UPDATE_EVENTS: (curState, data) => {
+      //ako je novi par dosao ide add event , a izmjena update
       let returnEvents = [...curState.spEvents];
       let returnSports = [...curState.sports];
 
@@ -72,6 +74,8 @@ const configureStore = () => {
 
         // miči par ako je završio
         //event_int_status - internal status, 2 - micanje meča, 1 - betstop
+        //nazivi da budu slicni sto slicniji
+
         if (
           (element.eventStatus &&
             element.eventStatus.st &&
@@ -105,8 +109,6 @@ const configureStore = () => {
               }
               console.log("removed event sport counter:", tmpSport);
               returnSports[indSport] = { ...tmpSport };
-
-              
             }
           }
 
@@ -163,7 +165,7 @@ const configureStore = () => {
 
         returnEvents[indMatch] = { ...tmpMatch };
       });
-      console.log("CLEAR_MATCHES",returnEvents);
+      console.log("CLEAR_MATCHES", returnEvents);
       return { spEvents: returnEvents };
     },
     // CLEAR_CLOSED_BETS: (curState, filterData) => {
@@ -220,7 +222,6 @@ const configureStore = () => {
 
     //   return { spEvents: returnEvents };
     // },
-    
   };
 
   initStore(actions, { spEvents: [] });

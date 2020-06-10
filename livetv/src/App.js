@@ -1,13 +1,12 @@
 import React from "react";
 import "./App.css";
 import LiveFetch from "./hoc/LiveFetch";
+import Tv from "./components/Tv/Tv";
 function App() {
   return (
     <React.Fragment>
       <LiveFetch />
-      <div className="App">
-        <header className="App-header">very soon</header>
-      </div>
+      <Tv></Tv>
     </React.Fragment>
   );
 }
