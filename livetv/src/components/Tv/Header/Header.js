@@ -19,6 +19,7 @@ const Header = (props) => {
     <div className="column">
         <span>Sifra</span>
         {/* <SlikaSporta SportId={SportId}/> */}
+        {/* //TODO m zamjeni sa nekom punom riječi */}
       {MarketVals.map((m) => (
         <div key={m.id}>
           <MarketName {...m} />
