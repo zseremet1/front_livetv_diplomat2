@@ -1,8 +1,8 @@
 import React from "react";
 import { useLive } from "../../../hooks/useLive";
-import MarketName from "../Header/MarketName";
-import TextMarket from "../Header/TextMarket";
-import './Header.scss';
+import MarketName from "./MarketName/MarketName";
+import TextMarket from "./TextMarket/TextMarket";
+import "./Header.scss";
 
 const Header = (props) => {
   const [liveState, dispatch] = useLive(false);
@@ -12,17 +12,18 @@ const Header = (props) => {
   const MarketObj = liveState.markets[SportId];
 
   const MarketVals = Object.values(MarketObj)
-    .filter((m) => m.red === 1)
-    .sort((m, a) => m.pozId - a.pozId);
+    .filter((market) => market.red === 1)
+    .sort((market1, market2) => market1.pozId - market2.pozId);
+  // .map(market=>({...market, possTypes: liveState.possTyp[market.idtip]}))
 
   return (
     <div className="column">
-        <span>Sifra</span>
-        {/* <SlikaSporta SportId={SportId}/> */}
-      {MarketVals.map((m) => (
-        <div key={m.id}>
-          <MarketName {...m} />
-          <TextMarket idtip={m.idtip} />
+      <span className="code">Šifra</span>
+      <td className="header-image" />
+      {MarketVals.map((market) => (
+        <div key={market.id}>
+          <MarketName {...market} />
+          <TextMarket idtip={market.idtip} market={market} />
         </div>
       ))}
     </div>

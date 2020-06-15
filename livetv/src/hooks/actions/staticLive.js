@@ -10,6 +10,30 @@ const configureStore = () => {
       let possTyp = newMarkets.possTyp;
       let typTrans = newMarkets.typTrans;
 
+      // prevodjenje possTyp sa eng na bos
+      const possTypPrevedeno = Object.values(possTyp)
+        .map((type) => type.split(", "))
+        .map((types) =>
+          types
+            .map((type) => type.replace(/[\[\]]/g, "").trim())
+            .map(
+              (type) => typTrans[type] || typTrans[type.toLowerCase()] || type
+            )
+        );
+
+      // Ubacivanje possTyp u market i dobijamo objekat
+      const marketSaPossTypNiz = Object.values(newMarkets.all).map(
+        (market) => ({
+          ...market,
+          possTyp: possTypPrevedeno[market.idtip],
+        })
+      );
+
+      // niz marketa sa possTyp pretvaramo nazad u objekat
+      const marketSaPossTypObj = Object.fromEntries(
+        marketSaPossTypNiz.map((market, index) => [index, market])
+      );
+
       let sports = [...newMarkets.sports]; // ;
 
       let indSport = 0;
@@ -27,10 +51,11 @@ const configureStore = () => {
 
       // console.log("markets", markets);
       let indMarket = 0;
-      Object.keys(newMarkets.all).forEach((el) => {
-        if (markets[newMarkets.all[el].ids])
-          markets[newMarkets.all[el].ids][newMarkets.all[el].id] = {
-            ...newMarkets.all[el],
+      // ovdje je zamjenjeno newMarkets.all (markete sa servisa), sa marketima sa possType koje su iznad  napraviljene
+      Object.keys(marketSaPossTypObj).forEach((el) => {
+        if (markets[marketSaPossTypObj[el].ids])
+          markets[marketSaPossTypObj[el].ids][marketSaPossTypObj[el].id] = {
+            ...marketSaPossTypObj[el],
             order: indMarket++,
           };
       });
@@ -39,8 +64,7 @@ const configureStore = () => {
         markets: markets,
         headMarkets: headMarkets,
         sports: sports,
-        possTyp,
-        typTrans
+        possTyp: possTypPrevedeno,
       };
     },
 

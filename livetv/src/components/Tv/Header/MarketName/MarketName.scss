@@ -1,0 +1,30 @@
+.column1
+{
+    flex: 1;    
+    display: flex;
+    border-left: 1px solid #daa520;
+    /*border-right: 1px solid #daa520;*/
+    border-bottom: 2px solid #888;
+
+      
+}
+
+.word-header{
+    text-align: center;
+    width: 100%;
+    word-break: keep-all;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 1;
+    background-color: #ffbf00;
+
+}
+
+.position
+  {
+        width: 10%;
+         text-align: center;
+         background-color: black;
+         color: #fff;
+ }

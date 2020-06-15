@@ -35,7 +35,7 @@ const LiveFetch = (props) => {
         // dispatch(actionTypes.ADD_STATIC_LIVE, {
         //     head: headMarkets,
         //     all: markets,
-        //     sports: returnSports,
+        //     sports: response.data.sports,
         //   });
 
         const { data } = response;
@@ -44,7 +44,7 @@ const LiveFetch = (props) => {
           all: data.markets,
           head: headMarkets,
           possTyp: data.possTyp,
-          typTrans: data.typTrans
+          typTrans: data.typTrans,
         });
 
         getEvents();
