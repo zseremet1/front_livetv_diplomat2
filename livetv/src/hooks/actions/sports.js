@@ -1,5 +1,6 @@
 import { initStore } from "../useLive";
 import { mapEvent } from "../functions/mapEvent";
+import { UPDATE_MESSAGES } from "./actionTypes";
 
 const configureStore = () => {
   const actions = {
@@ -222,8 +223,18 @@ const configureStore = () => {
 
     //   return { spEvents: returnEvents };
     // },
-  };
+    UPDATE_MESSAGES: (curState, { messages: newMessages }) => {
+      const { spEvents } = curState;
+      console.log("newMessages", newMessages);
+      const eventsIds = spEvents.map((ev) => Number(ev.idEvent));
 
+      const messages = newMessages
+        .filter((m) => m["1"])
+        .map((m) => m["1"])
+        .filter((m) => eventsIds.includes(m.idEvent));
+      console.log("MESSAGES", messages);
+    },
+  };
   initStore(actions, { spEvents: [] });
 };
 

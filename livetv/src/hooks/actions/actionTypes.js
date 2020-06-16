@@ -1,5 +1,6 @@
 export const ADD_EVENTS = "ADD_EVENTS";
 export const UPDATE_EVENTS = "UPDATE_EVENTS";
+export const UPDATE_MESSAGES = "UPDATE_MESSAGES";
 
 export const ADD_STATIC_LIVE = "ADD_STATIC_LIVE";
 

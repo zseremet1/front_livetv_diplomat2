@@ -8,7 +8,7 @@ const Header = (props) => {
   const [liveState, dispatch] = useLive(false);
 
   if (!liveState.markets) return null;
-  const SportId = props.SportId || 2;
+  const SportId = props.SportId || 6;
   const MarketObj = liveState.markets[SportId];
 
   const MarketVals = Object.values(MarketObj)
@@ -19,7 +19,7 @@ const Header = (props) => {
   return (
     <div className="column">
       <span className="code">Šifra</span>
-      <td className="header-image" />
+      <span className="header-image" />
       {MarketVals.map((market) => (
         <div key={market.id}>
           <MarketName {...market} />

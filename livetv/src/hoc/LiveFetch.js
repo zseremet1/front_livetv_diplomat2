@@ -73,6 +73,11 @@ const LiveFetch = (props) => {
           setIsRunning(true);
           // console.log("LiveFetch1.js");
 
+          const { data } = response;
+          dispatch(actionTypes.ADD_EVENTS, {
+            events: data.events.map((ev) => ev.event),
+          });
+
           // setDelay(1);
         })
         .catch((err) => {
@@ -102,7 +107,11 @@ const LiveFetch = (props) => {
         // m.map(m=>{
         //   markets[m.idEvent] = m;
         // })
-        console.log("Global state: ", liveState);
+        // console.log("Global state: ", liveState);
+        const { data } = response;
+        dispatch(actionTypes.UPDATE_MESSAGES, {
+          messages: data.m,
+        });
 
         setIsRunning(true);
       })
