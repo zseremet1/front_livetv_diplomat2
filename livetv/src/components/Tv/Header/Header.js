@@ -6,9 +6,12 @@ import "./Header.scss";
 
 const Header = (props) => {
   const [liveState, dispatch] = useLive(false);
+  const sport = liveState.sports.find(
+    (sport) => sport.ID === Number(props.SportId)
+  );
 
   if (!liveState.markets) return null;
-  const SportId = props.SportId || 6;
+  const SportId = props.SportId;
   const MarketObj = liveState.markets[SportId];
 
   const MarketVals = Object.values(MarketObj)
@@ -19,7 +22,7 @@ const Header = (props) => {
   return (
     <div className="column">
       <span className="code">Šifra</span>
-      <span className="header-image" />
+      <span className={["header-image", sport.Name].join(" ")} />
       {MarketVals.map((market) => (
         <div key={market.id}>
           <MarketName {...market} />

@@ -1,0 +1,102 @@
+@import "colors";
+/*global*/
+@mixin global-border-error-fill {
+  background-color: rgba($global-descriptive-error,0.12);
+  border: 1px solid rgba($global-descriptive-error,0.6);
+}
+@mixin global-button-fill {
+    box-shadow: inset 0 -2px 0 0 rgba(0,0,0,0.32);
+    border: none;
+    text-transform: uppercase;
+}
+@mixin global-button-outline {
+    border-width: 2px;
+    border-style: solid;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+/*light*/
+@mixin light-shadow-lv1 {
+  box-shadow: 0 6px 12px 0 rgba($light-color-typography-main,0.12);
+}
+@mixin light-shadow-lv2 {
+  box-shadow: 0 4px 8px 0 rgba($light-color-typography-main,0.24);
+}
+@mixin light-border-main-fill {
+  background-color: $light-color-layout-main;
+  border: 1px solid $light-color-layout-border;
+}
+@mixin light-border-main-fill-shadow-lv1 {
+  @include light-shadow-lv1;
+  @include light-border-main-fill;
+}
+@mixin light-border-main-fill-shadow-lv2 {
+  @include light-shadow-lv2;
+  @include light-border-main-fill;
+}
+
+@mixin light-border-accent-fill {
+  background-color: $light-color-layout-accent;
+  border: 1px solid $light-color-layout-border;
+}
+@mixin light-border-accent-fill-shadow-lv1 {
+  @include light-shadow-lv1;
+  @include light-border-accent-fill;
+}
+@mixin light-border-accent-fill-focus {
+  border: 1px solid $global-interactive-blue;
+  background-color: $light-color-layout-accent;
+}
+
+/*dark*/
+@mixin dark-shadow-lv1 {
+  box-shadow: 0 6px 12px 0  rgba($dark-color-shadow,0.12);
+}
+@mixin dark-shadow-lv2 {
+  box-shadow: 0 4px 8px 0 rgba($dark-color-shadow,0.44);
+}
+
+@mixin dark-border-main-fill {
+  background-color: $dark-color-layout-main;
+  border: 1px solid $dark-color-layout-border;
+}
+@mixin dark-border-main-fill-shadow-lv1 {
+  @include dark-shadow-lv1;
+  @include dark-border-main-fill;
+}
+@mixin dark-border-main-fill-shadow-lv2 {
+  @include dark-shadow-lv2;
+  @include dark-border-main-fill;
+}
+
+@mixin dark-border-accent-fill {
+  background-color: $dark-color-layout-accent;
+  border: 1px solid $dark-color-layout-border;
+}
+@mixin dark-border-accent-fill-shadow-lv1 {
+  @include dark-shadow-lv1;
+  @include dark-border-accent-fill;
+}
+@mixin dark-border-accent-fill-focus {
+  border: 1px solid $global-interactive-blue;
+  background-color: $dark-color-layout-accent;
+}
+
+@mixin sport-color-transparent-016{
+  .wgrass & {
+    background-color: rgba($sports-global-grass, 0.16);
+  }
+  .wparquette & {
+    background-color: rgba($sports-global-parquette, 0.16);
+  }
+  .wartifical & {
+    background-color: rgba($sports-global-artifical, 0.16);
+  }
+  .wclay & {
+    background-color: rgba($sports-global-clay, 0.16);
+  }
+  .wcool & {
+    background-color: rgba($sports-global-cool, 0.16);
+  }
+  
+}

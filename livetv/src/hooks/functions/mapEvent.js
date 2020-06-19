@@ -14,6 +14,7 @@ export function mapEvent(newEvent) {
     eventStatus: tmpEvent.eSt,
     countBets: tmpEvent.cnt,
     favorite: tmpEvent.favorite, // added for favorites
+    sifra: tmpEvent.sif,
   };
   return { ...returnEvent };
 }

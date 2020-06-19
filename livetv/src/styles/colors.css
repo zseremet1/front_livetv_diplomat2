@@ -1,0 +1,33 @@
+  /*light theme*/
+/* :root {
+  --light-color-layout-main: #fff;
+  --light-color-layout-accent: #e4e8f0;
+  --light-color-layout-dimmed: #d8dae6;
+  --light-color-layout-border: #b8bed1;
+  --light-color-typography-dimmed: #747e99;
+  --light-color-typography-accent: #414b66;
+  --light-color-typography-main: #0f1429;
+  --light-color-brand-red: #e8253f;
+  --light-color-descriptive-success: #00b36b;
+  --light-color-descriptive-gold: #db8c16;
+  --light-color-shadow-level1: rgba(15, 20, 41, 0.12);
+  --light-color-shadow-level2: rgba(15, 20, 41, 0.24);
+} */
+/* --theme-darkness: 1; */
+  /* filter: invert(0) brightness(var(--theme-darkness)); */
+
+  /*dark theme*/
+/* html[data-theme="dark"] {
+  --dark-color-layout-main: #0f1429;
+  --dark-color-layout-accent: #172040;
+  --dark-color-layout-dimmed: #0f1429;
+  --dark-color-layout-border: #2c395c;
+  --dark-color-typography-dimmed: #7983a3;
+  --dark-color-typography-accent: #bcc5d6;
+  --dark-color-typography-main: #b8bed1;
+  --dark-color-brand-red: #e8253f;
+  --dark-color-descriptive-success: #28e091;
+  --dark-color-descriptive-gold: #f2d25c;
+  --dark-color-shadow-level1: rgba(18, 24, 46, 0.32);
+  --dark-color-shadow-level2: rgba(18, 24, 46, 0.44);
+} */

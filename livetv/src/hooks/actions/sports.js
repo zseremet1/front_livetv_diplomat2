@@ -225,14 +225,14 @@ const configureStore = () => {
     // },
     UPDATE_MESSAGES: (curState, { messages: newMessages }) => {
       const { spEvents } = curState;
-      console.log("newMessages", newMessages);
+      // console.log("newMessages", newMessages);
       const eventsIds = spEvents.map((ev) => Number(ev.idEvent));
 
       const messages = newMessages
         .filter((m) => m["1"])
         .map((m) => m["1"])
         .filter((m) => eventsIds.includes(m.idEvent));
-      console.log("MESSAGES", messages);
+      // console.log("MESSAGES", messages);
     },
   };
   initStore(actions, { spEvents: [] });

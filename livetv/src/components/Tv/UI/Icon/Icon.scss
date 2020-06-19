@@ -1,0 +1,878 @@
+@font-face {
+    font-family: 'wwin-icon';
+    src:  url('../../../../assets/fonts/wwin-icon.eot?knkcr9');
+    src:  url('../../../../assets/fonts/wwin-icon.eot?knkcr9#iefix') format('embedded-opentype'),
+      url('../../../../assets/fonts/wwin-icon.ttf?knkcr9') format('truetype'),
+      url('../../../../assets/fonts/wwin-icon.woff?knkcr9') format('woff'),
+      url('../../../../assets/fonts/wwin-icon.svg?knkcr9#wwin-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="ico-"], [class*=" ico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'wwin-icon' !important;
+    // speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .ico-american-football:before {
+    content: "\e9a9";
+  }
+  .ico-archery:before {
+    content: "\e9aa";
+  }
+  .ico-athletics:before {
+    content: "\e9ab";
+  }
+  .ico-aussie:before {
+    content: "\e9ac";
+  }
+  .ico-badminton:before {
+    content: "\e9ad";
+  }
+  .ico-bandy:before {
+    content: "\e9ae";
+  }
+  .ico-baseball:before {
+    content: "\e9af";
+  }
+  .ico-basketball:before {
+    content: "\e9b0";
+  }
+  .ico-beach-handball:before {
+    content: "\e9b2";
+  }
+  .ico-beach-handball-invert:before {
+    content: "\e9b1";
+  }
+  .ico-beach-soccer:before {
+    content: "\e9b4";
+  }
+  .ico-beach-soccer-invert:before {
+    content: "\e9b3";
+  }
+  .ico-beach-volleyball:before {
+    content: "\e9b6";
+  }
+  .ico-beach-volleyball-invert:before {
+    content: "\e9b5";
+  }
+  .ico-bicycling:before {
+    content: "\e9b7";
+  }
+  .ico-bowls:before {
+    content: "\e9b8";
+  }
+  .ico-boxing:before {
+    content: "\e9b9";
+  }
+  .ico-chess:before {
+    content: "\e9ba";
+  }
+  .ico-cricket:before {
+    content: "\e9e8";
+  }
+  .ico-cs-go:before {
+    content: "\e9e9";
+  }
+  .ico-curling:before {
+    content: "\e9bb";
+  }
+  .ico-darts:before {
+    content: "\e9bc";
+  }
+  .ico-dota:before {
+    content: "\e9ea";
+  }
+  .ico-esports:before {
+    content: "\e9bd";
+  }
+  .ico-fencing:before {
+    content: "\e9be";
+  }
+  .ico-field-hockey:before {
+    content: "\e9bf";
+  }
+  .ico-floorball:before {
+    content: "\e9c0";
+  }
+  .ico-football:before {
+    content: "\e9c2";
+  }
+  .ico-football-invert:before {
+    content: "\e9c1";
+  }
+  .ico-formula-1:before {
+    content: "\e9c3";
+  }
+  .ico-fun:before {
+    content: "\e9c4";
+  }
+  .ico-futsal:before {
+    content: "\e9c6";
+  }
+  .ico-futsal-invert:before {
+    content: "\e9c5";
+  }
+  .ico-golf:before {
+    content: "\e9eb";
+  }
+  .ico-gymnastics:before {
+    content: "\e9c7";
+  }
+  .ico-handball:before {
+    content: "\e9c9";
+  }
+  .ico-handball-invert:before {
+    content: "\e9c8";
+  }
+  .ico-horse-racing:before {
+    content: "\e9f1";
+  }
+  .ico-ice-hockey:before {
+    content: "\e9ca";
+  }
+  .ico-judo:before {
+    content: "\e9cb";
+  }
+  .ico-lol:before {
+    content: "\e9ec";
+  }
+  .ico-motor-sport:before {
+    content: "\e9cc";
+  }
+  .ico-olympics:before {
+    content: "\e9cd";
+  }
+  .ico-pesapallo:before {
+    content: "\e9ce";
+  }
+  .ico-ragby:before {
+    content: "\e9cf";
+  }
+  .ico-rally:before {
+    content: "\e9d0";
+  }
+  .ico-rowing:before {
+    content: "\e9d1";
+  }
+  .ico-sailing:before {
+    content: "\e9d2";
+  }
+  .ico-ski-jumping:before {
+    content: "\e9d3";
+  }
+  .ico-skiing:before {
+    content: "\e9d4";
+  }
+  .ico-snooker:before {
+    content: "\e9d5";
+  }
+  .ico-sport:before {
+    content: "\e9d7";
+  }
+  .ico-sport-invert:before {
+    content: "\e9d6";
+  }
+  .ico-squash:before {
+    content: "\e9d8";
+  }
+  .ico-swimming:before {
+    content: "\e9d9";
+  }
+  .ico-table-tennis:before {
+    content: "\e9da";
+  }
+  .ico-taekwondo:before {
+    content: "\e9db";
+  }
+  .ico-tennis:before {
+    content: "\e9dc";
+  }
+  .ico-triathlon:before {
+    content: "\e9dd";
+  }
+  .ico-ultimate-fight:before {
+    content: "\e9de";
+  }
+  .ico-volleyball:before {
+    content: "\e9e0";
+  }
+  .ico-volleyball-invert:before {
+    content: "\e9df";
+  }
+  .ico-water-polo:before {
+    content: "\e9e1";
+  }
+  .ico-winter-sports:before {
+    content: "\e9e2";
+  }
+  .ico-wrestling:before {
+    content: "\e9e3";
+  }
+  .ico-wwin:before {
+    content: "\e9e4";
+  }
+  .ico-18:before {
+    content: "\e961";
+  }
+  .ico-android:before {
+    content: "\e962";
+  }
+  .ico-apple:before {
+    content: "\e963";
+  }
+  .ico-bell1:before {
+    content: "\e964";
+  }
+  .ico-check:before {
+    content: "\e965";
+  }
+  .ico-chevron-down:before {
+    content: "\e967";
+  }
+  .ico-chevron-down-fill:before {
+    content: "\e966";
+  }
+  .ico-chevron-left:before {
+    content: "\e969";
+  }
+  .ico-chevron-left-fill:before {
+    content: "\e968";
+  }
+  .ico-chevron-right:before {
+    content: "\e96b";
+  }
+  .ico-chevron-right-fill:before {
+    content: "\e96a";
+  }
+  .ico-chevron-up:before {
+    content: "\e96d";
+  }
+  .ico-chevron-up-fill:before {
+    content: "\e96c";
+  }
+  .ico-clear-fill:before {
+    content: "\e96e";
+  }
+  .ico-clear-outline:before {
+    content: "\e96f";
+  }
+  .ico-close:before {
+    content: "\e970";
+  }
+  .ico-cog1:before {
+    content: "\e971";
+  }
+  .ico-dots-hor:before {
+    content: "\e972";
+  }
+  .ico-dots-ver:before {
+    content: "\e973";
+  }
+  .ico-download:before {
+    content: "\e974";
+  }
+  .ico-eye1:before {
+    content: "\e975";
+  }
+  .ico-facebook:before {
+    content: "\e976";
+  }
+  .ico-favorite-plus:before {
+    content: "\e977";
+  }
+  .ico-fix-fill:before {
+    content: "\e978";
+  }
+  .ico-fix-outline:before {
+    content: "\e979";
+  }
+  .ico-home:before {
+    content: "\e97a";
+  }
+  .ico-instagram:before {
+    content: "\e97b";
+  }
+  .ico-location1:before {
+    content: "\e97c";
+  }
+  .ico-mail:before {
+    content: "\e97d";
+  }
+  .ico-menu:before {
+    content: "\e97e";
+  }
+  .ico-mode-dark1:before {
+    content: "\e97f";
+  }
+  .ico-mode-light1:before {
+    content: "\e980";
+  }
+  .ico-monitor:before {
+    content: "\e981";
+  }
+  .ico-mt-basketball .path1:before {
+    content: "\e983";
+    opacity: 0.7;
+  }
+  .ico-mt-basketball .path2:before {
+    content: "\e984";
+    margin-left: -1em;
+  }
+  .ico-mt-basketball-bg .path1:before {
+    content: "\e982";
+    color: #db8c16;
+  }
+  .ico-mt-basketball-bg .path2:before {
+    content: "\e983";
+    color: rgb(0, 0, 0);
+    margin-left: -1em;
+    opacity: 0.7;
+  }
+  .ico-mt-basketball-bg .path3:before {
+    content: "\e984";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+  
+  .ico-mt-football .path1:before {
+    content: "\e986";
+  }
+  .ico-mt-football .path2:before {
+    content: "\e987";
+    margin-left: -1em;
+  }
+
+  .ico-mt-football-bg .path1:before {
+    content: "\e985";
+    color: #11994c;
+  }
+  .ico-mt-football-bg .path2:before {
+    content: "\e986";
+    color: rgb(0, 0, 0);
+    margin-left: -1em;
+    opacity: 0.7;
+  }
+  .ico-mt-football-bg .path3:before {
+    content: "\e987";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+ 
+  .ico-mt-tennis .path1:before {
+    content: "\e989";
+    opacity: 0.7;
+  }
+  .ico-mt-tennis .path2:before {
+    content: "\e98a";
+    margin-left: -1em;
+  }
+
+  .ico-mt-tennis-bg .path1:before {
+    content: "\e988";
+    color: #db5f39;
+  }
+  .ico-mt-tennis-bg .path2:before {
+    content: "\e989";
+    color: rgb(0, 0, 0);
+    margin-left: -1em;
+    opacity: 0.7;
+  }
+  .ico-mt-tennis-bg .path3:before {
+    content: "\e98a";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+
+   
+  .ico-mt-volleyball .path1:before {
+    content: "\e98c";
+    opacity: 0.7;
+  }
+  .ico-mt-volleyball .path2:before {
+    content: "\e98d";
+    margin-left: -1em;
+  }
+  .ico-mt-volleyball-bg .path1:before {
+    content: "\e98b";
+    color: #2079c7;
+  }
+  .ico-mt-volleyball-bg .path2:before {
+    content: "\e98c";
+    color: rgb(0, 0, 0);
+    margin-left: -1em;
+     opacity: 0.7;
+  }
+  .ico-mt-volleyball-bg .path3:before {
+    content: "\e98d";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+  .ico-pause:before {
+    content: "\e98e";
+  }
+  .ico-payment:before {
+    content: "\e9ef";
+  }
+  .ico-phone:before {
+    content: "\e98f";
+  }
+  .ico-prod-casino:before {
+    content: "\e990";
+  }
+  .ico-prod-favorites:before {
+    content: "\e991";
+  }
+  .ico-prod-favorites-outline:before {
+    content: "\e9f0";
+  }
+  .ico-prod-live:before {
+    content: "\e992";
+  }
+  .ico-prod-lotto:before {
+    content: "\e993";
+  }
+  .ico-prod-poker:before {
+    content: "\e994";
+  }
+  .ico-prod-stats:before {
+    content: "\e995";
+  }
+  .ico-prod-virtuali:before {
+    content: "\e996";
+  }
+  .ico-row-collapse:before {
+    content: "\e997";
+  }
+  .ico-row-expand:before {
+    content: "\e998";
+  }
+  .ico-royal:before {
+    content: "\e999";
+  }
+  .ico-search:before {
+    content: "\e99a";
+  }
+  .ico-shield:before {
+    content: "\e99b";
+  }
+  .ico-sound-on1:before {
+    content: "\e99c";
+  }
+  .ico-stats-bars1:before {
+    content: "\e99d";
+  }
+  .ico-stream-play-fill:before {
+    content: "\e99e";
+  }
+  .ico-stream-play-outline:before {
+    content: "\e99f";
+  }
+  .ico-stream1:before {
+    content: "\e9a0";
+  }
+  .ico-target:before {
+    content: "\e9a1";
+  }
+  .ico-trash:before {
+    content: "\e9a2";
+  }
+  .ico-tri-left-dotted:before {
+    content: "\e9ed";
+  }
+  .ico-tri-right-dotted:before {
+    content: "\e9ee";
+  }
+  .ico-trophy:before {
+    content: "\e9a3";
+  }
+  .ico-twitter:before {
+    content: "\e9a4";
+  }
+  .ico-upload:before {
+    content: "\e9a5";
+  }
+  .ico-user1:before {
+    content: "\e9a6";
+  }
+  .ico-view-grid:before {
+    content: "\e9a7";
+  }
+  .ico-view-list:before {
+    content: "\e9a8";
+  }
+  .ico-card-green .path1:before {
+    content: "\e9e5";
+    color: rgb(0, 194, 116);
+  }
+  .ico-card-green .path2:before {
+    content: "\e9e6";
+    margin-left: -1em;
+    color: rgb(0, 163, 98);
+  }
+  .ico-card-red-double .path1:before {
+    content: "\e900";
+    color: rgb(255, 51, 71);
+  }
+  .ico-card-red-double .path2:before {
+    content: "\e901";
+    margin-left: -1em;
+    color: rgb(214, 34, 52);
+  }
+  .ico-card-red-double .path3:before {
+    content: "\e902";
+    margin-left: -1em;
+    color: rgb(255, 51, 71);
+  }
+  .ico-card-red-double .path4:before {
+    content: "\e903";
+    margin-left: -1em;
+    color: rgb(214, 34, 52);
+  }
+  .ico-card-yellow-red .path1:before {
+    content: "\e906";
+    color: rgb(240, 206, 38);
+  }
+  .ico-card-yellow-red .path2:before {
+    content: "\e907";
+    margin-left: -1em;
+    color: rgb(219, 170, 35);
+  }
+  .ico-card-yellow-red .path3:before {
+    content: "\e902";
+    margin-left: -1em;
+    color: rgb(255, 51, 71);
+  }
+  .ico-card-yellow-red .path4:before {
+    content: "\e903";
+    margin-left: -1em;
+    color: rgb(214, 34, 52);
+  }
+  .ico-card-red .path1:before {
+    content: "\e904";
+    color: rgb(255, 51, 71);
+  }
+  .ico-card-red .path2:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(214, 34, 52);
+  }
+  .ico-card-yellow .path1:before {
+    content: "\e906";
+    color: rgb(240, 206, 38);
+  }
+  .ico-card-yellow .path2:before {
+    content: "\e907";
+    margin-left: -1em;
+    color: rgb(219, 170, 35);
+  }
+  .ico-cashout .path1:before {
+    content: "\e908";
+    color: rgb(0, 194, 116);
+  }
+  .ico-cashout .path2:before {
+    content: "\e909";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .ico-st-fail-simple:before {
+    content: "\e90a";
+    color: #eb3471;
+  }
+  .ico-st-fail .path1:before {
+    content: "\e90b";
+    color: rgb(122, 130, 153);
+  }
+  .ico-st-fail .path2:before {
+    content: "\e90c";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .ico-st-success-simple:before {
+    content: "\e90d";
+    color: #00c274;
+  }
+  .ico-st-success .path1:before {
+    content: "\e90e";
+    color: rgb(0, 194, 116);
+  }
+  .ico-st-success .path2:before {
+    content: "\e90f";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .ico-st-waiting-simple:before {
+    content: "\e910";
+    color: #37a9fa;
+  }
+  .ico-st-waiting .path1:before {
+    content: "\e911";
+    color: rgb(112, 191, 255);
+  }
+  .ico-st-waiting .path2:before {
+    content: "\e912";
+    margin-left: -1em;
+    color: rgb(45, 136, 227);
+  }
+  .ico-st-waiting .path3:before {
+    content: "\e913";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .ico-tennis-serve .path1:before {
+    content: "\e914";
+    color: rgb(240, 206, 38);
+  }
+  .ico-tennis-serve .path2:before {
+    content: "\e915";
+    margin-left: -1em;
+    color: rgb(219, 170, 35);
+  }
+  .ico-1x2:before {
+    content: "\e916";
+  }
+  .ico-arrow-down:before {
+    content: "\e917";
+  }
+  .ico-arrow-left:before {
+    content: "\e918";
+  }
+  .ico-arrow-right:before {
+    content: "\e919";
+  }
+  .ico-arrow-up:before {
+    content: "\e91a";
+  }
+  .ico-bell:before {
+    content: "\e91b";
+  }
+  .ico-building:before {
+    content: "\e9f2";
+  }
+  .ico-cashout1:before {
+    content: "\e91c";
+  }
+  .ico-casino-history:before {
+    content: "\e91d";
+  }
+  .ico-checkbox-check:before {
+    content: "\e920";
+  }
+  .ico-checkbox-check-2:before {
+    content: "\e91e";
+  }
+  .ico-checkbox-check-fill:before {
+    content: "\e91f";
+  }
+  .ico-checkbox-empty:before {
+    content: "\e921";
+  }
+  .ico-checkbox-indet:before {
+    content: "\e923";
+  }
+  .ico-checkbox-indet-fill:before {
+    content: "\e922";
+  }
+  .ico-clear:before {
+    content: "\e924";
+  }
+  .ico-cog:before {
+    content: "\e925";
+  }
+  .ico-collapse:before {
+    content: "\e926";
+  }
+  .ico-color-drop:before {
+    content: "\e927";
+  }
+  .ico-copy:before {
+    content: "\e928";
+  }
+  .ico-corner:before {
+    content: "\e929";
+  }
+  .ico-deposit:before {
+    content: "\e92a";
+  }
+  .ico-document-horizontal:before {
+    content: "\e92b";
+  }
+  .ico-document-vertical:before {
+    content: "\e92c";
+  }
+  .ico-expand:before {
+    content: "\e92d";
+  }
+  .ico-eye:before {
+    content: "\e92e";
+  }
+  .ico-float-off:before {
+    content: "\e92f";
+  }
+  .ico-float-on:before {
+    content: "\e930";
+  }
+  .ico-font:before {
+    content: "\e934";
+  }
+  .ico-font-size-01:before {
+    content: "\e931";
+  }
+  .ico-font-size-02:before {
+    content: "\e932";
+  }
+  .ico-font-size-03:before {
+    content: "\e933";
+  }
+  .ico-help:before {
+    content: "\e935";
+  }
+  .ico-image:before {
+    content: "\e937";
+  }
+  .ico-image-fill:before {
+    content: "\e936";
+  }
+  .ico-jersey:before {
+    content: "\e938";
+  }
+  .ico-list-2-col:before {
+    content: "\e939";
+  }
+  .ico-live:before {
+    content: "\e93a";
+  }
+  .ico-location:before {
+    content: "\e93b";
+  }
+  .ico-lock:before {
+    content: "\e93c";
+  }
+  .ico-logout:before {
+    content: "\e93d";
+  }
+  .ico-mail1:before {
+    content: "\e9f3";
+  }
+  .ico-microphone:before {
+    content: "\e93e";
+  }
+  .ico-mode-dark:before {
+    content: "\e93f";
+  }
+  .ico-mode-light:before {
+    content: "\e940";
+  }
+  .ico-number:before {
+    content: "\e941";
+  }
+  .ico-pdf:before {
+    content: "\e942";
+  }
+  .ico-player-off:before {
+    content: "\e943";
+  }
+  .ico-player-off-double:before {
+    content: "\e9e7";
+  }
+  .ico-print:before {
+    content: "\e944";
+  }
+  .ico-progress:before {
+    content: "\e945";
+  }
+  .ico-radio-off:before {
+    content: "\e946";
+  }
+  .ico-radio-on:before {
+    content: "\e947";
+  }
+  .ico-romb:before {
+    content: "\e948";
+  }
+  .ico-share:before {
+    content: "\e949";
+  }
+  .ico-shield1:before {
+    content: "\e9f4";
+  }
+  .ico-sound-off:before {
+    content: "\e94a";
+  }
+  .ico-sound-on:before {
+    content: "\e94b";
+  }
+  .ico-star-fill:before {
+    content: "\e94c";
+  }
+  .ico-star-outline:before {
+    content: "\e94d";
+  }
+  .ico-stats-bars:before {
+    content: "\e94e";
+  }
+  .ico-stream:before {
+    content: "\e950";
+  }
+  .ico-stream-fill:before {
+    content: "\e94f";
+  }
+  .ico-ticket:before {
+    content: "\e951";
+  }
+  .ico-tickets:before {
+    content: "\e952";
+  }
+  .ico-tooltip:before {
+    content: "\e953";
+  }
+  .ico-transaction:before {
+    content: "\e954";
+  }
+  .ico-transfer:before {
+    content: "\e955";
+  }
+  .ico-trend:before {
+    content: "\e958";
+  }
+  .ico-trend-down:before {
+    content: "\e956";
+  }
+  .ico-trend-up:before {
+    content: "\e957";
+  }
+  .ico-tri-down:before {
+    content: "\e959";
+  }
+  .ico-tri-left:before {
+    content: "\e95a";
+  }
+  .ico-tri-right:before {
+    content: "\e95b";
+  }
+  .ico-tri-up:before {
+    content: "\e95c";
+  }
+  .ico-user:before {
+    content: "\e95d";
+  }
+  .ico-versus:before {
+    content: "\e95e";
+  }
+  .ico-video-big:before {
+    content: "\e95f";
+  }
+  .ico-video-small:before {
+    content: "\e960";
+  }

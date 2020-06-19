@@ -1,0 +1,50 @@
+
+.live-match__status
+{
+    display: none;
+    border-right: 1px solid #daa520;
+    border-bottom: 1px solid #406a23;
+}
+
+.live-match__hov:nth-child(2n)
+{
+    background-color: #1a2a0e;
+    border-right: 1px solid #daa520;
+    border-bottom: 1px solid #406a23;
+}
+.live-match__hov:nth-child(2n+1)
+{
+    background-color: #264015;
+    border-right: 1px solid #daa520;
+    border-bottom: 1px solid #406a23;
+}
+
+.live-match
+{
+    display: flex;
+    width: 26.60%;
+    border-right: 1px solid #daa520;
+}
+
+.live-match__name{
+    flex: 1;
+    position: relative;
+}
+
+// .live-match__name::after{
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     top: calc(50% - 2px);
+//     width: 98%;
+//     left: 0;
+//     border: 2px solid #fff;
+// }
+
+.CodeRowComponent
+{
+    background-color: black;
+    border: 1px solid #57af46;
+    border-left: 1.5px solid #57af46;
+    border-top: none;
+}

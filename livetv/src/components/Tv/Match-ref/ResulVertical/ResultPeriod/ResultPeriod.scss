@@ -1,0 +1,97 @@
+@import "../../../../../styles/colors";
+
+.live-result-period {
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+  &.wmain {
+    font-weight: bold;
+    color: red;
+  }
+  &.size20 {
+    width: 20px;
+  }
+  &.size16 {
+    width: 16px;
+  }
+  &.size12 {
+    width: 12px;
+  }
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 30%;
+    top: 35%;
+    right: 0;
+    width: 2.5px;
+    background-color: #fff;
+  }
+}
+
+.live-result-period__val {
+  margin: 1px;
+  padding: 2px 0;
+
+  &.wlost{
+      color: $light-color-typography-dimmed;
+  }
+
+  .wgrass &.wcurrent {
+    color: $sports-global-grass;
+  }
+  .wparquette &.wcurrent {
+    color: $sports-global-parquette;
+  }
+  .wclay &.wcurrent {
+    color: $sports-global-clay;
+  }
+  .wcool &.wcurrent {
+    color: $sports-global-cool;
+  }
+  .wartifical &.wcurrent {
+    color: $sports-global-artifical;
+  }
+  .wdefault &.wcurrent {
+    color: $sports-global-default;
+  }
+
+
+  .wgrass .wmain & {
+    background-color: $sports-global-grass;
+  }
+  .wparquette .wmain & {
+    background-color: $sports-global-parquette;
+  }
+  .wclay .wmain & {
+    background-color: $sports-global-clay;
+  }
+  .wcool .wmain & {
+    background-color: $sports-global-cool;
+  }
+  .wartifical .wmain & {
+    background-color: $sports-global-artifical;
+  }
+  .wdefault .wmain & {
+    background-color: $sports-global-default;
+  }
+
+  .wgrass .wstandard & {
+    background-color: rgba($sports-global-grass, 0.16);
+  }
+  .wparquette .wstandard & {
+    background-color: rgba($sports-global-parquette, 0.16);
+  }
+  .wclay .wstandard & {
+    background-color: rgba($sports-global-clay, 0.16);
+  }
+  .wcool .wstandard & {
+    background-color: rgba($sports-global-cool, 0.16);
+  }
+  .wartifical .wstandard & {
+    background-color: rgba($sports-global-artifical, 0.16);
+  }
+  .wdefault .wstandard & {
+    background-color: rgba($sports-global-default, 0.16);
+  }
+}

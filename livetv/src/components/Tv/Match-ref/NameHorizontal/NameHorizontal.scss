@@ -1,0 +1,43 @@
+
+// .live-name-h{
+//           display: flex;
+//          width: 100%;
+//          align-items: center;
+//  }
+
+
+ .live-name-h{
+  display: flex;
+  width: 100%;
+
+ }
+
+ .live-name-h__home{
+    // flex: 2 1;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    float: left;
+    color: #fff5d9;
+
+ }
+
+ .live-name-h__away{
+     flex-grow: 5;
+     width: 100%;
+     text-align: left;
+     color: #fff5d9;
+    }
+
+ .live-name-h__result{
+     width: 80%;
+     text-align: center;
+     flex-grow: 0;
+     display: flex;
+     align-items: center;
+     color: #e5bf00;
+    }

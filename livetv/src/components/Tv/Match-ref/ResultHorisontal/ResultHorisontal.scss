@@ -1,0 +1,24 @@
+@import '../../../../styles/colors';
+
+.live-result-h__red{
+    margin: 0 4px;
+    width: 16px;
+    height: 16px;
+    font-size: 1.6rem;
+}
+.live-result-h__val{
+    margin: 0 4px;
+    width: 16px;
+    padding: 2px 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #e5bf00;
+
+    .wgrass &{
+        background-color: $sports-global-grass;
+    }
+}
+
+.live-result-h__dot{
+    padding: 1px;
+}

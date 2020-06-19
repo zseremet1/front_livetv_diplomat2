@@ -1,0 +1,56 @@
+/*global*/
+$global-interactive-blue-dark2: #0b6ab3;
+$global-interactive-blue-dark1: #117ed1;
+$global-interactive-blue: #1894f2;
+$global-interactive-blue-light1: #37a9fa;
+$global-interactive-blue-light2: #57bcff;
+$global-descriptive-error: #eb3471;
+$global-descriptive-success: #00c274;
+$global-descriptive-gold-dark: #db8c16;
+$global-descriptive-gold-light: #f2d25c;
+$global-disabled-dark: #2e3c61;
+$global-disabled-light: #b8bed1;
+ 
+/*light theme*/
+$light-color-layout-main: #fff;
+$light-color-layout-accent: #e4e8f0;
+$light-color-layout-dimmed: #d8dae6;
+$light-color-layout-border: #b8bed1;
+
+$light-color-typography-dimmed: #747e99;
+$light-color-typography-accent: #414b66;
+$light-color-typography-main: #0f1429;
+
+$light-color-brand-red: #e8253f;
+$light-color-descriptive-success: #00b36b;
+$light-color-descriptive-gold: #db8c16;
+
+$light-color-table-row-state-updated: rgba($global-interactive-blue, 0.16);
+$light-color-table-row-state-outdated: rgba($global-descriptive-error, 0.12);
+$light-color-table-row-state-sucess: rgba($global-descriptive-success, 0.16);
+ 
+
+/*dark theme*/
+$dark-color-layout-main: #0f1429;
+$dark-color-layout-accent: #172040;
+$dark-color-layout-dimmed: #0a0e1f;
+$dark-color-layout-border: #2c395c;
+
+$dark-color-typography-dimmed: #7983a3;
+$dark-color-typography-accent: #bcc5d6;
+$dark-color-typography-main: #b8bed1;
+$dark-color-typography-light: #fff;
+
+$dark-color-brand-red: #e8253f;
+$dark-color-descriptive-success: #28e091;
+$dark-color-descriptive-gold: #f2d25c;
+
+$dark-color-shadow: #12182e;
+
+/*sports*/
+$sports-global-default: #414b66;
+$sports-global-artifical: #bf3d69;
+$sports-global-cool: #2079c7;
+$sports-global-grass: #11994c;
+$sports-global-clay: #db5f39;
+$sports-global-parquette: #db8c16;
