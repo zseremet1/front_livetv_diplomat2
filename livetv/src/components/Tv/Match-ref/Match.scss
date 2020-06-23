@@ -29,6 +29,15 @@
 .live-match__name{
     flex: 1;
     position: relative;
+    flex-direction: row;
+    width: 100%;
+}
+
+.live-match-timer
+{
+       background-color: red;    
+
+
 }
 
 // .live-match__name::after{
