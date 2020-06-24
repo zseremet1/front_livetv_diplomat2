@@ -6,6 +6,7 @@ import NameVertical from "./NameVertical/NameVertical";
 import ResultHorisontal from "./ResultHorisontal/ResultHorisontal";
 import ResultVertical from "./ResulVertical/ResultVertical";
 import Code from "./Code/Code";
+import BetsHorizontal from "./BetsHorizontal/BetsHorizontal";
 // import Icon from "../UI/Icon/Icon";
 
 const Match = (props) => {
@@ -15,6 +16,11 @@ const Match = (props) => {
   // const matchExpandHandler = (idEvent) => {
   //   props.history.replace("/live/" + idEvent);
   // };
+
+  const extraCode = [];
+  if (props.spEvent.idSport === 2 || props.spEvent.idSport === 6) {
+    extraCode.push("A");
+  }
 
   let firstBet;
   let secndBet;
@@ -47,7 +53,7 @@ const Match = (props) => {
       {/* <div className= "CodeRowComponent">41 </div> */}
 
       <div className={mainClassName.join(" ")}>
-        <Code sif={props.spEvent.sifra} />
+        <Code sif={props.spEvent.sifra} showExtra={extraCode} />
         {/* <Time
           idEvent={props.spEvent.idEvent}
           eventStatus={props.spEvent.eventStatus}
@@ -65,31 +71,29 @@ const Match = (props) => {
           )} */}
         {/* </div> */}
         <div className="live-match__name">
-        
-        {props.sport.horisontal ? (
-
-               <Time
-               idEvent={props.spEvent.idEvent}
-               eventStatus={props.spEvent.eventStatus}
-               time={props.spEvent.startTime ? props.spEvent.startTime : 0} /> 
-        ):  (
-          <NameVertical spEvent={props.spEvent}>
-            <ResultVertical eventStatus={props.spEvent.eventStatus} />
-          </NameVertical> )}
-          
+          {props.sport.horisontal ? (
+            <Time
+              idEvent={props.spEvent.idEvent}
+              eventStatus={props.spEvent.eventStatus}
+              time={props.spEvent.startTime ? props.spEvent.startTime : 0}
+            />
+          ) : (
+            <NameVertical spEvent={props.spEvent}>
+              <ResultVertical eventStatus={props.spEvent.eventStatus} />
+            </NameVertical>
+          )}
 
           {props.sport.horisontal ? (
             <NameHorizontal spEvent={props.spEvent}>
-               {/* <Time
+              {/* <Time
                 idEvent={props.spEvent.idEvent}
                 eventStatus={props.spEvent.eventStatus}
                 time={props.spEvent.startTime ? props.spEvent.startTime : 0} /> */}
               <ResultHorisontal eventStatus={props.spEvent.eventStatus} />
             </NameHorizontal>
-          ) : <div className=""></div>
-          
-          
-          }
+          ) : (
+            <div className=""></div>
+          )}
         </div>
         <div className="live-match__stream">
           {props.spEvent.eventStatus ? (
@@ -135,6 +139,11 @@ const Match = (props) => {
             : null}
         </div>
       </div>
+      <BetsHorizontal
+        spEvent={props.spEvent}
+        sport={props.sport}
+        market={props.market}
+      />
     </div>
   );
 };

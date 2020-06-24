@@ -24,16 +24,17 @@ const Tv = (props) => {
     <div className="App">
       {Object.keys(eventsBySport).map((idSport) => {
         return (
-          <>
+          <React.Fragment key={idSport}>
             <Header SportId={idSport} />
             {eventsBySport[idSport].map((event) => (
               <Match
                 key={event.idEvent}
                 spEvent={event}
                 sport={sports.find((sport) => sport.ID === event.idSport)}
+                market={liveState.markets[event.idSport]}
               />
             ))}
-          </>
+          </React.Fragment>
         );
       })}
     </div>

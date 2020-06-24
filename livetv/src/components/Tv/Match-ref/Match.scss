@@ -6,6 +6,10 @@
     border-bottom: 1px solid #406a23;
 }
 
+.live-match__hov{
+    display: flex;
+}
+
 .live-match__hov:nth-child(2n)
 {
     background-color: #1a2a0e;

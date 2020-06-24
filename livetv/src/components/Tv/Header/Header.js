@@ -16,14 +16,15 @@ const Header = (props) => {
 
   const MarketVals = Object.values(MarketObj)
     .filter((market) => market.red === 1)
-    .sort((market1, market2) => market1.pozId - market2.pozId);
-  // .map(market=>({...market, possTypes: liveState.possTyp[market.idtip]}))
+    // .sort((market1, market2)=> market2.red - market1.red )
+    .sort((market1, market2) => market1.pozId - market2.pozId)
+  .map(market=>({...market, possTypes: liveState.possTyp[market.idtip]}))
 
   return (
     <div className="column">
       <span className="code">Šifra</span>
       <span className={["header-image", sport.Name].join(" ")} />
-      {MarketVals.map((market) => (
+      {MarketVals.slice(0, 5).map((market) => (
         <div key={market.id}>
           <MarketName {...market} />
           <TextMarket idtip={market.idtip} market={market} />

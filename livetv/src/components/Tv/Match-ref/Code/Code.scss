@@ -4,6 +4,7 @@
     color: #fff;
     width: 13.2%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     border-left: 1px solid #57af46;
     border-right: 1px solid #57af46;
@@ -11,5 +12,6 @@
     &>*{
         width: 100%;
         text-align: center;
+        flex: 1;
     }
 }
