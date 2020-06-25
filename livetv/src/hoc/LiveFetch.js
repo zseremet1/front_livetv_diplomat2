@@ -75,9 +75,9 @@ const LiveFetch = (props) => {
           // console.log("LiveFetch1.js");
 
           const { data } = response;
-          if (data.events.length === 0) {
-            data.events = fakeEv;
-          }
+          // if (data.events.length === 0) {
+          //   data.events = fakeEv;
+          // }
 
           dispatch(actionTypes.ADD_EVENTS, {
             events: data.events.map((ev) => ({

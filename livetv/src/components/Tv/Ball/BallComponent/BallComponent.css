@@ -1,0 +1,25 @@
+.BallComponent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.BallComponent .BallComponentContent {
+    width: 100%;
+}
+
+.BallComponent.top .BallComponentContent {
+    padding: 2px 0 2px;
+}
+
+.BallComponent.bottom .BallComponentContent {
+    padding: 2px 0 2px 0;
+}
+
+.BallComponent .imageDiv {
+    width: 85%;
+    vertical-align: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

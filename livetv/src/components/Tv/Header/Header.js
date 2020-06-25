@@ -13,7 +13,8 @@ const Header = (props) => {
   if (!liveState.markets) return null;
   const SportId = props.SportId;
   const MarketObj = liveState.markets[SportId];
-
+  if(!MarketObj) return null;
+  
   const MarketVals = Object.values(MarketObj)
     .filter((market) => market.red === 1)
     // .sort((market1, market2)=> market2.red - market1.red )

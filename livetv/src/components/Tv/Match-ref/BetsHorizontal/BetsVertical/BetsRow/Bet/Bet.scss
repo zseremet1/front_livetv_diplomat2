@@ -1,5 +1,18 @@
 .Bet{
-    flex: 1;
+    // flex: 1;
     text-align: center;
-    background-color: white;
+    width: 30%;
+    /* margin: 0 0.6%; */
+    margin: 0 auto;
+    float: left;
+    display: table;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 1px 1px 1px 0;
+
 }
+
+
+
