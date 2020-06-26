@@ -1,11 +1,13 @@
 import React from "react";
 import "./MarketName.scss";
 const MarketName = (props) => {
+  const text =
+    props.nHead.length > 20 ? `${props.nHead.slice(0, 17)}...` : props.nHead;
   return (
     <div className="column1">
       <span className="position">{props.pozId}</span>
 
-      <span className="word-header">{props.nHead}</span>
+      <span className="word-header">{text}</span>
     </div>
   );
 };

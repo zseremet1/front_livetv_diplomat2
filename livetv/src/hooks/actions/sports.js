@@ -136,6 +136,7 @@ const configureStore = () => {
                 });
               }
             } else if (element.bets) {
+             // console.log(element.idEvent,element.bets);
               //TODO ako je marketstatus <> 1,6 tada treba brisati klađenje iz para
               returnEvents[indExist].bets = {
                 ...returnEvents[indExist].bets,

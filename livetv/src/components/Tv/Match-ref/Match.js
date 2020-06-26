@@ -12,7 +12,7 @@ import BetsHorizontal from "./BetsHorizontal/BetsHorizontal";
 const Match = (props) => {
   const mainClassName = ["live-match"];
   //console.log(props.spEvent);
-
+  // console.log("MATCH::props length", JSON.stringify(props).length);
   // const matchExpandHandler = (idEvent) => {
   //   props.history.replace("/live/" + idEvent);
   // };

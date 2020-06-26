@@ -1,7 +1,7 @@
 .Bet{
     // flex: 1;
     text-align: center;
-    width: 30%;
+    width: 22%;
     /* margin: 0 0.6%; */
     margin: 0 auto;
     float: left;
@@ -13,6 +13,33 @@
     padding: 1px 1px 1px 0;
 
 }
+// .live-match__hov:nth-child(2n) .Bet {
+//           background-color: #404040;
+        
+//      }
+.Bet.hide{
+    color: transparent;
+}
 
+.Bet.grey{
+    color: #4c4c4c;
+}
 
+.Bet.redArrow{
+    --bgc: red;
+    animation: bgc 2s both;
+}
 
+.Bet.greenArrow{
+    --bgc: green;
+    animation: bgc 2s both;
+}
+
+@keyframes bgc {
+    0%, 99%{
+        background-color: var(--bgc);
+    }
+    100%{
+        background-color: #fff;
+    }
+}

@@ -75,9 +75,9 @@ const LiveFetch = (props) => {
           // console.log("LiveFetch1.js");
 
           const { data } = response;
-          // if (data.events.length === 0) {
-          //   data.events = fakeEv;
-          // }
+          //  if (data.events.length === 0) {
+          //    data.events = fakeEv;
+          //  }
 
           dispatch(actionTypes.ADD_EVENTS, {
             events: data.events.map((ev) => ({
@@ -100,7 +100,7 @@ const LiveFetch = (props) => {
     setDelay(2000);
     setIsRunning(false);
     let postData = {
-      tc1: counterMsg.t1, //Data
+      t1: counterMsg.t1, //Data
       t2: counterMsg.t2, //Lang
       lang: "en", //TODO ubaciti pravi jezik
     };
@@ -204,7 +204,12 @@ const LiveFetch = (props) => {
         // dispatch(actionTypes.UPDATE_MESSAGES, {
         //   messages: data.m,
         // });
-
+        if (response.data.t1 || response.data.t2) {
+          setCounterMsg({
+            t1: response.data.t1,
+            t2: response.data.t2,
+          });
+        }
         setIsRunning(true);
       })
       .catch((err) => {

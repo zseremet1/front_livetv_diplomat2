@@ -17,7 +17,12 @@ const Time = (props) => {
     printDatchTime = props.eventStatus.c.mtT?.split(":")[0] + "'";
   }
 
-  return <span className="live-match-time"> {printDatchTime}</span>;
+  return (
+    <span className="live-match-time">
+      {" "}
+      {printDatchTime === "00'" ? "HT" : printDatchTime}
+    </span>
+  );
 };
 
 export default Time;

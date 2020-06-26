@@ -34,10 +34,14 @@ const BetsHorizontal = (props) => {
     .map((market) => market.id);
 
   // Rasporedjujemo oklade u betRows na osnovu reda i pozicije
-  const { oddsBet } = props.spEvent;
-  oddsBet.forEach((odd) => {
-    const { idBt, red, odds, spec } = odd;
-    betsRows[red][MarketOrder.indexOf(idBt) + 1] = odds;
+  const { bets } = props.spEvent;
+  Object.values(bets).forEach((odd) => {
+    const { idBt, red, odds, spec, idmSt } = odd;
+    // if(idmSt !== 1 && idmSt !== 6) return;
+    betsRows[red][MarketOrder.indexOf(idBt) + 1] = odds.map((odd) => ({
+      ...odd,
+      idmSt,
+    }));
     specRows[red][MarketOrder.indexOf(idBt) + 1] = spec;
   });
 

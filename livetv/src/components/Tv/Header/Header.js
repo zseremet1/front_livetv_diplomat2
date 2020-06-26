@@ -13,13 +13,16 @@ const Header = (props) => {
   if (!liveState.markets) return null;
   const SportId = props.SportId;
   const MarketObj = liveState.markets[SportId];
-  if(!MarketObj) return null;
-  
+  if (!MarketObj) return null;
+
   const MarketVals = Object.values(MarketObj)
     .filter((market) => market.red === 1)
     // .sort((market1, market2)=> market2.red - market1.red )
     .sort((market1, market2) => market1.pozId - market2.pozId)
-  .map(market=>({...market, possTypes: liveState.possTyp[market.idtip]}))
+    .map((market) => ({
+      ...market,
+      possTypes: liveState.possTyp[market.idtip],
+    }));
 
   return (
     <div className="column">
