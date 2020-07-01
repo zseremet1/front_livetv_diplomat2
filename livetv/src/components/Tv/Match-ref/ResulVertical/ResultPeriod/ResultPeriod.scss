@@ -1,7 +1,7 @@
 @import "../../../../../styles/colors";
 
 .live-result-period {
-  font-size: 1.2rem;
+   font-size: 1.125rem;
   text-align: center;
   position: relative;
   &.wmain {
@@ -34,9 +34,9 @@
   margin: 1px;
   padding: 2px 0;
 
-  &.wlost{
-      color: $light-color-typography-dimmed;
-  }
+  // &.wlost{
+  //     color: $light-color-typography-dimmed;
+  // }
 
   .wgrass &.wcurrent {
     color: $sports-global-grass;

@@ -1,0 +1,46 @@
+
+
+.Tenis.column {
+    border-bottom: 2px solid #e68e5b;
+    border-top: 1px solid #e68e5b;
+
+}
+
+.Tenis.live-match__hov:nth-child(2n)
+{
+    background-color: #5c3924;
+    border-bottom: 2px solid #e68e5b;
+    border-top: 1px solid #e68e5b;
+}
+
+.Tenis.live-match__hov:nth-child(2n+1) {
+    background-color: #8a5537;
+    border-right: 1px solid #daa520;
+    border-bottom: 2px solid #e68e5b;
+    border-top: 1px solid #e68e5b;
+}
+
+.Tenis.BetsVertical {
+   
+    border-right: 1px solid #e68e5b;
+    // border-bottom: 1px solid #e68e5b;
+}
+
+.Tenis.BetsRow
+{
+     border-bottom: 1px solid #e68E5B;
+}
+
+// .Tenis.text-market{
+//     background-color: yellow;
+// }
+
+
+// .Tenis.column.text-market
+// {
+//     background-color: yellow;
+// }
+
+// 1px solid #e68e5b
+
+//2px solid #e68e5b

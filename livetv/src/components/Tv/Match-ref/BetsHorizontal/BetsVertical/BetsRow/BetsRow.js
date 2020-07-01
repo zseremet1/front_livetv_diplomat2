@@ -26,7 +26,7 @@ const BetsRow = (props) => {
     );
   }
 
-  return <div className="BetsRow">{red}</div>;
+  return    <div className={["BetsRow",sport.Name].join(" ")}>{red}</div>;
 };
 
 export default BetsRow;

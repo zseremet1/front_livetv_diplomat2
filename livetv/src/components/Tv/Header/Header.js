@@ -25,8 +25,8 @@ const Header = (props) => {
     }));
 
   return (
-    <div className="column">
-      <span className="code">Šifra</span>
+    <div className={["column",sport.Name].join(" ")}>
+      <span className={["code",sport.Name].join(" ")}>Šifra</span>
       <span className={["header-image", sport.Name].join(" ")} />
       {MarketVals.slice(0, 5).map((market) => (
         <div key={market.id}>

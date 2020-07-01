@@ -10,6 +10,7 @@ const BetsVertical = (props) => {
   Object.values(redoviData).forEach((red, index) => {
     // ako u redu ima vrijednosti, dodaj taj red
     if (red.length) {
+
       redovi.push(
         <BetsRow
           red={red}
@@ -22,7 +23,8 @@ const BetsVertical = (props) => {
     }
   });
 
-  return <div className="BetsVertical">{redovi}</div>;
+  return <div className={["BetsVertical" ,props.sport.Name].join(" ")}>{redovi}</div>;
+
 };
 
 export default BetsVertical;

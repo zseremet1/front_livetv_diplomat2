@@ -120,7 +120,7 @@ const configureStore = () => {
           const indExist = returnEvents.findIndex(
             (p) => p.idEvent === element.idEvent
           );
-          //console.log("UPDATE_EVENTS", element, returnEvents);
+          // console.log("UPDATE_EVENTS", element, returnEvents);
 
           if (indExist > -1) {
             //ako se mjenjaju kvote tada samo kvote u objektu mjenjamo
@@ -136,7 +136,7 @@ const configureStore = () => {
                 });
               }
             } else if (element.bets) {
-             // console.log(element.idEvent,element.bets);
+              // console.log(element.idEvent,element.bets);
               //TODO ako je marketstatus <> 1,6 tada treba brisati klađenje iz para
               returnEvents[indExist].bets = {
                 ...returnEvents[indExist].bets,

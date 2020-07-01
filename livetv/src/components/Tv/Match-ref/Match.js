@@ -42,14 +42,17 @@ const Match = (props) => {
       }
     });
   }
-
+console.log("(props.spEvent.bets",props.spEvent.bets);
   // let cssFavorite = ["live-match__favorit"];
   // if (props.spEvent.favorite === true) {
   //   cssFavorite.push("active");
   // }
 
   return (
-    <div className="live-match__hov" title={props.spEvent.idEvent}>
+    <div
+      className={["live-match__hov", props.sport.Name].join(" ")}
+      title={props.spEvent.idEvent}
+    >
       {/* <div className= "CodeRowComponent">41 </div> */}
 
       <div className={mainClassName.join(" ")}>

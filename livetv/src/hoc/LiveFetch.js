@@ -75,9 +75,9 @@ const LiveFetch = (props) => {
           // console.log("LiveFetch1.js");
 
           const { data } = response;
-          //  if (data.events.length === 0) {
-          //    data.events = fakeEv;
-          //  }
+              // if (data.events.length === 0) {
+              //   data.events = fakeEv;
+              // }
 
           dispatch(actionTypes.ADD_EVENTS, {
             events: data.events.map((ev) => ({
@@ -114,6 +114,8 @@ const LiveFetch = (props) => {
         let newEvents = [];
 
         if (response.data.m) {
+
+          // console.log("response.data.m", response.data.m);
           response.data.m.forEach((item) => {
             const msgValue = item[Object.keys(item)[0]];
             switch (Object.keys(item)[0]) {
@@ -122,6 +124,8 @@ const LiveFetch = (props) => {
                   idEvent: msgValue.idEvent,
                   eventStatus: msgValue.eSt,
                 });
+
+                // console.log("msgValue", msgValue);
                 break;
               case "2": //new math
                 newEvents.push(msgValue);
@@ -140,21 +144,21 @@ const LiveFetch = (props) => {
                 });
                 break;
 
-              case "5":
-              case "6":
-                //nove oklade
-                const keyMatch = Object.keys(msgValue)[0];
-                // let updateOdds = [];
-                msgValue[keyMatch].forEach((betItem) => {
-                  // let tmpbetValue = betItem[Object.keys(betItem)[0]];
-                  let tmpBet = {};
-                  tmpBet[betItem.id] = betItem;
-                  updateEvents.push({
-                    idEvent: parseInt(keyMatch),
-                    bets: tmpBet,
-                  });
-                });
-                break;
+              // case "5":
+              // case "6":
+              //   //nove oklade
+              //   const keyMatch = Object.keys(msgValue)[0];
+              //    //let updateOdds = [];
+              //   msgValue[keyMatch].forEach((betItem) => {
+              //     //let tmpbetValue = betItem[Object.keys(betItem)[0]];
+              //     let tmpBet = {};
+              //     tmpBet[betItem.id] = betItem;
+              //     updateEvents.push({
+              //       idEvent: parseInt(keyMatch),
+              //       bets: tmpBet,
+              //     });
+              //   });
+              //   break;
               case "7": //betstop
                 updateEvents.push({
                   idEvent: parseInt(msgValue.idEvent),
@@ -162,14 +166,14 @@ const LiveFetch = (props) => {
                 });
 
                 break;
-              case "8": //broj oklada za meč
-                const idMatchMsg = Object.keys(msgValue)[0];
-                updateEvents.push({
-                  idEvent: parseInt(idMatchMsg),
-                  countBets: parseInt(msgValue[idMatchMsg]),
-                });
+              // case "8": //broj oklada za meč
+              //   const idMatchMsg = Object.keys(msgValue)[0];
+              //   updateEvents.push({
+              //     idEvent: parseInt(idMatchMsg),
+              //     countBets: parseInt(msgValue[idMatchMsg]),
+              //   });
 
-                break;
+                // break;
               case "9":
                 updateEvents = [];
                 newEvents = [];

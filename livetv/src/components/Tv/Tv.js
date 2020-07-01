@@ -13,6 +13,7 @@ const Tv = (props) => {
   const eventsBySport = {};
 
   spEvents.forEach((ev) => {
+  //  if (Object.keys(ev.eventStatus).length === 2 ) return ;
     if (!eventsBySport[ev.idSport]) {
       eventsBySport[ev.idSport] = [];
     }

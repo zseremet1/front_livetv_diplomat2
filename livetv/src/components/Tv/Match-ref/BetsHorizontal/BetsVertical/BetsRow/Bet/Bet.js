@@ -19,12 +19,12 @@ const Bet = (props) => {
         flag = -1;
       }
     }
-    setPrevVal([data.va, flag, Date.now()]);
+    setPrevVal([data.va, flag]);
   }
   // formatiranje vrijednosti da uvijek ima 2 decimalna mjesta
-  const whole = parseInt(data.va);
-  const rest = parseFloat(data.va) - whole;
-  const value = `${whole}.${`${parseInt(rest * 100)}00`.slice(0, 2)}`;
+  // const whole = parseInt(data.va);
+  // const rest = parseFloat(data.va) - whole;
+  const value = Number(data.va).toFixed(2); // `${whole}.${`${parseInt(rest * 100)}00`.slice(0, 2)}`;
 
   const classList = ["Bet"];
 

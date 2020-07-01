@@ -11,15 +11,15 @@ const Time = (props) => {
       "MM'"
     );
   }
-
+  // console.log(props.eventStatus.c.mtT);
   if (props.eventStatus && props.eventStatus.c) {
     //console.log("time",props.idEvent, props.eventStatus);
-    printDatchTime = props.eventStatus.c.mtT?.split(":")[0] + "'";
+    printDatchTime =
+      parseInt(props.eventStatus.c.mtT?.split(":")[0], 10) + 1  + "'";
   }
 
   return (
     <span className="live-match-time">
-      {" "}
       {printDatchTime === "00'" ? "HT" : printDatchTime}
     </span>
   );

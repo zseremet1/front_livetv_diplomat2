@@ -37,7 +37,7 @@ const BetsHorizontal = (props) => {
   const { bets } = props.spEvent;
   Object.values(bets).forEach((odd) => {
     const { idBt, red, odds, spec, idmSt } = odd;
-    // if(idmSt !== 1 && idmSt !== 6) return;
+    //  if(idmSt !== 1 && idmSt !== 6) return;  //koment-nknd
     betsRows[red][MarketOrder.indexOf(idBt) + 1] = odds.map((odd) => ({
       ...odd,
       idmSt,
@@ -55,8 +55,10 @@ const BetsHorizontal = (props) => {
             2: betsRows[2][index + 1],
             3: betsRows[3][index + 1],
           }}
+
           market={props.market[MarketOrder[index]]}
           sport={props.sport}
+          
           spec={{
             1: specRows[1][index + 1],
             2: specRows[2][index + 1],
