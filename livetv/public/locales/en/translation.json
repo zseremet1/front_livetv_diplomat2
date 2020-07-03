@@ -1,0 +1,6 @@
+{
+    "title": "Welcome to react using react-i18next",
+    "example1": "To get started, edit {{name}} and save to reload.",
+    "exampleText2": "Switch language between english and german using buttons above."
+    
+}

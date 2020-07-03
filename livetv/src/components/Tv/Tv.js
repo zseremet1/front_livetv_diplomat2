@@ -3,8 +3,17 @@ import { useLive } from "../../hooks/useLive";
 import Header from "./Header/Header";
 import Match from "./Match-ref/Match";
 
+//import hook for translate
+import { useTranslation } from "react-i18next";
+
 const Tv = (props) => {
   const [liveState] = useLive();
+
+  //initialize hook for translate
+  const { t } = useTranslation();
+  //example translate
+  console.log("primjer1", t("title"));
+  console.log("primjer1", t("example1", { name: "Stanko" }));
 
   const { spEvents = [], sports } = liveState;
 
@@ -13,7 +22,7 @@ const Tv = (props) => {
   const eventsBySport = {};
 
   spEvents.forEach((ev) => {
-  //  if (Object.keys(ev.eventStatus).length === 2 ) return ;
+    //  if (Object.keys(ev.eventStatus).length === 2 ) return ;
     if (!eventsBySport[ev.idSport]) {
       eventsBySport[ev.idSport] = [];
     }

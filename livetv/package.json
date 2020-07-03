@@ -7,10 +7,13 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "i18next": "^19.5.3",
+    "i18next-http-backend": "^1.0.16",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-i18next": "^11.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
@@ -19,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format" : "prettier --write **/*.js",
+    "format": "prettier --write **/*.js",
     "format:watch": "nodemon -w . -x npm run format"
   },
   "eslintConfig": {

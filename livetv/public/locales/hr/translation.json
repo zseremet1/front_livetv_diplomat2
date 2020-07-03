@@ -1,0 +1,6 @@
+{
+  "title": "Dobro došli, koristite react-i18next",
+  "example1": "Ovo je primjer varijable {{name}} u tekstu.",
+  "exampleText2": "Naziv ključeva je na engleskom, camil case"
+   
+  }
