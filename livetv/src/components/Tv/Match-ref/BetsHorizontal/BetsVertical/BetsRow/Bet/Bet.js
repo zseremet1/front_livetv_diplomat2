@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Bet.scss";
 
 const Bet = (props) => {
-  const { data, sport, market } = props;
+  const { data /* sport, market*/ } = props;
   const [prevVal, setPrevVal] = useState([0, 0, 0]);
 
   if (prevVal[1] !== 0 && Date.now() - prevVal[2] > 2000) {

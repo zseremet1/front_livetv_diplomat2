@@ -1,6 +1,13 @@
 .BetsVertical{
-    display: flex;
+    // display: flex;
     flex: 1 ;
     flex-direction: column;
     border-right: 1px solid #daa520;
+
+    &.sport6
+    {
+        border-right: 1px solid #e68e5b;
+
+    }
+   
 }

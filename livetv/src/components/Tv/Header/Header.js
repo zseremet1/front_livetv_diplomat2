@@ -25,13 +25,13 @@ const Header = (props) => {
     }));
 
   return (
-    <div className={["column",sport.Name].join(" ")}>
-      <span className={["code",sport.Name].join(" ")}>Šifra</span>
-      <span className={["header-image", sport.Name].join(" ")} />
+    <div className={["column", `sport${sport.ID}`].join(" ")}>
+      <span className={["code", `sport${sport.ID}`].join(" ")}>Šifra</span>
+      <span className={["header-image", `sport${sport.ID}`].join(" ")} />
       {MarketVals.slice(0, 5).map((market) => (
         <div key={market.id}>
-          <MarketName {...market} />
-          <TextMarket idtip={market.idtip} market={market} />
+          <MarketName {...market} sportId={sport.ID} />
+          <TextMarket idtip={market.idtip} market={market} sportId={sport.ID} />
         </div>
       ))}
     </div>

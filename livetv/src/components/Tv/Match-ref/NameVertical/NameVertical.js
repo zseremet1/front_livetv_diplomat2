@@ -2,7 +2,7 @@ import React from "react";
 import "./NameVertical.scss";
 import "../../SportScss/Tenis.scss";
 
-const NameHorisontal = (props) => {
+const NameVertical = (props) => {
   //    let sportClass = null;
 
   //    switch(props.sports)
@@ -11,15 +11,33 @@ const NameHorisontal = (props) => {
 
   return (
     <div className="live-name-v">
-      <div className="live-name-v__team">
+      <div
+        className="live-name-v__timer"
+        style={{ display: props.spEvent.idSport === 3 ? "flex" : "none" }}
+      >
+        {`${props.spEvent.eventStatus?.c?.mtT.split(":")[0]}'`}
+      </div>
+      <div className={["live-name-v__team", `sport${props.sportId}`].join(" ")}>
         <div>
-          <div className="live-name-v__home">{props.spEvent.homeTeam}</div>
-          <div className="live-name-v__away">{props.spEvent.awayTeam}</div>
+          <div
+            className={["live-name-v__home", `sport${props.sportId}`].join(" ")}
+          >
+            {props.spEvent.homeTeam}
+          </div>
+          <div
+            className={["live-name-v__away", `sport${props.sportId}`].join(" ")}
+          >
+            {props.spEvent.awayTeam}
+          </div>
         </div>
       </div>
-      <div className="live-name-v__result">{props.children}</div>
+      <div
+        className={["live-name-v__result", `sport${props.sportId}`].join(" ")}
+      >
+        {props.children}
+      </div>
     </div>
   );
 };
 
-export default NameHorisontal;
+export default NameVertical;

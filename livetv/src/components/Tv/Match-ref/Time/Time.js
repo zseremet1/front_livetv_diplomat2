@@ -15,11 +15,10 @@ const Time = (props) => {
   if (props.eventStatus && props.eventStatus.c) {
     //console.log("time",props.idEvent, props.eventStatus);
     printDatchTime =
-      parseInt(props.eventStatus.c.mtT?.split(":")[0], 10) + 1  + "'";
+      parseInt(props.eventStatus.c.mtT?.split(":")[0], 10) + 1 + "'";
   }
-
   return (
-    <span className="live-match-time">
+    <span className={["live-match-time", `sport${props.sportId}`].join(" ")}>
       {printDatchTime === "00'" ? "HT" : printDatchTime}
     </span>
   );

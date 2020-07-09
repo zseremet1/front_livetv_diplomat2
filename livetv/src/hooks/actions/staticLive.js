@@ -1,4 +1,5 @@
 import { initStore } from "../useLive";
+
 const configureStore = () => {
   const actions = {
     /*akcija*/ ADD_STATIC_LIVE: (curState, newMarkets) => {

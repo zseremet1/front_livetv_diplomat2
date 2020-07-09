@@ -11,7 +11,11 @@
     overflow: hidden;
     background-color: #fff;
     padding: 1px 1px 1px 0;
-      
+    &.s2{
+        width: 33%;
+        border-bottom: 1px solid #406a23;
+
+    }
 }
 // .live-match__hov:nth-child(2n) .Bet {
 //           background-color: #404040;

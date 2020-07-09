@@ -9,6 +9,49 @@
 .live-match__hov{
     display: flex;
 }
+.live-match__hov.sport6 .live-match__name::after
+{
+    position: absolute;
+    content: "";
+    display: flex;
+    left:2% ;
+    right: 0;
+    top: 49%;
+    height: 0;
+    // width: 100%;
+    border-top: 2px solid #a16440;
+}
+
+// .live-match__hov.sport3 
+// {
+//     background-color: rebeccapurple;
+// } 
+
+.live-match__hov.sport3 .live-match__name::after
+{
+    position: absolute;
+    content: "";
+    display: flex;
+    left:2% ;
+    right: 0;
+    top: 35%;
+    height: 0;
+    // width: 100%;
+    border-top: 2px solid #a16440;
+
+}
+.live-match__name.sport3 .live-name-v__result
+{
+    width: 25.897%;
+    flex-grow: 1;
+    color: #fff5d9;
+}
+
+.live-match__name.sport3 .live-name-v__team
+{
+    width: 45%;
+}
+
 
 
 
@@ -17,12 +60,41 @@
     background-color: #1a2a0e;
     border-right: 1px solid #daa520;
     border-bottom: 1px solid #406a23;
+
+    &.sport6{
+        background-color: #5c3924;
+    border-bottom: 2px solid #e68e5b;
+    border-top: 1px solid #e68e5b;
+    }
+    
+    &.sport3{
+        background-color: #5c3924;
+    border-bottom: 2px solid #e68e5b;
+    border-top: 1px solid #e68e5b;
+    }
 }
 .live-match__hov:nth-child(2n+1)
 {
     background-color: #264015;
     border-right: 1px solid #daa520;
     border-bottom: 1px solid #406a23;
+     
+    &.sport6
+    {
+        background-color: #8a5537;
+        border-right: 1px solid #daa520;
+        border-bottom: 2px solid #e68e5b;
+        border-top: 1px solid #e68e5b;
+    }
+    &.sport3
+    {
+        background-color: #8a5537;
+        border-right: 1px solid #daa520;
+        border-bottom: 2px solid #e68e5b;
+        border-top: 1px solid #e68e5b;
+    }
+
+
 }
 
 .live-match
@@ -30,13 +102,38 @@
     display: flex;
     width: 26.60%;
     border-right: 1px solid #daa520;
+   &.gool .live-match__name.sport2{
+       animation: pulse-red 5s
+   }
+}
+
+@keyframes pulse-red{
+    0%,40%, 80%{
+        background-color: rgba(200,50,50,0.5);
+    }
+    20%,60%,100%{
+        background-color: rgba(200,50,50,1);
+    }
 }
 
 .live-match__name{
     flex: 1;
     position: relative;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: row; 
+}
+
+.ico-card-red,.ico-card-red-double{
+    background-color: red;
+    height: 16px;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.ico-card-red::after{
+    content: "1";
+}
+.ico-card-red-double::after{
+    content: "2";
 }
 
 .live-match-timer

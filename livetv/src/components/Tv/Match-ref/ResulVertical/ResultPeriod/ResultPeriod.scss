@@ -17,26 +17,38 @@
   }
   &.size12 {
     width: 12px;
+
   }
   &::after{
     content: "";
     display: block;
     position: absolute;
-    height: 30%;
-    top: 35%;
+    height: 28%;
+    top: 37%;
     right: 0;
-    width: 2.5px;
-    background-color: #fff;
+    width: 2.3px;
+    background-color: #a16440;;
   }
+
+  // &.sport3::after{ join kasnije
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   height: 28%;
+  //   top: 37%;
+  //   right: 0;
+  //   width: 2.3px;
+  //   background-color:red;
+  // }
 }
 
 .live-result-period__val {
   margin: 1px;
   padding: 2px 0;
 
-  // &.wlost{
-  //     color: $light-color-typography-dimmed;
-  // }
+  &.wlost &.wcurrent{
+  border-bottom: 1px solid black;    
+  }
 
   .wgrass &.wcurrent {
     color: $sports-global-grass;

@@ -1,6 +1,5 @@
 import { initStore } from "../useLive";
 import { mapEvent } from "../functions/mapEvent";
-import { UPDATE_MESSAGES } from "./actionTypes";
 
 const configureStore = () => {
   const actions = {
@@ -13,7 +12,7 @@ const configureStore = () => {
       if (data.events)
         data.events.forEach((el) => {
           let element = mapEvent(el);
-
+          console.log("data.events", data.events);
           // da li postoji par
           const indExist = returnEvents.findIndex(
             (p) => p.idEvent === element.idEvent
@@ -43,22 +42,22 @@ const configureStore = () => {
           }
         });
 
-      // // //update parovi - klađenja
-      // // if (data.updateEvents)
-      // //   data.updateEvents.forEach((el) => {
-      // //     // da li postoji par
-      // //     const indExist = returnEvents.findIndex(
-      // //       (p) => p.idEvent === el.idEvent
-      // //     );
-      // //     // console.log("updateEvents",el, indExist);
-      // //     if (indExist > -1) {
-      // //       returnEvents[indExist].bets = {
-      // //         ...returnEvents[indExist].bets,
-      // //         ...el.bets,
-      // //       };
-      // //     } else {
-      // //     }
-      // //   });
+      //update parovi - klađenja
+      if (data.updateEvents)
+        data.updateEvents.forEach((el) => {
+          // da li postoji par
+          const indExist = returnEvents.findIndex(
+            (p) => p.idEvent === el.idEvent
+          );
+          // console.log("updateEvents",el, indExist);
+          if (indExist > -1) {
+            returnEvents[indExist].bets = {
+              ...returnEvents[indExist].bets,
+              ...el.bets,
+            };
+          } else {
+          }
+        });
 
       return {
         spEvents: returnEvents,
@@ -84,7 +83,6 @@ const configureStore = () => {
           (element.event_int_status && ~~element.event_int_status === 2)
         ) {
           console.log("removed event", element);
-
           // da li postoji par
           const indExistEvent = returnEvents.findIndex(
             (p) => p.idEvent === element.idEvent
@@ -224,17 +222,6 @@ const configureStore = () => {
 
     //   return { spEvents: returnEvents };
     // },
-    UPDATE_MESSAGES: (curState, { messages: newMessages }) => {
-      const { spEvents } = curState;
-      // console.log("newMessages", newMessages);
-      const eventsIds = spEvents.map((ev) => Number(ev.idEvent));
-
-      const messages = newMessages
-        .filter((m) => m["1"])
-        .map((m) => m["1"])
-        .filter((m) => eventsIds.includes(m.idEvent));
-      // console.log("MESSAGES", messages);
-    },
   };
   initStore(actions, { spEvents: [] });
 };

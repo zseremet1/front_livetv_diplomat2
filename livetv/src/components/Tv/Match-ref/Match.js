@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Match.scss";
 import Time from "./Time/Time";
 import NameHorizontal from "./NameHorizontal/NameHorizontal";
@@ -10,7 +10,38 @@ import BetsHorizontal from "./BetsHorizontal/BetsHorizontal";
 // import Icon from "../UI/Icon/Icon";
 
 const Match = (props) => {
+  const [result, setResult] = useState({ hSc: null, aSc: null, goal: 0 });
+  if (result.hsc === null || result.aSc === null) {
+    setResult({
+      aSc: props.spEvent.eventStatus.aSc,
+      hSc: props.spEvent.eventStatus.hSc,
+      goal: 0,
+    });
+  }
+  if (
+    result.hSc !== null &&
+    (props.spEvent.eventStatus.aSc !== result.aSc ||
+      props.spEvent.eventStatus.hSc !== result.hSc)
+  ) {
+    setTimeout(() => {
+      setResult({
+        aSc: props.spEvent.eventStatus.aSc,
+        hSc: props.spEvent.eventStatus.hSc,
+        goal: 0,
+      });
+    }, 5 * 1000);
+
+    setResult({
+      aSc: props.spEvent.eventStatus.aSc,
+      hSc: props.spEvent.eventStatus.hSc,
+      goal: Date.now() + 1000 * 5,
+    });
+  }
   const mainClassName = ["live-match"];
+
+  if (Date.now() - result.goal < 0 && props.sport.ID === 2) {
+    mainClassName.push("gool");
+  }
   //console.log(props.spEvent);
   // console.log("MATCH::props length", JSON.stringify(props).length);
   // const matchExpandHandler = (idEvent) => {
@@ -18,8 +49,18 @@ const Match = (props) => {
   // };
 
   const extraCode = [];
-  if (props.spEvent.idSport === 2 || props.spEvent.idSport === 6) {
+  const extraCodes = [];
+  if (
+    props.spEvent.idSport === 2 ||
+    props.spEvent.idSport === 6 ||
+    props.spEvent.idSport === 2 ||
+    props.spEvent.idSport === 3 ||
+    props.spEvent.idSport === 18
+  ) {
     extraCode.push("A");
+  }
+  if (props.spEvent.idSport === 3) {
+    extraCodes.push("B");
   }
 
   let firstBet;
@@ -42,7 +83,7 @@ const Match = (props) => {
       }
     });
   }
-console.log("(props.spEvent.bets",props.spEvent.bets);
+  // console.log("(props.spEvent.bets",props.spEvent.bets);
   // let cssFavorite = ["live-match__favorit"];
   // if (props.spEvent.favorite === true) {
   //   cssFavorite.push("active");
@@ -50,13 +91,18 @@ console.log("(props.spEvent.bets",props.spEvent.bets);
 
   return (
     <div
-      className={["live-match__hov", props.sport.Name].join(" ")}
+      className={["live-match__hov", `sport${props.sport.ID}`].join(" ")}
       title={props.spEvent.idEvent}
     >
       {/* <div className= "CodeRowComponent">41 </div> */}
 
       <div className={mainClassName.join(" ")}>
-        <Code sif={props.spEvent.sifra} showExtra={extraCode} />
+        <Code
+          sif={props.spEvent.sifra}
+          showExtra={extraCode}
+          showExtraC={extraCodes}
+          sportId={props.sport.ID}
+        />
         {/* <Time
           idEvent={props.spEvent.idEvent}
           eventStatus={props.spEvent.eventStatus}
@@ -73,7 +119,10 @@ console.log("(props.spEvent.bets",props.spEvent.bets);
             <Icon name="ico-star-outline"></Icon>
           )} */}
         {/* </div> */}
-        <div className="live-match__name">
+
+        <div
+          className={["live-match__name", `sport${props.sport.ID}`].join(" ")}
+        >
           {props.sport.horisontal ? (
             <Time
               idEvent={props.spEvent.idEvent}
@@ -95,10 +144,12 @@ console.log("(props.spEvent.bets",props.spEvent.bets);
               <ResultHorisontal eventStatus={props.spEvent.eventStatus} />
             </NameHorizontal>
           ) : (
-            <div className=""></div>
+            <div />
           )}
         </div>
-        <div className="live-match__stream">
+        <div
+          className={["live-match__stream", `sport${props.sport.ID}`].join(" ")}
+        >
           {props.spEvent.eventStatus ? (
             <div>
               <span className="live-match__status">
@@ -110,6 +161,7 @@ console.log("(props.spEvent.bets",props.spEvent.bets);
         <div className="live-match__odd">
           <BetShort
             internalBetStop={
+              //ako je vece 0 internal status se brise ako je 2
               ~~props.spEvent.event_int_status > 0 ? true : false
             }
             bet={firstBet}

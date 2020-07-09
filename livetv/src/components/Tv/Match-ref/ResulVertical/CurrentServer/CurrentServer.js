@@ -1,7 +1,7 @@
 import React from "react";
 import "./CurrentServer.scss";
 // import {Icon} from '../../../../UI';
-import Ball from "../Ball/Ball";
+// import Ball from "../Ball/Ball";
 
 const CurrentServer = (props) => {
   return (

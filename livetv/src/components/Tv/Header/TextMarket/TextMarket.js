@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./TextMarket.scss";
 
 const TextMarket = (props) => {
@@ -48,10 +48,10 @@ const TextMarket = (props) => {
   //     break;
   // }
   return (
-    <div className="text-market">
+    <div className={["text-market", `sport${props.sportId}`].join(" ")}>
       {possTyp.map((tip, index) => (
         <span
-          className="number-tips"
+          className={["number-tips", `sport${props.sportId}`].join(" ")}
           key={index}
           style={{ flex: flexPadding[index] }}
         >

@@ -9,18 +9,18 @@ const ResultHorisontal = (props) => {
     let countHomeRedCard =
       props.eventStatus.stat.rCa.h + props.eventStatus.stat.yrCa.h;
     if (countHomeRedCard > 0) {
-      HomeRedCard = <div name="ico-card-red" />;
+      HomeRedCard = <div className="ico-card-red" />;
       if (countHomeRedCard > 1) {
-        HomeRedCard = <div name="ico-card-red-double" />;
+        HomeRedCard = <div className="ico-card-red-double" />;
       }
     }
 
     let countAwayRedCard =
       props.eventStatus.stat.rCa.a + props.eventStatus.stat.yrCa.a;
     if (countAwayRedCard > 0) {
-      AwayRedCard = <div name="ico-card-red" />;
+      AwayRedCard = <div className="ico-card-red" />;
       if (countAwayRedCard > 1) {
-        AwayRedCard = <div name="ico-card-red-double" />;
+        AwayRedCard = <div className="ico-card-red-double" />;
       }
     }
   }

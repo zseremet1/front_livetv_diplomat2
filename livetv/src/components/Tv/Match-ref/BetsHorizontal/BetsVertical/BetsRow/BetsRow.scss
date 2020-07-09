@@ -3,12 +3,28 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    // border-right: 1px solid #daa520;
-    /*border-right: 1px solid #daa520;*/
     padding-top:4px;
-    // border-bottom: 2px solid #e0f900;
-    //ovdje rijesiti ove linije 
+    &.sport6
+    {
+        border-bottom: 1px solid #e68E5B;
+        padding: 2.5px 4px 1px 3px;
 
+
+    }
+    &.sport2{
+        
+        border-bottom: 1px solid #406a23;
+        padding: 2.5px 4px 1px 3px;
+    }
+    &.sport3
+    {
+        border-bottom: 1px solid #e68E5B;
+        border-bottom: none;
+        border-top: 1px solid #e68E5B;
+        padding: 2.5px 4px 1px 3px;
+
+
+    }
 }
 
  .live-match__hov:nth-child(2n) .BetsRow .Bet{
@@ -30,7 +46,7 @@
     overflow: hidden;
     padding: 1px 1px 1px 0;
     background-color:#e0f900 ;
-    font-size: 0.9375rem;
+    font-size: 0.92rem;
 
 
 }
