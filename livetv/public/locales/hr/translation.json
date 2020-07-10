@@ -1,6 +1,26 @@
 {
   "title": "Dobro došli, koristite react-i18next",
   "example1": "Ovo je primjer varijable {{name}} u tekstu.",
-  "exampleText2": "Naziv ključeva je na engleskom, camil case"
-   
+  "exampleText2": "Naziv ključeva je na engleskom, camil case",
+  "name" :"Ovo je ime od kljuca ime {{name}}",
+  "soccer95" : "Regularno vrijeme",
+   "soccer845":"Ishod ostatka meča",
+   "soccer651":"Tko postiže X gol",
+   "soccer97":"Zbroj golova",
+   "soccer3":"Oba tima daju gol...",
+  "basketball122":"Regular time 1 X 2",
+  "basketball900":"Who gets to the X points first?",
+  "basketball103":"Handicap (Multi)",
+  "basketball367":"Total Points (Multi)",
+  "baskteball891":"Number of points of the home team  ",
+  "tenis170":"Pobjednik",
+  "tenis831":"Set - ishod X i Y gema",
+  "tenis832":"Set - pobjednik X gema",
+  "tenis666":"Set - zbroj gemova",
+  "tenis174":"Zbroj gemova",
+  "tenis2":"{{n}}-{{m}}g {{Q}}.set",
+    "tenis3":"{{n}}.g/{{Q}}.s",
+    "tenis4":"{{n}}/{{Q}}.s",
+  "ngol": "{{n}} gol",
+  "goalnr.gol" :"{{gol}}.gol"
   }

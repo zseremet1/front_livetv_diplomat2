@@ -2,8 +2,11 @@ import React from "react";
 import "./BetsRow.scss";
 import Bet from "./Bet/Bet";
 import { mapMarketSpecifier } from "../../../../../../hooks/functions/mapMarketSpecifier";
+import { useTranslation } from "react-i18next";
 
 const BetsRow = (props) => {
+  const [t] = useTranslation();
+
   const { red: redData, sport, market, spec } = props;
 
   // generisemo red
@@ -19,7 +22,42 @@ const BetsRow = (props) => {
 
   // sredujemo spec
   let specBet;
-  if (spec.length) {
+  let specVal = spec.length
+    ? Object.fromEntries(spec.split("|").map((x) => x.split("=")))
+    : {};
+
+  /*nogomet*/
+  if (market.id === 651) {
+    specBet = t("ngol", { n: specVal.goalnr });
+  } else if (market.id === 652) {
+    specBet = t("ngol", { n: specVal.goalnr });
+  }
+  /*tenis*/
+  if (market.id === 831) {
+    specBet = t("tenis2", {
+      n: specVal.gamenrX,
+      m: specVal.gamenrY,
+      Q: specVal.setnr,
+    });
+   
+  }
+  if (market.id === 832) {
+    specBet = t("tenis3", {
+      n: specVal.gamenr,
+      Q: specVal.setnr,
+    });
+  }
+
+  if (market.id === 666) {
+    specBet = t("tenis4", {
+      n: specVal.total,
+      Q: specVal.setnr,
+    });
+  }
+
+
+
+  if (spec.length && !specBet) {
     specBet = mapMarketSpecifier(market.nps, spec);
   }
   // if(sport.ID === 6 && red === 1)

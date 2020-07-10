@@ -12,9 +12,9 @@ const Tv = (props) => {
   //initialize hook for translate
   const { t } = useTranslation();
   //example translate
-  console.log("primjer1", t("title"));
-  console.log("primjer1", t("example1", { name: "Stanko" }));
-
+  // console.log("primjer1", t("title"));
+  // console.log("primjer1", t("example1", { name: "Stanko" }));
+  // console.log("Primjer 3", t('name',{name: "hahu"}));
   const { spEvents = [], sports } = liveState;
 
   if ((sports && sports.length === 0) || !sports) return null;
