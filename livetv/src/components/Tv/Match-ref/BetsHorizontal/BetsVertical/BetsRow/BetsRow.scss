@@ -1,9 +1,15 @@
 .BetsRow{
-    flex: 1;
+    // flex: 1;
+    // display: flex;
+    // flex-wrap: nowrap;
+    // width: 100%;
+    // padding-top:4px;
+
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-end;
     width: 100%;
-    padding-top:4px;
+
     border-bottom: 1px solid grey;
  
     &.sport25
@@ -49,27 +55,46 @@
     }
 }
 
-.live-match__hov:nth-child(2n) .BetsRow .Bet {
-       background-color: #404040;  
+.live-match__hov:nth-child(2n) .BetsRow .Bet .bet-odd-value{
+      
+        background-color: #404040;  
        color: #fff5d9;
+
+
   }
 
 .BetSpec
 {
+    // text-align: center;
+    // width: 30%;
+    // height: 4%;
+    // margin: 0 auto;
+    // float: left;
+    // display: table;
+    // justify-content: center;
+    // align-items: center;
+    // overflow: hidden;
+    // padding: 1px 1px 1px 0;
+    // background-color:#e0f900 ;
+    // font-size: 0.9111rem;
+
     text-align: center;
-    width: 30%;
-    height: 4%;
-    /* margin: 0 0.6%; */
-    margin: 0 auto;
-    float: left;
-    display: table;
-    justify-content: center;
+    white-space: nowrap;
     align-items: center;
-    overflow: hidden;
-    padding: 1px 1px 1px 0;
-    background-color:#e0f900 ;
     font-size: 0.9111rem;
+    width: 33.33%;
 
-
+    .four-items &{
+        width: 25%;
+    }
+    .five-items &{
+        width: 20%;
+    }
+    
+    & .bet-spec-value{
+        margin: 1px;
+    background-color: #e0f900;
+    padding: 0 1px;
+}
 }
 

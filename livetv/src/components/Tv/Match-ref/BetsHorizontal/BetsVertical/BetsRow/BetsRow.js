@@ -10,6 +10,9 @@ const BetsRow = (props) => {
   const { red: redData, sport, market, spec } = props;
 
   // generisemo red
+
+  //vrte se svi mogući tipovi i pune kvote za taj tip
+  //ako nema kvote za taj tip puni se prazna kućica
   const red = redData.map((red, index) => (
     <Bet key={index} data={red} sport={sport} market={market} />
   ));
@@ -75,7 +78,7 @@ const BetsRow = (props) => {
   if (specBet) {
     red.unshift(
       <div className="BetSpec" key={-1}>
-        {specBet}
+       <div className="bet-spec-value"> {specBet}</div>
       </div>
     );
   } else if (red.length === 2) {

@@ -47,8 +47,10 @@ const Bet = (props) => {
 
   return (
     <div className={classList.join(" ")}>
+      <div className="bet-odd-value">
       {arrow}
       {value}
+      </div>
     </div>
   );
 };
