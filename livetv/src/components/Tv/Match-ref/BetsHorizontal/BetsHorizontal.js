@@ -42,13 +42,19 @@ const BetsHorizontal = (props) => {
     //   console.log(props.sport.Name, props.spEvent.awayTeam,odd  )
     // }
     // console.log(MarketOrder, idBt)
+    // const pozId = MarketOrder[red].indexOf(idBt) + 1;
+    const pozId = Object.values(props.market).find((m) => m.id === idBt).pozId;
+    // console.log()
 
-    betsRows[red][MarketOrder[red].indexOf(idBt) + 1] = odds.map((odd) => ({
+    betsRows[red][pozId] = odds.map((odd) => ({
       ...odd,
+      idBt,
       idmSt,
     }));
-    specRows[red][MarketOrder[red].indexOf(idBt) + 1] = spec;
+    specRows[red][pozId] = spec;
   });
+
+  // console.log(props.market, betsRows);
 
   // console.log(props.sport.Name, props.spEvent.awayTeam,betsRows  )
   // console.log(MarketOrder)
@@ -63,9 +69,15 @@ const BetsHorizontal = (props) => {
             3: betsRows[3][index + 1],
           }}
           market={[
-            props.market[MarketOrder[1][index]],
-            props.market[MarketOrder[2][index]],
-            props.market[MarketOrder[3][index]],
+            Object.values(props.market).find(
+              (m) => m.id === betsRows[1][index + 1][0]?.idBt
+            ),
+            Object.values(props.market).find(
+              (m) => m.id === betsRows[2][index + 1][0]?.idBt
+            ),
+            Object.values(props.market).find(
+              (m) => m.id === betsRows[3][index + 1][0]?.idBt
+            ),
           ]}
           sport={props.sport}
           spec={{

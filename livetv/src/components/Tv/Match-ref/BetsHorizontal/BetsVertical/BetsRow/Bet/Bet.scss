@@ -11,9 +11,9 @@
     overflow: hidden;
     background-color: #fff;
     padding: 1px 1px 1px 0;
-    &.s2{
+    &.sport2{
         width: 33%;
-        border-bottom: 1px solid #406a23;
+        // border-bottom: 1px solid #406a23;
 
     }
 }
@@ -23,27 +23,31 @@
 //      }
 .Bet.hide{
     color: transparent;
+    color: none;
 }
 
-.Bet.grey{
-    color: #4c4c4c;
-}
 
-.Bet.redArrow{
-    --bgc: red;
-    animation: bgc 2s both;
-}
+ .Bet.yellow{
+    //  background-color: red;
+     color: grey;
+ }
 
-.Bet.greenArrow{
-    --bgc: green;
-    animation: bgc 2s both;
-}
 
-@keyframes bgc {
-    0%, 99%{
-        background-color: var(--bgc);
+ .Bet.ico-tri-down{
+    color: red;
+    animation: color 2s both;
+ 
+ .Bet.ico-tri-up{
+     color: green;
+     animation: color 2s both;
+ }
+
+ @keyframes bgc {
+     0%, 99%{
+         background-color: var(color);
+     }
+     100%{
+         // background-color: #fff;
+     }
     }
-    100%{
-        // background-color: #fff;
-    }
-}
+ }

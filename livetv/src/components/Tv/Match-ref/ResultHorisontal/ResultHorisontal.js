@@ -1,6 +1,7 @@
 import React from "react";
 import "./ResultHorisontal.scss";
-// import { Icon } from "../../../UI";
+import Ico from "../../UI/Icon/Icon";
+import Icon from "../../UI/Icon/Icon";
 
 const ResultHorisontal = (props) => {
   let HomeRedCard = null;
@@ -9,18 +10,18 @@ const ResultHorisontal = (props) => {
     let countHomeRedCard =
       props.eventStatus.stat.rCa.h + props.eventStatus.stat.yrCa.h;
     if (countHomeRedCard > 0) {
-      HomeRedCard = <div className="ico-card-red" />;
+      HomeRedCard = <Ico name="ico-card-red" />;
       if (countHomeRedCard > 1) {
-        HomeRedCard = <div className="ico-card-red-double" />;
+        HomeRedCard = <Ico name="ico-card-red-double" />;
       }
     }
 
     let countAwayRedCard =
       props.eventStatus.stat.rCa.a + props.eventStatus.stat.yrCa.a;
     if (countAwayRedCard > 0) {
-      AwayRedCard = <div className="ico-card-red" />;
+      AwayRedCard = <Ico name="ico-card-red" />;
       if (countAwayRedCard > 1) {
-        AwayRedCard = <div className="ico-card-red-double" />;
+        AwayRedCard = <Ico name="ico-card-red-double" />;
       }
     }
   }

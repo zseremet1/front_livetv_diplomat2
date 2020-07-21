@@ -71,8 +71,8 @@ const configureStore = () => {
 
       data.forEach((element) => {
         let removed = false;
-
-        // miči par ako je završio
+        //testing
+        // miči par ako je završio  
         //event_int_status - internal status, 2 - micanje meča, 1 - betstop
         //nazivi da budu slicni sto slicniji
 
@@ -80,9 +80,10 @@ const configureStore = () => {
           (element.eventStatus &&
             element.eventStatus.st &&
             ~~element.eventStatus.st > 1) ||
-          (element.event_int_status && ~~element.event_int_status === 2)
+          (element.event_int_status && ~~element.event_int_status === 2) ||
+          element.forceRemoveEvent
         ) {
-          console.log("removed event", element);
+          console.log("removed event", element, returnEvents);
           // da li postoji par
           const indExistEvent = returnEvents.findIndex(
             (p) => p.idEvent === element.idEvent
@@ -134,12 +135,16 @@ const configureStore = () => {
                 });
               }
             } else if (element.bets) {
-              // console.log(element.idEvent,element.bets);
+              //EDO console.log(element.idEvent, element.bets);
               //TODO ako je marketstatus <> 1,6 tada treba brisati klađenje iz para
-              returnEvents[indExist].bets = {
-                ...returnEvents[indExist].bets,
-                ...element.bets,
-              };
+              returnEvents[indExist].bets = Object.fromEntries(        //testing
+                Object.values({
+                  ...returnEvents[indExist].bets,
+                  ...element.bets,
+                })
+                  .map((oklada) => ([1, 6].includes(oklada.idmSt) ? [oklada.id, oklada] : null))
+                  .filter((oklada) => !!oklada)
+              );
             } else {
               returnEvents[indExist] = {
                 ...returnEvents[indExist],

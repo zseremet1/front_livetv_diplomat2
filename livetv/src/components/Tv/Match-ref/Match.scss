@@ -9,8 +9,92 @@
 .live-match__hov{
     display: flex;
 }
-.live-match__hov.sport6 .live-match__name::after
+
+.live-match__hov .live-match__name::after
 {
+    // position: absolute;
+    // content: "";
+    // display: flex;
+    // left:2% ;
+    // right: 0;
+    // top: 49%;
+    // height: 0;
+    // // width: 100%;
+    border-top: 2px solid white;
+}
+.live-match__hov.sport20  .live-match__name::after
+ {
+
+    position: absolute;
+    content: "";
+    display: flex;
+    left:2% ;
+    right: 0;
+    top: 49%;
+    height: 0;
+    // width: 100%;
+    border-top: 2px solid #426089;
+
+} 
+.live-match__hov.sport25  .live-match__name::after
+ {
+
+    position: absolute;
+    content: "";
+    display: flex;
+    left:2% ;
+    right: 0;
+    top: 49%;
+    height: 0;
+    // width: 100%;
+    border-top: 2px solid #606060;
+
+} 
+.live-match__hov.sport5  .live-match__name::after
+ {
+
+    position: absolute;
+    content: "";
+    display: flex;
+    left:2% ;
+    right: 0;
+    top: 49%;
+    height: 0;
+    // width: 100%;
+    border-top: 2px solid #426089;
+
+} 
+.live-match__hov.sport5  .live-match__name::after
+ {
+
+    position: absolute;
+    content: "";
+    display: flex;
+    left:2% ;
+    right: 0;
+    top: 49%;
+    height: 0;
+    // width: 100%;
+    border-top: 2px solid #426089;
+
+} 
+
+ .live-match__hov.sport6 .live-match__name::after
+ {
+     position: absolute;
+     content: "";
+     display: flex;
+     left:2% ;
+     right: 0;
+     top: 49%;
+     height: 0;
+     // width: 100%;
+     border-top: 2px solid #a16440;
+ }
+
+ .live-match__hov.sport3  .live-match__name::after
+ {
+
     position: absolute;
     content: "";
     display: flex;
@@ -20,12 +104,8 @@
     height: 0;
     // width: 100%;
     border-top: 2px solid #a16440;
-}
 
-// .live-match__hov.sport3 
-// {
-//     background-color: rebeccapurple;
-// } 
+} 
 
 .live-match__hov.sport3 .live-match__name::after
 {
@@ -57,28 +137,105 @@
 
 .live-match__hov:nth-child(2n)
 {
-    background-color: #1a2a0e;
+    background-color: #000;
     border-right: 1px solid #daa520;
-    border-bottom: 1px solid #406a23;
+     border-bottom: 1px solid #C0C0C0;
 
+
+    
+
+    /*za ostale sportove */
+
+    //  &.sport2
+    //  {
+    //      border-right: 1px solid #787878;
+    //      border-bottom: 1px solid #787878;
+    //      background-color: #000;
+    //  }
+
+
+    
+
+    &.sport25
+    {
+        width: 100%;
+        text-align: center;
+        flex: 1 1;
+        background-color: #5c422a;
+        border-bottom: 1px solid #e5a56a;
+        border-left: 1px solid #e5a56a;
+        border-right: 1px solid #e5a56a;
+        // border-top: 1px solid #426089;
+    }
+    &.sport5
+    {
+        width: 100%;
+        text-align: center;
+        flex: 1 1;
+        background-color: #1a2637;
+        border-bottom: 1px solid #426089;
+        border-left: 1px solid #426089;
+        border-right: 1px solid #426089;
+        // border-top: 1px solid #426089;
+    }
+    &.sport20
+    {
+        width: 100%;
+        text-align: center;
+        flex: 1 1;
+        background-color: #1a2637;
+        border-bottom: 1px solid #426089;
+        border-left: 1px solid #426089;
+        border-right: 1px solid #426089;
+        // border-top: 1px solid #426089;
+    }
     &.sport6{
         background-color: #5c3924;
     border-bottom: 2px solid #e68e5b;
     border-top: 1px solid #e68e5b;
     }
     
-    &.sport3{
-        background-color: #5c3924;
-    border-bottom: 2px solid #e68e5b;
-    border-top: 1px solid #e68e5b;
-    }
+     &.sport3{
+         background-color: #5c3924;
+     border-bottom: 2px solid #e68e5b;
+     border-top: 1px solid #e68e5b;
+     }
+     &.sport2
+     {
+         background-color: #1a2a0e;
+         border-right: 1px solid #daa520;
+         border-bottom: 1px solid #406a23;
+     }
 }
 .live-match__hov:nth-child(2n+1)
 {
-    background-color: #264015;
+    background-color: #808080;
     border-right: 1px solid #daa520;
-    border-bottom: 1px solid #406a23;
-     
+    border-bottom: 1px solid #C0C0C0;
+    &.sport25
+    {
+        width: 100%;
+        text-align: center;
+        flex: 1 1;
+        background-color: #956030;
+
+        border-bottom: 1px solid #e5a56a;
+        border-left: 1px solid #e5a56a;
+        border-right: 1px solid #e5a56a;
+        // border-top: 1px solid #426089;
+    }
+ 
+
+    &.sport20
+    {
+        background-color: #283a52;
+        border-bottom: 1px solid #426089;
+    }
+    &.sport5
+    {
+        background-color: #283a52;
+        border-bottom: 1px solid #426089;
+    }
     &.sport6
     {
         background-color: #8a5537;
@@ -86,13 +243,19 @@
         border-bottom: 2px solid #e68e5b;
         border-top: 1px solid #e68e5b;
     }
-    &.sport3
-    {
-        background-color: #8a5537;
-        border-right: 1px solid #daa520;
-        border-bottom: 2px solid #e68e5b;
-        border-top: 1px solid #e68e5b;
-    }
+     &.sport3
+     {
+         background-color: #8a5537;
+         border-right: 1px solid #daa520;
+         border-bottom: 2px solid #e68e5b;
+         border-top: 1px solid #e68e5b;
+     }
+     &.sport2
+     {
+         background-color: #264015;
+         border-right: 1px solid #daa520;
+         border-bottom: 1px solid #406a23;
+     }
 
 
 }
@@ -122,19 +285,21 @@
     flex-direction: row; 
 }
 
-.ico-card-red,.ico-card-red-double{
-    background-color: red;
-    height: 16px;
-    color: #fff;
-    font-size: 0.75rem;
-}
+// .ico-card-red,.ico-card-red-double{
+//     background-color: red;
+//     height: 16px;
+//     color: #fff;
+//     font-size: 0.75rem;
+    
+// }
 
-.ico-card-red::after{
-    content: "1";
-}
-.ico-card-red-double::after{
-    content: "2";
-}
+// .ico-card-red::after{
+//     content: "1";
+//     display: none;
+// }
+// .ico-card-red-double::after{
+//     content: "2";
+// }
 
 .live-match-timer
 {
@@ -153,10 +318,10 @@
 //     border: 2px solid #fff;
 // }
 
-.CodeRowComponent
-{
-    background-color: black;
-    border: 1px solid #57af46;
-    border-left: 1.5px solid #57af46;
-    border-top: none;
-}
+// .CodeRowComponent
+// {
+//     background-color: black;
+//     border: 1px solid #57af46;
+//     border-left: 1.5px solid #57af46;
+//     border-top: none;
+// }

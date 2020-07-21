@@ -93,6 +93,7 @@ const LiveFetch = (props) => {
                   ? {
                       ...ev.event,
                       sif: ev.sif,
+                      ek: ev.ek,
                       oddsBet: ev.oddsBet,
                     }
                   : null
@@ -124,7 +125,7 @@ const LiveFetch = (props) => {
       .post("messagesTv", postData)
       .then((response) => {
         let updateEvents = [];
-        let newEvents = [];
+        let newEvents = { events: [] };
         // console.log("postdata",postData)
         if (response.data.m) {
           console.log("response data", response.data.m);
@@ -140,14 +141,21 @@ const LiveFetch = (props) => {
 
                 // console.log("msgValue", msgValue);
                 break;
-              case "2": //new math
-                newEvents.push(msgValue);
+              case "2": //new match            //testing
+                newEvents.events.push({
+                  ...msgValue.event,
+                  ek: msgValue.ek,
+                  sif: msgValue.sif,
+                  oddsBet: msgValue.oddsBet,
+                });
+
+                // console.log("new Events", newEvents);
                 break;
 
               case "3": //update time match , matchs status
-                updateEvents.push(msgValue);
+                updateEvents.push(msgValue);  //testing
 
-                console.log("update", updateEvents);
+                // console.log("updateeeee", updateEvents);
 
                 break;
               case "4": //nove oklade
@@ -158,6 +166,8 @@ const LiveFetch = (props) => {
                   idEvent: parseInt(keyMatchOdd),
                   bets: tmpBet,
                 });
+
+                // console.log("keyMatchOdd",updateEvents) //testing
                 break;
 
               // case "5":
@@ -192,9 +202,17 @@ const LiveFetch = (props) => {
                 break;
               case "9":
                 updateEvents = [];
-                newEvents = [];
+                newEvents = { events: [] };
                 dispatch(actionTypes.CLEAR_MATCHES, true);
                 // dispatchBet(actionTypes.CLEAR_MATCHES, true);
+                break;
+              case "10":
+                if (msgValue.Ekran !== tv && tv !== "0") break;
+                updateEvents.push({
+                  ...msgValue,
+                  idEvent: msgValue.IDEvent,
+                  forceRemoveEvent: true,
+                });
                 break;
               default:
                 //nepoznat
@@ -215,7 +233,7 @@ const LiveFetch = (props) => {
         // })
         // console.log("Global state: ", liveState);
         // const { data } = response;
-        if (newEvents.length) {
+        if (newEvents.events.length) {
           dispatch(actionTypes.ADD_EVENTS, newEvents);
         }
         if (updateEvents.length) {

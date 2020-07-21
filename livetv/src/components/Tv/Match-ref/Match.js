@@ -55,7 +55,9 @@ const Match = (props) => {
     props.spEvent.idSport === 6 ||
     props.spEvent.idSport === 2 ||
     props.spEvent.idSport === 3 ||
-    props.spEvent.idSport === 18
+    props.spEvent.idSport === 20 ||
+    props.spEvent.idSport === 5 ||
+    props.spEvent.idSport === 25
   ) {
     extraCode.push("A");
   }
@@ -128,10 +130,11 @@ const Match = (props) => {
               idEvent={props.spEvent.idEvent}
               eventStatus={props.spEvent.eventStatus}
               time={props.spEvent.startTime ? props.spEvent.startTime : 0}
+              sportId={props.sport.ID}
             />
           ) : (
             <NameVertical spEvent={props.spEvent}>
-              <ResultVertical eventStatus={props.spEvent.eventStatus} />
+              <ResultVertical eventStatus={props.spEvent.eventStatus} sport={props.sport}/>
             </NameVertical>
           )}
 

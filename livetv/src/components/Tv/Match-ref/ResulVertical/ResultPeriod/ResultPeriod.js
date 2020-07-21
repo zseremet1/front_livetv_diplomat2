@@ -2,7 +2,7 @@ import React from "react";
 import "./ResultPeriod.scss";
 
 const ResultPeriod = (props) => {
-  let periodCss = ["live-result-period"];
+  let periodCss = ["live-result-period", `sport${props.sportId}`];
   periodCss.push("size20");
   let homeCss = ["live-result-period__val"];
   let awayCss = ["live-result-period__val"];

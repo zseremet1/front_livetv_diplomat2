@@ -48,6 +48,7 @@
   }
   .ico-basketball:before {
     content: "\e9b0";
+    font-size: 2.2rem;
   }
   .ico-beach-handball:before {
     content: "\e9b2";
@@ -63,6 +64,9 @@
   }
   .ico-beach-volleyball:before {
     content: "\e9b6";
+    font-size: 2.2rem;
+    color: #fff;
+  
   }
   .ico-beach-volleyball-invert:before {
     content: "\e9b5";
@@ -108,6 +112,9 @@
   }
   .ico-football:before {
     content: "\e9c2";
+     font-size: 2.3rem;
+    text-align: center;
+ 
   }
   .ico-football-invert:before {
     content: "\e9c1";
@@ -141,6 +148,8 @@
   }
   .ico-ice-hockey:before {
     content: "\e9ca";
+    font-size: 2.3rem;
+
   }
   .ico-judo:before {
     content: "\e9cb";
@@ -198,6 +207,7 @@
   }
   .ico-tennis:before {
     content: "\e9dc";
+    font-size: 2.2em;
   }
   .ico-triathlon:before {
     content: "\e9dd";
@@ -207,6 +217,7 @@
   }
   .ico-volleyball:before {
     content: "\e9e0";
+    font-size: 2.2em;
   }
   .ico-volleyball-invert:before {
     content: "\e9df";
@@ -524,6 +535,7 @@
   .ico-card-red-double .path1:before {
     content: "\e900";
     color: rgb(255, 51, 71);
+
   }
   .ico-card-red-double .path2:before {
     content: "\e901";
@@ -633,11 +645,14 @@
   .ico-tennis-serve .path1:before {
     content: "\e914";
     color: rgb(240, 206, 38);
+    // font-size: 1.3rem;
   }
   .ico-tennis-serve .path2:before {
     content: "\e915";
     margin-left: -1em;
     color: rgb(219, 170, 35);
+    // font-size: 1.3rem;
+
   }
   .ico-1x2:before {
     content: "\e916";
@@ -854,7 +869,10 @@
   }
   .ico-tri-down:before {
     content: "\e959";
+    color:red;
+
   }
+
   .ico-tri-left:before {
     content: "\e95a";
   }
@@ -863,7 +881,10 @@
   }
   .ico-tri-up:before {
     content: "\e95c";
+    color:green;
+
   }
+
   .ico-user:before {
     content: "\e95d";
   }

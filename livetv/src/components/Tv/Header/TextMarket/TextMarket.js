@@ -5,16 +5,12 @@ const TextMarket = (props) => {
   const flexPadding = [2, 2, 2];
   const nps = props.market.nps;
   const possTyp = [...props.market.possTyp];
- 
 
-
+  /*nps*/
 
   if (nps) {
     flexPadding.unshift(2);
-    possTyp.unshift(
-      ""
-   
-    );
+    possTyp.unshift("");
   } else if (possTyp.length === 2) {
     flexPadding.unshift(2);
     possTyp.unshift("");

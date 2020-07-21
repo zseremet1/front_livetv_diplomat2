@@ -4,16 +4,25 @@ import "./CurrentServer.scss";
 // import Ball from "../Ball/Ball";
 
 const CurrentServer = (props) => {
+  let ballName = "";
+  switch (props.sportId) {
+    case 6:
+      ballName = "ico-tennis-serve";
+    // case ostali sportovi //
+    case  25:
+      ballName="ico-tennis-serve";
+  }
+
   return (
     <div className="live-current-server">
       <div className="live-current-server__icon">
         {props.current === "1" ? (
-          <div name="ico-tennis-serve" className="ico-tennis-serve" />
+          <div name={ballName} className={ballName} />
         ) : null}{" "}
       </div>
       <div className="live-current-server__icon">
         {props.current === "2" ? (
-          <div name="ico-tennis-serve" className="ico-tennis-serve" />
+          <div name={ballName} className={ballName} />
         ) : null}{" "}
       </div>
     </div>

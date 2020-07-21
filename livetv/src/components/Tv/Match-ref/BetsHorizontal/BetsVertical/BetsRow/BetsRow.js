@@ -16,7 +16,7 @@ const BetsRow = (props) => {
 
   //generisemo red
   //   const red = redData.map((red, index) => {
-  // //  if(props.sport.ID === 2 && props.market.id === 2 && red.t === 'X') return null;
+  // // ovo nikako koristiti => ovaj if =>  if(props.sport.ID === 2 && props.market.id === 2 && red.t === 'X') return null;
   //    return <Bet key={index} data={red} sport={sport} market={market} />
   //  }).filter(x=>Boolean(x));
 
@@ -39,7 +39,6 @@ const BetsRow = (props) => {
       m: specVal.gamenrY,
       Q: specVal.setnr,
     });
-   
   }
   if (market.id === 832) {
     specBet = t("tenis3", {
@@ -55,7 +54,15 @@ const BetsRow = (props) => {
     });
   }
 
+  /*slucaj 3 poyicija nogomet*/
+  if(market.id === 651 || market.id === 652 ){
+    [red[1],red[2]] = [red[2],red[1]]
+  }
 
+  // odds = props.market.typs.map((typsItem) => {
+  //   // const keyTip = Object.keys(typsItem)[0];
+  //   indOdd = props.bet.odds.findIndex(
+  //     (betItem) => betItem.t === Object.keys(typsItem)[0] });
 
   if (spec.length && !specBet) {
     specBet = mapMarketSpecifier(market.nps, spec);

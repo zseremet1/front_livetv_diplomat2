@@ -2,6 +2,9 @@ export function mapEvent(newEvent) {
   const tmpEvent = { ...newEvent };
   let returnEvent = null;
 
+  // mapiramo bets da budu po keyu jer dalje dobijamo tako
+  let mapedBets = Object.fromEntries(tmpEvent.oddsBet.map((ev) => [ev.id, ev]));
+
   returnEvent = {
     idEvent: tmpEvent.idEvent,
     idSport: tmpEvent.ids,
@@ -15,7 +18,8 @@ export function mapEvent(newEvent) {
     countBets: tmpEvent.cnt,
     favorite: tmpEvent.favorite, // added for favorites
     sifra: tmpEvent.sif,
-    bets: tmpEvent.oddsBet,
+    bets: mapedBets,
+    ek: tmpEvent.ek,
   };
   return { ...returnEvent };
 }

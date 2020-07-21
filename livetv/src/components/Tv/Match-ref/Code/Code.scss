@@ -2,9 +2,7 @@
 {
     background-color: #000;
     color: #fff;
-    &.sport6{
-        background-color: #261001;
-    }
+  
     width: 13.2%;
     display: flex;
     flex-direction: column;
@@ -16,23 +14,68 @@
     width: 100%;
     text-align: center;
     flex: 1;
+  
+
+    /*za ostale id eve spremiti */
     background-color: #000;
+    border-top:1px solid #C0C0C0;
+    border-left:1px solid #C0C0C0;
+    border-right: 1px solid #C0C0C0;
+    // border-bottom: 1px solid #C0C0C0;
+
+    //   &.sport2
+    //   {
+    //     border-top:1px solid #C0C0C0;
+    //     border-left:1px solid #C0C0C0;
+    //     border-right: 1px solid #C0C0C0;
+    //     border-bottom: 1px solid #C0C0C0;
+    //   }
+
+    &.sport25
+    {
+        background-color: #000;
+    border-left: 1px solid #e5a56a;
+    border-right: 1px solid #e5a56a;
+    border-bottom: 1px solid #e5a56a;
+       border-top:1px solid #e5a56a;
+    }
+
+    &.sport5{
+        background-color: #000;
+        border-top:   1px solid #426089;
+        border-left: 1px solid #426089;
+        border-right: 1px solid #426089;
+        border-bottom: 1px solid #426089;
+    }
+
+    &.sport20{
+        background-color: #000;
+        border-top:   1px solid #426089;
+        border-left: 1px solid #426089;
+        border-right: 1px solid #426089;
+        border-bottom: 1px solid #426089;
+    }
     &.sport6{
         background-color: #261001;
-        border-top:   1px solid #e68e5b;
+        // border-top:   1px solid #e68e5b;
         border-left: 1px solid #e68e5b; 
         border-right: 1px solid #e68e5b;
+         border-bottom: 1px solid #e68e5b;
+        border-top: none;
     }
-    &.sport3{
-        background-color: #261001;
-        border-top:   1px solid #e68e5b;
-        border-left: 1px solid #e68e5b; 
-        border-right: 1px solid #e68e5b;
-    }
-    &.sport2
-    {
-        border-left: 1.5px solid #57af46;   
-        border-right: 1px solid #57af46;
-        border-bottom: 1px solid #57af46;
-    }
+     &.sport3{
+         background-color: #261001;
+         border-top:   1px solid #e68e5b;
+         border-left: 1px solid #e68e5b; 
+         border-right: 1px solid #e68e5b;
+
+     }
+      &.sport2
+      {
+          border-left: 1.5px solid #57af46;   
+          border-right: 1px solid #57af46;
+          border-bottom: 1px solid #57af46;
+          border-top:   none;
+
+      }
 }

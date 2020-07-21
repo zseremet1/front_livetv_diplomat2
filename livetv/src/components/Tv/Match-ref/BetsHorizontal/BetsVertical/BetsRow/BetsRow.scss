@@ -4,6 +4,28 @@
     flex-wrap: nowrap;
     width: 100%;
     padding-top:4px;
+    border-bottom: 1px solid grey;
+ 
+    &.sport25
+    {
+        border-bottom:1px solid #e5a56a;
+        padding: 4px  4px 3px 3px;
+
+    }
+
+    &.sport20
+    {
+      border-bottom: 1px solid #426089;
+      padding: 4px  4px 3px 3px;
+
+    }
+    &.sport5
+    {
+      border-bottom: 1px solid #426089;
+      padding: 4px  4px 3px 3px;
+
+    }
+
     &.sport6
     {
         border-bottom: 1px solid #e68E5B;
@@ -11,11 +33,11 @@
 
 
     }
-    &.sport2{
-        
-        border-bottom: 1px solid #406a23;
-        padding: 2.5px 4px 1px 3px;
-    }
+     &.sport2{
+  
+         border-bottom: 1px solid #406a23;
+         padding: 4px  4px 3px 3px;
+        }
     &.sport3
     {
         border-bottom: 1px solid #e68E5B;
@@ -27,10 +49,10 @@
     }
 }
 
- .live-match__hov:nth-child(2n) .BetsRow .Bet{
-      background-color: #404040;  
-      color: #fff5d9;
- }
+.live-match__hov:nth-child(2n) .BetsRow .Bet {
+       background-color: #404040;  
+       color: #fff5d9;
+  }
 
 .BetSpec
 {
@@ -46,7 +68,7 @@
     overflow: hidden;
     padding: 1px 1px 1px 0;
     background-color:#e0f900 ;
-    font-size: 0.92rem;
+    font-size: 0.9111rem;
 
 
 }

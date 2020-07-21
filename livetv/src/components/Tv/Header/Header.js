@@ -2,10 +2,15 @@ import React from "react";
 import { useLive } from "../../../hooks/useLive";
 import MarketName from "./MarketName/MarketName";
 import TextMarket from "./TextMarket/TextMarket";
+import SportIcon from "../UI/Icon/SportIcon";
 import "./Header.scss";
+import { useTranslation } from "react-i18next";
 
 const Header = (props) => {
   const [liveState, dispatch] = useLive(false);
+
+  const [t] = useTranslation();
+
   const sport = liveState.sports.find(
     (sport) => sport.ID === Number(props.SportId)
   );
@@ -24,10 +29,17 @@ const Header = (props) => {
       possTypes: liveState.possTyp[market.idtip],
     }));
 
+
   return (
     <div className={["column", `sport${sport.ID}`].join(" ")}>
-      <span className={["code", `sport${sport.ID}`].join(" ")}>Šifra</span>
-      <span className={["header-image", `sport${sport.ID}`].join(" ")} />
+       <span className={["code", `sport${sport.ID}`].join(" ")}>
+        {t("Šifra")}
+      </span>
+      {/* <span className={["SportIcon", `sport${sport.ID}`].join(" ")} /> */}
+       <span className={["headerImage", `sport${sport.ID}`].join(" ")} ><SportIcon idSport={sport.ID}/>
+         <p className={["header-Name",`sport${sport.ID}`].join(" ")}>{sport.Name}</p> 
+           </span> 
+
       {MarketVals.slice(0, 5).map((market) => (
         <div key={market.id}>
           <MarketName {...market} sportId={sport.ID} />

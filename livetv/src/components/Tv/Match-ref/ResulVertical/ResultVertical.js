@@ -15,7 +15,7 @@ const ResultVertical = (props) => {
       ) : null}
 
       {props.eventStatus && props.eventStatus.cuSer ? (
-        <CurrentServer current={props.eventStatus.cuSer} />
+        <CurrentServer current={props.eventStatus.cuSer} sportId={props.sport.ID} />
       ) : null}
 
       {props.eventStatus && props.eventStatus.hgSc ? (
@@ -41,7 +41,9 @@ const ResultVertical = (props) => {
             .map((el) => {
               return (
                 <ResultPeriod
-                  key={el.num}
+                  // FIXX line
+                   sportId={props.sport.ID}   /*puca ovdje */
+                   key={el.num}
                   pSc={el}
                   current={
                     ~~props.eventStatus.mtSt === ~~el.mtStCo ? true : false

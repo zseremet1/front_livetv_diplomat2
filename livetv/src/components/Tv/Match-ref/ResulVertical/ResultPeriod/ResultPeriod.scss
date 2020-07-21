@@ -19,6 +19,7 @@
     width: 12px;
 
   }
+ 
   &::after{
     content: "";
     display: block;
@@ -27,8 +28,25 @@
     top: 37%;
     right: 0;
     width: 2.3px;
-    background-color: #a16440;;
+    // boja crtica se postavlja na osnovu sporta, a #a166400 je default ako nema nijedne boje
+    background-color: var(--bojaCrtica, #a16440);
+      
   }
+
+&.sport5
+{
+  --bojaCrtica: #426089;
+}
+
+ &.sport20{
+  --bojaCrtica : #426089;
+}
+
+ 
+   &.sport25{
+    --bojaCrtica: #606060;
+   }
+
 
   // &.sport3::after{ join kasnije
   //   content: "";
