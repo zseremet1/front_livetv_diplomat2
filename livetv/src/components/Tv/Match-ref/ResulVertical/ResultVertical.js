@@ -11,6 +11,8 @@ const ResultVertical = (props) => {
         <ResultPeriod
           mainPeriod={true}
           pSc={{ hSc: props.eventStatus.hSc, aSc: props.eventStatus.aSc }}
+          sportId={props.sport.ID}
+
         ></ResultPeriod>
       ) : null}
 

@@ -64,11 +64,7 @@ const BetsRow = (props) => {
     });
   }
 
-  /*slucaj 3 poyicija nogomet*/
-
-  // if(market.id === 651 || market.id === 652 ){
-  //   [red[1],red[2]] = [red[2],red[1]]
-  // }
+ 
 
   // odds = props.market.typs.map((typsItem) => {
   //   // const keyTip = Object.keys(typsItem)[0];

@@ -870,6 +870,9 @@
   .ico-tri-down:before {
     content: "\e959";
     color:red;
+    padding: 2px 2px 2px 2px;
+    display: absolute;
+    float: left;
 
   }
 
@@ -882,6 +885,14 @@
   .ico-tri-up:before {
     content: "\e95c";
     color:green;
+    width: 15%;
+    height: 40%;
+    background-color: yellow;
+    padding: 2px 2px 2px 2px;
+    display: flex;
+    position: relative;
+    float: left;
+    margin-right: 3%;
 
   }
 

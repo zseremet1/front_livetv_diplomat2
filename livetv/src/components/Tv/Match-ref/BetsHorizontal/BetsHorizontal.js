@@ -63,7 +63,7 @@ const BetsHorizontal = (props) => {
   //   betsRows[2] = [];
   //   specRows[2] = [];
   // }
-
+  const show3nd = !props.sakrijTreciRed;
   return (
     <div className="BetsHorizontal">
       {new Array(5).fill(0).map((_, index) => (
@@ -83,15 +83,16 @@ const BetsHorizontal = (props) => {
                   (m) => m.id === betsRows[2][index + 1][0]?.idBt
                 )
               : [],
-            Object.values(props.market).find(
+              show3nd ? 
+                Object.values(props.market).find(
               (m) => m.id === betsRows[3][index + 1][0]?.idBt
-            ),
+            ) : [],
           ]}
           sport={props.sport}
           spec={{
             1: specRows[1][index + 1],
             2: show2nd ? specRows[2][index + 1] : [],
-            3: specRows[3][index + 1],
+            3: show3nd ? specRows[3][index + 1] : [],
           }}
         />
       ))}

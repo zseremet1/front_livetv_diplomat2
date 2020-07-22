@@ -5,6 +5,7 @@ import NameHorizontal from "./NameHorizontal/NameHorizontal";
 import NameVertical from "./NameVertical/NameVertical";
 import ResultHorisontal from "./ResultHorisontal/ResultHorisontal";
 import ResultVertical from "./ResulVertical/ResultVertical";
+// import ResultPeriod from "./ResulVertical/ResultPeriod/ResultPeriod";
 import Code from "./Code/Code";
 import BetsHorizontal from "./BetsHorizontal/BetsHorizontal";
 // import Icon from "../UI/Icon/Icon";
@@ -96,6 +97,7 @@ const Match = (props) => {
   // }
 
   let drugoPoluvrijeme = null;
+  let baskteballtrecired = null;
   // if(props.sport.ID === 2 && props.spEvent.eventStatus.mtSt == 7){
   //   extraCode.push("A")
   // } else 
@@ -117,7 +119,30 @@ const Match = (props) => {
     drugoPoluvrijeme = <div />;
     extraCode.length =0;
   }
-
+  // else if (props.sport.ID === 3 && props.spEvent.eventStatus.mtSt === 0)
+  // {
+  //   baskteballtrecired = <div/>
+  //   extraCode.length = 0;
+  // }
+  /*kosarka */
+  if (props.sport.ID === 3 && props.spEvent.eventStatus.mtSt === 13) {
+    baskteballtrecired = (
+      <span
+        style={{
+          textAlign: "right",
+          display: "block",
+          color: "#fff",
+          paddingRight: "1rem",
+        }}
+      >
+      </span>
+    );
+  }
+  else if (props.sport.ID === 3 && props.spEvent.eventStatus.mtSt === 0)
+  {
+    baskteballtrecired = <div/>
+    extraCode.length = 0;
+  }
   return (
     <div
       className={["live-match__hov", `sport${props.sport.ID}`].join(" ")}
@@ -160,8 +185,9 @@ const Match = (props) => {
               sportId={props.sport.ID}
             />
           ) : (
-            <NameVertical spEvent={props.spEvent}>
+            <NameVertical spEvent={props.spEvent} baskteballtrecired={baskteballtrecired}>
               <ResultVertical eventStatus={props.spEvent.eventStatus} sport={props.sport}/>
+              {/* <ResultPeriod eventStatus={props.spEvent.eventStatus} sport={props.sport}/> */}
             </NameVertical>
           )}
 
@@ -229,6 +255,8 @@ const Match = (props) => {
         sport={props.sport}
         market={props.market}
         sakrijDrugiRed={extraCode.length === 0}
+        sakrijTreciRed={extraCode.length === 0 }
+
       />
     </div>
   );

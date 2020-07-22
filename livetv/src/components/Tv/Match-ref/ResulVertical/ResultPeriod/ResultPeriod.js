@@ -28,8 +28,11 @@ const ResultPeriod = (props) => {
 
   return (
     <div className={periodCss.join(" ")}>
-      <div className={homeCss.join(" ")}>{props.pSc.hSc}&nbsp;</div>
-      <div className={awayCss.join(" ")}>{props.pSc.aSc}&nbsp;</div>
+      {/* <div className={homeCss.join(" ")}>{props.pSc.hSc}&nbsp;</div> */}
+      <div className={[homeCss, `sport${props.sportId}`].join(" ")}>{props.pSc.hSc}&nbsp;</div>
+      <div className={[awayCss, `sport${props.sportId}`].join(" ")}>{props.pSc.aSc}&nbsp;</div>
+
+      {/* <div className={awayCss.join(" ")}>{props.pSc.aSc}&nbsp;</div> */}
     </div>
   );
 };
