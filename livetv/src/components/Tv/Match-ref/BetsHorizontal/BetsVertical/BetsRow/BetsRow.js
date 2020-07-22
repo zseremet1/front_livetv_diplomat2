@@ -32,37 +32,38 @@ const BetsRow = (props) => {
 
   // sredujemo spec
   let specBet;
-  let specVal = spec.length
-    ? Object.fromEntries(spec.split("|").map((x) => x.split("=")))
-    : {};
+  // let specVal = spec.length
+  //   ? Object.fromEntries(spec.split("|").map((x) => x.split("=")))
+  //   : {};
 
-  /*nogomet*/
-  if (market.id === 651) {
-    specBet = t("ngol", { n: specVal.goalnr });
-  } else if (market.id === 652) {
-    specBet = t("ngol", { n: specVal.goalnr });
-  }
-  /*tenis*/
-  if (market.id === 831) {
-    specBet = t("tenis2", {
-      n: specVal.gamenrX,
-      m: specVal.gamenrY,
-      Q: specVal.setnr,
-    });
-  }
-  if (market.id === 832) {
-    specBet = t("tenis3", {
-      n: specVal.gamenr,
-      Q: specVal.setnr,
-    });
-  }
+  //REVIEW removed
+  // /*nogomet*/
+  // if (market.id === 651) {
+  //   specBet = t("ngol", { n: specVal.goalnr });
+  // } else if (market.id === 652) {
+  //   specBet = t("ngol", { n: specVal.goalnr });
+  // }
+  // /*tenis*/
+  // if (market.id === 831) {
+  //   specBet = t("tenis2", {
+  //     n: specVal.gamenrX,
+  //     m: specVal.gamenrY,
+  //     Q: specVal.setnr,
+  //   });
+  // }
+  // if (market.id === 832) {
+  //   specBet = t("tenis3", {
+  //     n: specVal.gamenr,
+  //     Q: specVal.setnr,
+  //   });
+  // }
 
-  if (market.id === 666) {
-    specBet = t("tenis4", {
-      n: specVal.total,
-      Q: specVal.setnr,
-    });
-  }
+  // if (market.id === 666) {
+  //   specBet = t("tenis4", {
+  //     n: specVal.total,
+  //     Q: specVal.setnr,
+  //   });
+  // }
 
   /*slucaj 3 poyicija nogomet*/
 
