@@ -36,7 +36,8 @@ const BetsHorizontal = (props) => {
   // Rasporedjujemo oklade u betRows na osnovu reda i pozicije
   const { bets } = props.spEvent;
   Object.values(bets).forEach((odd) => {
-    const { idBt, red, odds, spec, idmSt } = odd;
+  //  console.log("BetsHorizontal", odd.id, odd);
+    const {id, idBt, red, odds, spec, idmSt } = odd;
     //  if(idmSt !== 1 && idmSt !== 6) return;  //koment-nknd
     // if((idBt === 2 || idBt===97) && props.sport.ID === 2){
     //   console.log(props.sport.Name, props.spEvent.awayTeam,odd  )
@@ -50,6 +51,7 @@ const BetsHorizontal = (props) => {
       ...odd,
       idBt,
       idmSt,
+     idttt: id
     }));
     specRows[red][pozId] = spec;
   });
