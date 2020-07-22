@@ -58,6 +58,12 @@ const BetsHorizontal = (props) => {
 
   // console.log(props.sport.Name, props.spEvent.awayTeam,betsRows  )
   // console.log(MarketOrder)
+  const show2nd = !props.sakrijDrugiRed;
+  // if(props.sakrijDrugiRed){
+  //   betsRows[2] = [];
+  //   specRows[2] = [];
+  // }
+
   return (
     <div className="BetsHorizontal">
       {new Array(5).fill(0).map((_, index) => (
@@ -65,16 +71,18 @@ const BetsHorizontal = (props) => {
           key={index}
           redovi={{
             1: betsRows[1][index + 1],
-            2: betsRows[2][index + 1],
+            2: show2nd ? betsRows[2][index + 1] : [],
             3: betsRows[3][index + 1],
           }}
           market={[
             Object.values(props.market).find(
               (m) => m.id === betsRows[1][index + 1][0]?.idBt
             ),
-            Object.values(props.market).find(
-              (m) => m.id === betsRows[2][index + 1][0]?.idBt
-            ),
+            show2nd
+              ? Object.values(props.market).find(
+                  (m) => m.id === betsRows[2][index + 1][0]?.idBt
+                )
+              : [],
             Object.values(props.market).find(
               (m) => m.id === betsRows[3][index + 1][0]?.idBt
             ),
@@ -82,7 +90,7 @@ const BetsHorizontal = (props) => {
           sport={props.sport}
           spec={{
             1: specRows[1][index + 1],
-            2: specRows[2][index + 1],
+            2: show2nd ? specRows[2][index + 1] : [],
             3: specRows[3][index + 1],
           }}
         />

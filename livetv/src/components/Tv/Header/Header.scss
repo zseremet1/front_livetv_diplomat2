@@ -25,8 +25,14 @@
     }
 
 }
-.column >div{
-    flex: 1;
+// .column >div{
+//     // flex: 1;
+
+//     width: 18.25%;
+// }
+.column-sport
+{
+    width: 18.25%;
 }
 .code
 {
@@ -93,7 +99,7 @@ border-bottom: none;
 
 .headerImage
 {
-    width: 22.999%;
+    width: 23.5%;
     background-position: left top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -135,6 +141,7 @@ border-bottom: none;
     }
 
 }
+
 
 .header-Name
 {

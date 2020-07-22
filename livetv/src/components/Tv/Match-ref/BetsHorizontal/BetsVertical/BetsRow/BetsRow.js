@@ -3,6 +3,7 @@ import "./BetsRow.scss";
 import Bet from "./Bet/Bet";
 import { mapMarketSpecifier } from "../../../../../../hooks/functions/mapMarketSpecifier";
 import { useTranslation } from "react-i18next";
+import { func } from "prop-types";
 
 const BetsRow = (props) => {
   const [t] = useTranslation();
@@ -13,9 +14,15 @@ const BetsRow = (props) => {
 
   //vrte se svi mogući tipovi i pune kvote za taj tip
   //ako nema kvote za taj tip puni se prazna kućica
-  const red = redData.map((red, index) => (
-    <Bet key={index} data={red} sport={sport} market={market} />
-  ));
+  const red = new Array(redData.length)
+    .fill(0)
+    .map((_, ix) => <PraznaKucica key={ix} sport={sport} />);
+  redData.forEach((data, index) => {
+    const inx = market.possTypEng.indexOf(data.t);
+    if (inx !== -1) {
+      red[inx] = <Bet key={index} data={data} sport={sport} market={market} />;
+    }
+  });
 
   //generisemo red
   //   const red = redData.map((red, index) => {
@@ -58,9 +65,10 @@ const BetsRow = (props) => {
   }
 
   /*slucaj 3 poyicija nogomet*/
-  if(market.id === 651 || market.id === 652 ){
-    [red[1],red[2]] = [red[2],red[1]]
-  }
+
+  // if(market.id === 651 || market.id === 652 ){
+  //   [red[1],red[2]] = [red[2],red[1]]
+  // }
 
   // odds = props.market.typs.map((typsItem) => {
   //   // const keyTip = Object.keys(typsItem)[0];
@@ -78,17 +86,11 @@ const BetsRow = (props) => {
   if (specBet) {
     red.unshift(
       <div className="BetSpec" key={-1}>
-       <div className="bet-spec-value"> {specBet}</div>
+        <div className="bet-spec-value"> {specBet}</div>
       </div>
     );
   } else if (red.length === 2) {
-    red.unshift(
-      <div
-        key={-2}
-        className={["Bet", sport.ID].join(" ")}
-        style={{ backgroundColor: "transparent" }}
-      />
-    );
+    red.unshift(<PraznaKucica sport={sport} key={-3} />);
   }
   // console.log("red", red);
 
@@ -96,3 +98,12 @@ const BetsRow = (props) => {
 };
 
 export default BetsRow;
+
+function PraznaKucica(props) {
+  return (
+    <div
+      className={["Bet", props.sport.ID].join(" ")}
+      style={{ backgroundColor: "transparent" }}
+    />
+  );
+}

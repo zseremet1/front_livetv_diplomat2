@@ -29,19 +29,21 @@ const Header = (props) => {
       possTypes: liveState.possTyp[market.idtip],
     }));
 
-
   return (
     <div className={["column", `sport${sport.ID}`].join(" ")}>
-       <span className={["code", `sport${sport.ID}`].join(" ")}>
+      <span className={["code", `sport${sport.ID}`].join(" ")}>
         {t("Šifra")}
       </span>
       {/* <span className={["SportIcon", `sport${sport.ID}`].join(" ")} /> */}
-       <span className={["headerImage", `sport${sport.ID}`].join(" ")} ><SportIcon idSport={sport.ID}/>
-         <p className={["header-Name",`sport${sport.ID}`].join(" ")}>{sport.Name}</p> 
-           </span> 
+      <span className={["headerImage", `sport${sport.ID}`].join(" ")}>
+        <SportIcon idSport={sport.ID} />
+        <p className={["header-Name", `sport${sport.ID}`].join(" ")}>
+          {sport.Name}
+        </p>
+      </span>
 
       {MarketVals.slice(0, 5).map((market) => (
-        <div key={market.id}>
+        <div className="column-sport" key={market.id}>
           <MarketName {...market} sportId={sport.ID} />
           <TextMarket idtip={market.idtip} market={market} sportId={sport.ID} />
         </div>

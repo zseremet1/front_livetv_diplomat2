@@ -1,11 +1,7 @@
 import React from "react";
 import "./NameHorizontal.scss";
 
-import { useTranslation } from "react-i18next";
-
 const NameHorisontal = (props) => {
-  const [t] = useTranslation();
-  let drugoPoluvrijeme = null;
   const {
     spEvent: {
       idSport,
@@ -13,22 +9,8 @@ const NameHorisontal = (props) => {
     },
   } = props;
 
-  if (idSport === 2 && mtSt === 6) {
-    drugoPoluvrijeme = (
-      <span
-        style={{
-          textAlign: "right",
-          display: "block",
-          color: "#fff",
-          paddingRight: "1rem",
-        }}
-      >
-        {t("1.Poluvrijeme", { n: 1 })}
-      </span>
-    );
-  } else if (idSport === 2 && mtSt === 0) {
-    drugoPoluvrijeme = <div />;
-  }
+  const drugoPoluvrijeme = props.drugoPoluvrijeme;
+
   return (
     <>
       <div className="live-name-h">

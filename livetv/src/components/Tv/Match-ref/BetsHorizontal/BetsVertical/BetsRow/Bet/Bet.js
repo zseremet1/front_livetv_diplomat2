@@ -41,15 +41,19 @@ const Bet = (props) => {
   if (data.idmSt === 6) {
     classList.push("yellow");
     // FIXX line
-  } else if (data.idmSt !== 1 || parseFloat(data.va) === 1) {
+  } else if (data.idmSt !== 1) {
+    classList.push("hide");
+  }
+
+  if (parseFloat(data.va) === 1) {
     classList.push("hide");
   }
 
   return (
     <div className={classList.join(" ")}>
       <div className="bet-odd-value">
-      {arrow}
-      {value}
+        {arrow}
+        {value}
       </div>
     </div>
   );

@@ -22,11 +22,18 @@ const configureStore = () => {
             )
         );
 
+      const possTypBezPrevoda = Object.values(possTyp)
+        .map((type) => type.split(", "))
+        .map((types) =>
+          types.map((type) => type.replace(/[\[\]]/g, "").trim())
+        );
+
       // Ubacivanje possTyp u market i dobijamo objekat
       const marketSaPossTypNiz = Object.values(newMarkets.all).map(
         (market) => ({
           ...market,
           possTyp: possTypPrevedeno[market.idtip],
+          possTypEng: possTypBezPrevoda[market.idtip],
         })
       );
 

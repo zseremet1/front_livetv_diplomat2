@@ -153,7 +153,7 @@ const LiveFetch = (props) => {
                 break;
 
               case "3": //update time match , matchs status
-                updateEvents.push(msgValue);  //testing
+                updateEvents.push(msgValue); //testing
 
                 // console.log("updateeeee", updateEvents);
 

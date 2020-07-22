@@ -10,7 +10,11 @@ const Time = (props) => {
     //   new Date(props.time * 1000 + (window.$timezoneOffset || 0) * 60 * 1000),
     //   "MM'"
     // );
-    printDatchTime = DisplayTimeByStatus(props.sportId, props.eventStatus, props.time)
+    printDatchTime = DisplayTimeByStatus(
+      props.sportId,
+      props.eventStatus,
+      props.time
+    );
   }
   // console.log(props.eventStatus.c.mtT);
   // if (props.eventStatus && props.eventStatus.c) {

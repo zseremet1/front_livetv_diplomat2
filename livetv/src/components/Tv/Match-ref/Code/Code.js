@@ -15,14 +15,14 @@ const Code = (props) => {
           {extraCode}
         </span>
       ))}
-      {props.showExtraC.map((extraCodec, index) => (
+      {/* {props.showExtraC.map((extraCodec, index) => (
         <span
           key={index}
           className={["Codetxt", `sport${props.sportId}`].join(" ")}
         >
           {extraCodec}
         </span>
-      ))}
+      ))} */}
     </div>
   );
 };

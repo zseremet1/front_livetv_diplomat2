@@ -26,7 +26,9 @@ const Tv = (props) => {
     if (!eventsBySport[ev.idSport]) {
       eventsBySport[ev.idSport] = [];
     }
-    eventsBySport[ev.idSport].push(ev);
+    if(ev.idEvent){
+      eventsBySport[ev.idSport].push(ev);
+    }
   });
 
   console.log("liveState", liveState);

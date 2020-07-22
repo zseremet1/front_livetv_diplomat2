@@ -72,7 +72,7 @@ const configureStore = () => {
       data.forEach((element) => {
         let removed = false;
         //testing
-        // miči par ako je završio  
+        // miči par ako je završio
         //event_int_status - internal status, 2 - micanje meča, 1 - betstop
         //nazivi da budu slicni sto slicniji
 
@@ -137,12 +137,15 @@ const configureStore = () => {
             } else if (element.bets) {
               //EDO console.log(element.idEvent, element.bets);
               //TODO ako je marketstatus <> 1,6 tada treba brisati klađenje iz para
-              returnEvents[indExist].bets = Object.fromEntries(        //testing
+              returnEvents[indExist].bets = Object.fromEntries(
+                //testing
                 Object.values({
                   ...returnEvents[indExist].bets,
                   ...element.bets,
                 })
-                  .map((oklada) => ([1, 6].includes(oklada.idmSt) ? [oklada.id, oklada] : null))
+                  .map((oklada) =>
+                    [1, 6].includes(oklada.idmSt) ? [oklada.id, oklada] : null
+                  )
                   .filter((oklada) => !!oklada)
               );
             } else {

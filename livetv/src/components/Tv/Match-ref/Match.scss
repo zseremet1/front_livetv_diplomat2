@@ -6,6 +6,8 @@
     border-bottom: 1px solid #406a23;
 }
 
+
+
 .live-match__hov{
     display: flex;
 }
@@ -263,7 +265,7 @@
 .live-match
 {
     display: flex;
-    width: 26.60%;
+    width: 22.9%;
     border-right: 1px solid #daa520;
    &.gool .live-match__name.sport2{
        animation: pulse-red 5s
@@ -280,9 +282,11 @@
 }
 
 .live-match__name{
+    // display: flex;
     flex: 1;
     position: relative;
-    flex-direction: row; 
+    // flex-direction: row; 
+    width: 1px;
 }
 
 // .ico-card-red,.ico-card-red-double{

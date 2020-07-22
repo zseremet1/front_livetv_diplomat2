@@ -9,7 +9,11 @@ import Code from "./Code/Code";
 import BetsHorizontal from "./BetsHorizontal/BetsHorizontal";
 // import Icon from "../UI/Icon/Icon";
 
+import { useTranslation } from "react-i18next";
+
+
 const Match = (props) => {
+  const [t] = useTranslation();
   const [result, setResult] = useState({ hSc: null, aSc: null, goal: 0 });
   if (result.hsc === null || result.aSc === null) {
     setResult({
@@ -49,11 +53,11 @@ const Match = (props) => {
   // };
 
   const extraCode = [];
-  const extraCodes = [];
+  // const extraCodes = [];
   if (
-    props.spEvent.idSport === 2 ||
+    // props.spEvent.idSport === 2 ||
     props.spEvent.idSport === 6 ||
-    props.spEvent.idSport === 2 ||
+    // props.spEvent.idSport === 2 ||
     props.spEvent.idSport === 3 ||
     props.spEvent.idSport === 20 ||
     props.spEvent.idSport === 5 ||
@@ -62,7 +66,7 @@ const Match = (props) => {
     extraCode.push("A");
   }
   if (props.spEvent.idSport === 3) {
-    extraCodes.push("B");
+    extraCode.push("B");
   }
 
   let firstBet;
@@ -91,6 +95,29 @@ const Match = (props) => {
   //   cssFavorite.push("active");
   // }
 
+  let drugoPoluvrijeme = null;
+  // if(props.sport.ID === 2 && props.spEvent.eventStatus.mtSt == 7){
+  //   extraCode.push("A")
+  // } else 
+  if (props.sport.ID === 2 && props.spEvent.eventStatus.mtSt === 6) {
+    drugoPoluvrijeme = (
+      <span
+        style={{
+          textAlign: "right",
+          display: "block",
+          color: "#fff",
+          paddingRight: "1rem",
+        }}
+      >
+        {t("1.Poluvrijeme", { n: 1 })}
+      </span>
+    );
+    extraCode.push("A");
+  } else if (props.sport.ID === 2 && props.spEvent.eventStatus.mtSt === 0) {
+    drugoPoluvrijeme = <div />;
+    extraCode.length =0;
+  }
+
   return (
     <div
       className={["live-match__hov", `sport${props.sport.ID}`].join(" ")}
@@ -102,7 +129,7 @@ const Match = (props) => {
         <Code
           sif={props.spEvent.sifra}
           showExtra={extraCode}
-          showExtraC={extraCodes}
+          // showExtraC={extraCodes}
           sportId={props.sport.ID}
         />
         {/* <Time
@@ -139,7 +166,7 @@ const Match = (props) => {
           )}
 
           {props.sport.horisontal ? (
-            <NameHorizontal spEvent={props.spEvent}>
+            <NameHorizontal spEvent={props.spEvent} drugoPoluvrijeme={drugoPoluvrijeme}>
               {/* <Time
                 idEvent={props.spEvent.idEvent}
                 eventStatus={props.spEvent.eventStatus}
@@ -201,6 +228,7 @@ const Match = (props) => {
         spEvent={props.spEvent}
         sport={props.sport}
         market={props.market}
+        sakrijDrugiRed={extraCode.length === 0}
       />
     </div>
   );
