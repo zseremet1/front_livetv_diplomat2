@@ -22,9 +22,13 @@ const Time = (props) => {
   //   printDatchTime =
   //     parseInt(props.eventStatus.c.mtT?.split(":")[0], 10) + 1 + "'";
   // }
+  if (printDatchTime === "undefined'") {
+    printDatchTime = "  ";
+  }
   return (
     <span className={["live-match-time", `sport${props.sportId}`].join(" ")}>
-      {printDatchTime === "00'" ? "HT" : printDatchTime}
+      {/* {printDatchTime === "00'" ? "HT" : printDatchTime} */}
+      {printDatchTime}
     </span>
   );
 };

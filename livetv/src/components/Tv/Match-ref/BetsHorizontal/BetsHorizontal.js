@@ -65,7 +65,7 @@ const BetsHorizontal = (props) => {
   //   betsRows[2] = [];
   //   specRows[2] = [];
   // }
-  const show3nd = !props.sakrijTreciRed;
+  const show3rd = !props.sakrijTreciRed;
   return (
     <div className="BetsHorizontal">
       {new Array(5).fill(0).map((_, index) => (
@@ -74,7 +74,7 @@ const BetsHorizontal = (props) => {
           redovi={{
             1: betsRows[1][index + 1],
             2: show2nd ? betsRows[2][index + 1] : [],
-            3: betsRows[3][index + 1],
+            3: show3rd ? betsRows[3][index + 1] : [],
           }}
           market={[
             Object.values(props.market).find(
@@ -85,7 +85,7 @@ const BetsHorizontal = (props) => {
                   (m) => m.id === betsRows[2][index + 1][0]?.idBt
                 )
               : [],
-              show3nd ? 
+              show3rd ? 
                 Object.values(props.market).find(
               (m) => m.id === betsRows[3][index + 1][0]?.idBt
             ) : [],
@@ -94,7 +94,7 @@ const BetsHorizontal = (props) => {
           spec={{
             1: specRows[1][index + 1],
             2: show2nd ? specRows[2][index + 1] : [],
-            3: show3nd ? specRows[3][index + 1] : [],
+            3: show3rd ? specRows[3][index + 1] : [],
           }}
         />
       ))}

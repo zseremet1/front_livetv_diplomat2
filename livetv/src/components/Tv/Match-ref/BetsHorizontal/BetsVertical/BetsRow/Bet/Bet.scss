@@ -20,6 +20,8 @@
     & .bet-odd-value{
     background-color: #fff;
         margin: 1px;
+        text-align:right;
+        font-size: 0.98rem; 
     }
 
     .four-items &{
@@ -33,29 +35,39 @@
 
 
 
-// .live-match__hov:nth-child(2n) .Bet {
+// .live-match__hov:nth-child(2n+1) .Bet.hide .bet-odd-value {
 //           background-color: #404040;
+// }
         
 //      }
-.Bet.hide{
+.Bet.hide {
+
     color: transparent;
-    color: none;
+  color: none;
+    
 }
 
 
- .Bet.yellow{
-    //  background-color: red;
-     color: grey;
- }
+
+
+//  .Bet.yellow{
+//     //  background-color: red;
+//      color: grey;
+//  }
 
 
  .Bet.ico-tri-down{
-    color: red;
-    animation: color 2s both;
- 
+    // color: red;
+    // animation: color 2s both;
+    &::before {
+        padding: 2px 5px 2px 2px;
+      }
  .Bet.ico-tri-up{
-     color: green;
-     animation: color 2s both;
+    //  color: green;
+    //  animation: color 2s both;
+    &::before {
+        padding: 2px 5px 2px 2px;
+      }
  }
 
  @keyframes bgc {

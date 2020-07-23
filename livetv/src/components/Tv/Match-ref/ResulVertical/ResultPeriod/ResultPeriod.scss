@@ -6,8 +6,10 @@
   position: relative;
   &.wmain {
     font-weight: bold;
-    color: red;
     display: none;
+    &.sport6{
+      display: none;
+    }
   }
   &.size20 {
     width: 20px;
@@ -124,5 +126,9 @@
   }
   .wdefault .wstandard & {
     background-color: rgba($sports-global-default, 0.16);
+  }
+  &.yellow
+  {
+    color: yellow;
   }
 }

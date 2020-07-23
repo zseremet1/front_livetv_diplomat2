@@ -55,10 +55,10 @@
     }
 }
 
-.live-match__hov:nth-child(2n) .BetsRow .Bet .bet-odd-value{
+.live-match__hov:nth-child(2n) .BetsRow .bet-odd-value{
       
         background-color: #404040;  
-       color: #fff5d9;
+    //    color: #fff5d9;
 
 
   }
@@ -95,6 +95,7 @@
         margin: 1px;
     background-color: #e0f900;
     padding: 0 1px;
+    color: #000;
 }
 }
 

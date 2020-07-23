@@ -142,20 +142,7 @@
     background-color: #000;
     border-right: 1px solid #daa520;
      border-bottom: 1px solid #C0C0C0;
-
-
-    
-
-    /*za ostale sportove */
-
-    //  &.sport2
-    //  {
-    //      border-right: 1px solid #787878;
-    //      border-bottom: 1px solid #787878;
-    //      background-color: #000;
-    //  }
-
-
+     color:#fff5d9;
     
 
     &.sport25
@@ -214,6 +201,7 @@
     background-color: #808080;
     border-right: 1px solid #daa520;
     border-bottom: 1px solid #C0C0C0;
+    color: #000;
     &.sport25
     {
         width: 100%;
@@ -282,28 +270,10 @@
 }
 
 .live-match__name{
-    // display: flex;
     flex: 1;
     position: relative;
-    // flex-direction: row; 
     width: 1px;
 }
-
-// .ico-card-red,.ico-card-red-double{
-//     background-color: red;
-//     height: 16px;
-//     color: #fff;
-//     font-size: 0.75rem;
-    
-// }
-
-// .ico-card-red::after{
-//     content: "1";
-//     display: none;
-// }
-// .ico-card-red-double::after{
-//     content: "2";
-// }
 
 .live-match-timer
 {
@@ -312,20 +282,3 @@
 
 }
 
-// .live-match__name::after{
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     top: calc(50% - 2px);
-//     width: 98%;
-//     left: 0;
-//     border: 2px solid #fff;
-// }
-
-// .CodeRowComponent
-// {
-//     background-color: black;
-//     border: 1px solid #57af46;
-//     border-left: 1.5px solid #57af46;
-//     border-top: none;
-// }

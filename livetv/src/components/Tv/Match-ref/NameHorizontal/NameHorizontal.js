@@ -2,12 +2,12 @@ import React from "react";
 import "./NameHorizontal.scss";
 
 const NameHorisontal = (props) => {
-  const {
-    spEvent: {
-      idSport,
-      eventStatus: { mtSt },
-    },
-  } = props;
+  // const {
+  //   spEvent: {
+  //     idSport,
+  //     eventStatus: { mtSt },
+  //   },
+  // } = props;
 
   const drugoPoluvrijeme = props.drugoPoluvrijeme;
 

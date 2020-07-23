@@ -25,14 +25,18 @@ const ResultPeriod = (props) => {
       awayCss.push("wcurrent");
     }
   }
+  if ([6, 3,25].includes(props.sportId) && props.isYellow) {
+    homeCss.push("yellow");
+    awayCss.push("yellow");
+  }
 
   return (
     <div className={periodCss.join(" ")}>
-      {/* <div className={homeCss.join(" ")}>{props.pSc.hSc}&nbsp;</div> */}
-      <div className={[homeCss, `sport${props.sportId}`].join(" ")}>{props.pSc.hSc}&nbsp;</div>
-      <div className={[awayCss, `sport${props.sportId}`].join(" ")}>{props.pSc.aSc}&nbsp;</div>
+       <div className={homeCss.join(" ")}>{props.pSc.hSc}&nbsp;</div> 
+      {/* <div className={[homeCss, `sport${props.sportId}`].join(" ")}>{props.pSc.hSc}&nbsp;</div>
+      <div className={[awayCss, `sport${props.sportId}`].join(" ")}>{props.pSc.aSc}&nbsp;</div> */}
 
-      {/* <div className={awayCss.join(" ")}>{props.pSc.aSc}&nbsp;</div> */}
+      <div className={awayCss.join(" ")}>{props.pSc.aSc}&nbsp;</div> 
     </div>
   );
 };

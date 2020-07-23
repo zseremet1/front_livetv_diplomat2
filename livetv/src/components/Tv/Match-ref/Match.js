@@ -47,6 +47,8 @@ const Match = (props) => {
   if (Date.now() - result.goal < 0 && props.sport.ID === 2) {
     mainClassName.push("gool");
   }
+
+
   //console.log(props.spEvent);
   // console.log("MATCH::props length", JSON.stringify(props).length);
   // const matchExpandHandler = (idEvent) => {
@@ -66,9 +68,9 @@ const Match = (props) => {
   ) {
     extraCode.push("A");
   }
-  if (props.spEvent.idSport === 3) {
-    extraCode.push("B");
-  }
+  // if (props.spEvent.idSport === 3) {
+  //   extraCode.push("B");
+  // }
 
   let firstBet;
   let secndBet;
@@ -117,7 +119,7 @@ const Match = (props) => {
     extraCode.push("A");
   } else if (props.sport.ID === 2 && props.spEvent.eventStatus.mtSt === 0) {
     drugoPoluvrijeme = <div />;
-    extraCode.length =0;
+    extraCode.length = 0;
   }
   // else if (props.sport.ID === 3 && props.spEvent.eventStatus.mtSt === 0)
   // {
@@ -126,22 +128,21 @@ const Match = (props) => {
   // }
   /*kosarka */
   if (props.sport.ID === 3 && props.spEvent.eventStatus.mtSt === 13) {
-    baskteballtrecired = (
-      <span
-        style={{
-          textAlign: "right",
-          display: "block",
-          color: "#fff",
-          paddingRight: "1rem",
-        }}
-      >
-      </span>
-    );
-  }
-  else if (props.sport.ID === 3 && props.spEvent.eventStatus.mtSt === 0)
-  {
-    baskteballtrecired = <div/>
-    extraCode.length = 0;
+    baskteballtrecired = null;
+    extraCode.push("B");
+    //  (
+    //   <span
+    //     style={{
+    //       textAlign: "right",
+    //       display: "block",
+    //       color: "#fff",
+    //       paddingRight: "1rem",
+    //     }}
+    //   ></span>
+    // );
+  } else if (props.sport.ID === 3 && props.spEvent.eventStatus.mtSt === 0) {
+    baskteballtrecired = null; // <div />;
+    extraCode.length = 1;
   }
   return (
     <div
@@ -185,7 +186,9 @@ const Match = (props) => {
               sportId={props.sport.ID}
             />
           ) : (
-            <NameVertical spEvent={props.spEvent} baskteballtrecired={baskteballtrecired}>
+            <NameVertical spEvent={props.spEvent} 
+            baskteballtrecired={baskteballtrecired}>
+
               <ResultVertical eventStatus={props.spEvent.eventStatus} sport={props.sport}/>
               {/* <ResultPeriod eventStatus={props.spEvent.eventStatus} sport={props.sport}/> */}
             </NameVertical>
@@ -255,7 +258,7 @@ const Match = (props) => {
         sport={props.sport}
         market={props.market}
         sakrijDrugiRed={extraCode.length === 0}
-        sakrijTreciRed={extraCode.length === 0 }
+        sakrijTreciRed={extraCode.length === 1 }
 
       />
     </div>

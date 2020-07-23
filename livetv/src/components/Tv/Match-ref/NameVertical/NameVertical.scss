@@ -23,10 +23,11 @@
     color: #fff5d9;
     margin-left: 10px;
     width: 0%;
-
- 
-
-
+    >div{
+        width: 95%;
+        white-space: nowrap;
+        overflow-x: hidden;
+    }
 }
 .live-name-v__result {
     width: 150px;

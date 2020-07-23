@@ -6,11 +6,16 @@ import "./CurrentServer.scss";
 const CurrentServer = (props) => {
   let ballName = "";
   switch (props.sportId) {
-    case 20:
-      ballName = "ico-tennis-serve";
-    // case ostali sportovi //
     case 6:
+      ballName = "ico-tennis-serve";
+      break;
+      case 25:
+        ballName = "ico-voleyball-serve";
+        break;
+    // case ostali sportovi //
+    case 20:
       ballName = "ico-voleyball-serve";
+      break;
   }
 
   return (

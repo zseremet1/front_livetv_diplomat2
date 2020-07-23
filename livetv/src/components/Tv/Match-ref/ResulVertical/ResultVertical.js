@@ -5,6 +5,19 @@ import ResultGame from "./ResultGame/ResultGame";
 import ResultPeriod from "./ResultPeriod/ResultPeriod";
 
 const ResultVertical = (props) => {
+
+  let brPolja = 0;
+  switch(props.sport.ID)
+  {
+    case 5: //hokej
+    brPolja= 3;
+    break;
+
+    default:
+      brPolja = 6;
+  }
+
+
   return (
     <div className="live-result-vertical">
       {props.eventStatus && props.eventStatus.hSc && props.eventStatus.aSc ? (
@@ -42,8 +55,8 @@ const ResultVertical = (props) => {
               { num: 16 },
             ],
           ]
-            .slice(0, 6)
-            .map((el) => {
+            .slice(0, brPolja)
+            .map((el, ix , arr) => {
               return (
                 <ResultPeriod
                   // FIXX line
@@ -53,6 +66,7 @@ const ResultVertical = (props) => {
                   current={
                     ~~props.eventStatus.mtSt === ~~el.mtStCo ? true : false
                   }
+                  isYellow ={el.num <10 &&  arr[ix+1]?.num>10}
                 />
               );
             })
