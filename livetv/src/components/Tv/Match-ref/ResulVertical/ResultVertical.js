@@ -12,7 +12,12 @@ const ResultVertical = (props) => {
     case 5: //hokej
     brPolja= 3;
     break;
-
+    case 25: //hokej
+    brPolja= 5;
+    break;
+    case 3: //hokej
+    brPolja= 4;
+    break;
     default:
       brPolja = 6;
   }

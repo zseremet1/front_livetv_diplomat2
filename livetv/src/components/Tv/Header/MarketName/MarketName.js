@@ -9,7 +9,7 @@ const MarketName = (props) => {
     props.nHead.length > 25 ? `${props.nHead.slice(0, 22)}...` : props.nHead;
   /*soccer-header translation*/
 
-  // text= (props.nHead);
+   text= (props.nHead);
 
   return (
     <div className={["column1", `sport${props.sportId}`].join(" ")}>

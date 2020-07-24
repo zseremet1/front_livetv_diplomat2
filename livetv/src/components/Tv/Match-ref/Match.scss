@@ -23,6 +23,7 @@
     // height: 0;
     // // width: 100%;
     border-top: 2px solid white;
+    
 }
 .live-match__hov.sport20  .live-match__name::after
  {
@@ -34,8 +35,8 @@
     right: 0;
     top: 49%;
     height: 0;
-    // width: 100%;
-    border-top: 2px solid #426089;
+    width: 92.6%;
+     border-top: 2px solid #426089;
 
 } 
 .live-match__hov.sport25  .live-match__name::after
@@ -49,9 +50,23 @@
     top: 49%;
     height: 0;
     // width: 100%;
-    border-top: 2px solid #606060;
+     border-top: 2px solid #606060;
 
 } 
+// .live-match__hov.sport5  .live-match__name::after
+//  {
+
+//     position: absolute;
+//     content: "";
+//     display: flex;
+//     left:2% ;
+//     right: 0;
+//     top: 49%;
+//     height: 0;
+//     // width: 100%;
+//      border-top: 2px solid #426089;
+
+// } 
 .live-match__hov.sport5  .live-match__name::after
  {
 
@@ -60,24 +75,10 @@
     display: flex;
     left:2% ;
     right: 0;
-    top: 49%;
+    top: 48%;
     height: 0;
-    // width: 100%;
-    border-top: 2px solid #426089;
-
-} 
-.live-match__hov.sport5  .live-match__name::after
- {
-
-    position: absolute;
-    content: "";
-    display: flex;
-    left:2% ;
-    right: 0;
-    top: 49%;
-    height: 0;
-    // width: 100%;
-    border-top: 2px solid #426089;
+     width: 84%;
+     border-top: 2px solid #426089;
 
 } 
 
@@ -90,8 +91,8 @@
      right: 0;
      top: 49%;
      height: 0;
-     // width: 100%;
-     border-top: 2px solid #a16440;
+      width: 99%;
+      border-top: 2px solid #a16440;
  }
 
  .live-match__hov.sport3  .live-match__name::after
@@ -105,23 +106,23 @@
     top: 49%;
     height: 0;
     // width: 100%;
-    border-top: 2px solid #a16440;
-
+    // border-top: 2px solid #a16440;
+    border: none;
 } 
 
-.live-match__hov.sport3 .live-match__name::after
-{
-    position: absolute;
-    content: "";
-    display: flex;
-    left:2% ;
-    right: 0;
-    top: 35%;
-    height: 0;
-    // width: 100%;
-    border-top: 2px solid #a16440;
-
-}
+// .live-match__hov.sport3 .live-match__name::after
+// {
+//     position: absolute;
+//     content: "";
+//     display: flex;
+//     left:2% ;
+//     right: 0;
+//     top: 35%;
+//     height: 0;
+//     // width: 100%;
+//     // border-top: 2px solid #a16440;
+//     border-top: none;
+// }
 .live-match__name.sport3 .live-name-v__result
 {
     width: 25.897%;
@@ -131,7 +132,41 @@
 
 .live-match__name.sport3 .live-name-v__team
 {
-    width: 45%;
+    width: 1%;
+    // background-color: #000;
+    //  border-top: 2px solid #606060;
+   
+}
+
+.live-match__name.sport20 .live-name-v__team
+{
+    width: 40%;
+    padding-top: 7px;
+    text-align: left;
+
+}
+.live-match__name.sport6 .live-name-v__team
+{
+    width: 1%;
+    padding-top: 5px;
+    text-align: left;
+
+}
+.live-match__name.sport25 .live-name-v__team
+{
+    width: 60%;
+    padding-top: 7px;
+    text-align: left;
+
+}
+
+.live-match__name.sport5 .live-name-v__team
+{
+    // padding-top: 4px;
+    text-align: left;
+    padding-top: 5px;
+    width: 70%;
+
 }
 
 

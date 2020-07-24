@@ -3,20 +3,7 @@
   "example1": "Ovo je primjer varijable {{name}} u tekstu.",
   "exampleText2": "Naziv ključeva je na engleskom, camil case",
   "name" :"Ovo je ime od kljuca ime {{name}}",
-  "soccer95" : "Regularno vrijeme",
-   "soccer845":"Ishod ostatka meča",
-   "soccer651":"Tko postiže X gol",
-   "soccer97":"Zbroj golova",
-   "soccer3":"Oba tima daju gol...",
  
-  "tenis170":"Pobjednik",
-  "tenis831":"Set - ishod X i Y gema",
-  "tenis832":"Set - pobjednik X gema",
-  "tenis666":"Set - zbroj gemova",
-  "tenis174":"Zbroj gemova",
-  "tenis2":"{{n}}-{{m}}g {{Q}}.set",
-    "tenis3":"{{n}}.g/{{Q}}.s",
-    "tenis4":"{{n}}/{{Q}}.s",
   "ngol": "{{n}} gol",
   "goalnr.gol" :"{{gol}}.gol"
   }

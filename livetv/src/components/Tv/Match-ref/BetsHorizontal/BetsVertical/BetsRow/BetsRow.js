@@ -24,6 +24,9 @@ const BetsRow = (props) => {
     }
   });
 
+
+  //1 x 2 prvo vrtiti tipove iz marketa ,onda unutar njega kvote puniti koje ima , ako je nadje stavlja se kvota ako ne onda prazna
+  //
   //generisemo red
   //   const red = redData.map((red, index) => {
   // // ovo nikako koristiti => ovaj if =>  if(props.sport.ID === 2 && props.market.id === 2 && red.t === 'X') return null;
@@ -36,34 +39,7 @@ const BetsRow = (props) => {
   //   ? Object.fromEntries(spec.split("|").map((x) => x.split("=")))
   //   : {};
 
-  //REVIEW removed
-  // /*nogomet*/
-  // if (market.id === 651) {
-  //   specBet = t("ngol", { n: specVal.goalnr });
-  // } else if (market.id === 652) {
-  //   specBet = t("ngol", { n: specVal.goalnr });
-  // }
-  // /*tenis*/
-  // if (market.id === 831) {
-  //   specBet = t("tenis2", {
-  //     n: specVal.gamenrX,
-  //     m: specVal.gamenrY,
-  //     Q: specVal.setnr,
-  //   });
-  // }
-  // if (market.id === 832) {
-  //   specBet = t("tenis3", {
-  //     n: specVal.gamenr,
-  //     Q: specVal.setnr,
-  //   });
-  // }
-
-  // if (market.id === 666) {
-  //   specBet = t("tenis4", {
-  //     n: specVal.total,
-  //     Q: specVal.setnr,
-  //   });
-  // }
+  
 
  
 
@@ -100,7 +76,7 @@ function PraznaKucica(props) {
   return (
     <div
       className={["Bet", props.sport.ID].join(" ")}
-      style={{ backgroundColor: "transparent" }}
+      style={{ backgroundColor: "blue" }}
     />
   );
 }

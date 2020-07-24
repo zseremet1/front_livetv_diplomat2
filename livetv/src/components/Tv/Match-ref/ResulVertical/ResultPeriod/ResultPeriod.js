@@ -4,8 +4,8 @@ import "./ResultPeriod.scss";
 const ResultPeriod = (props) => {
   let periodCss = ["live-result-period", `sport${props.sportId}`];
   periodCss.push("size20");
-  let homeCss = ["live-result-period__val"];
-  let awayCss = ["live-result-period__val"];
+  let homeCss = ["live-result-period__val", `sport${props.sportId}`];
+  let awayCss = ["live-result-period__val", `sport${props.sportId}`];
 
   if (props.mainPeriod) {
     periodCss.push("wmain");
@@ -32,11 +32,11 @@ const ResultPeriod = (props) => {
 
   return (
     <div className={periodCss.join(" ")}>
-       <div className={homeCss.join(" ")}>{props.pSc.hSc}&nbsp;</div> 
-      {/* <div className={[homeCss, `sport${props.sportId}`].join(" ")}>{props.pSc.hSc}&nbsp;</div>
-      <div className={[awayCss, `sport${props.sportId}`].join(" ")}>{props.pSc.aSc}&nbsp;</div> */}
+        <div className={homeCss.join(" ")}>{props.pSc.hSc}&nbsp;</div>  
+       {/* <div className={[homeCss, `sport${props.sportId}`].join(" ")}>{props.pSc.hSc}&nbsp;</div>
+      <div className={[awayCss, `sport${props.sportId}`].join(" ")}>{props.pSc.aSc}&nbsp;</div>  */}
 
-      <div className={awayCss.join(" ")}>{props.pSc.aSc}&nbsp;</div> 
+       <div className={awayCss.join(" ")}>{props.pSc.aSc}&nbsp;</div> 
     </div>
   );
 };

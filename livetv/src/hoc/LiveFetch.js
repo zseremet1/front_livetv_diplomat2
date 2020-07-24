@@ -138,7 +138,7 @@ const LiveFetch = (props) => {
                   idEvent: msgValue.idEvent,
                   eventStatus: msgValue.eSt,
                 });
-                console.log(msgValue.idEvent,msgValue.eSt)
+                console.log("msgValue.idEvent,msgValue.eSt" ,msgValue.idEvent,msgValue.eSt);
                 break;
               case "2": //new match            //testing
                 newEvents.events.push({
