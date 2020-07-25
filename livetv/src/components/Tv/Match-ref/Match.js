@@ -12,10 +12,12 @@ import BetsHorizontal from "./BetsHorizontal/BetsHorizontal";
 
 import { useTranslation } from "react-i18next";
 
-
 const Match = (props) => {
   const [t] = useTranslation();
   const [result, setResult] = useState({ hSc: null, aSc: null, goal: 0 });
+  if([2,3].includes(props.sport.ID) && !props.spEvent.eventStatus.c) return null;
+  //SPORT 2,3 ako nema c onda ga ne postavljaj
+
   if (result.hsc === null || result.aSc === null) {
     setResult({
       aSc: props.spEvent.eventStatus.aSc,
@@ -47,7 +49,6 @@ const Match = (props) => {
   if (Date.now() - result.goal < 0 && props.sport.ID === 2) {
     mainClassName.push("gool");
   }
-
 
   //console.log(props.spEvent);
   // console.log("MATCH::props length", JSON.stringify(props).length);
@@ -102,7 +103,7 @@ const Match = (props) => {
   let baskteballtrecired = null;
   // if(props.sport.ID === 2 && props.spEvent.eventStatus.mtSt == 7){
   //   extraCode.push("A")
-  // } else 
+  // } else
   if (props.sport.ID === 2 && props.spEvent.eventStatus.mtSt === 6) {
     drugoPoluvrijeme = (
       <span
@@ -186,16 +187,23 @@ const Match = (props) => {
               sportId={props.sport.ID}
             />
           ) : (
-            <NameVertical spEvent={props.spEvent} 
-            baskteballtrecired={baskteballtrecired}>
-
-              <ResultVertical eventStatus={props.spEvent.eventStatus} sport={props.sport}/>
+            <NameVertical
+              spEvent={props.spEvent}
+              baskteballtrecired={baskteballtrecired}
+            >
+              <ResultVertical
+                eventStatus={props.spEvent.eventStatus}
+                sport={props.sport}
+              />
               {/* <ResultPeriod eventStatus={props.spEvent.eventStatus} sport={props.sport}/> */}
             </NameVertical>
           )}
 
           {props.sport.horisontal ? (
-            <NameHorizontal spEvent={props.spEvent} drugoPoluvrijeme={drugoPoluvrijeme}>
+            <NameHorizontal
+              spEvent={props.spEvent}
+              drugoPoluvrijeme={drugoPoluvrijeme}
+            >
               {/* <Time
                 idEvent={props.spEvent.idEvent}
                 eventStatus={props.spEvent.eventStatus}
@@ -258,8 +266,7 @@ const Match = (props) => {
         sport={props.sport}
         market={props.market}
         sakrijDrugiRed={extraCode.length === 0}
-        sakrijTreciRed={extraCode.length === 1 }
-
+        sakrijTreciRed={extraCode.length === 1}
       />
     </div>
   );

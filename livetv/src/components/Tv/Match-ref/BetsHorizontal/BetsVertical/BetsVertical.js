@@ -10,16 +10,28 @@ const BetsVertical = (props) => {
   Object.values(redoviData).forEach((red, index) => {
     // ako u redu ima vrijednosti, dodaj taj red
     if (red.length) {
-      redovi.push(
-        <BetsRow
-          red={red}
-          sport={sport}
-          market={market[index]}
-          key={index}
-          spec={spec[index + 1]}
-        />
-      );
-    }
+      if (red[0]?.id === 0) { //provjera ako je prazan red dodati prazne kucice
+        redovi.push(
+          <BetsRow
+            red={[]}
+            sport={sport}
+            market={market[index]}
+            key={index}
+            spec={spec[index + 1]}
+          />
+        );
+      } else {
+        redovi.push(
+          <BetsRow
+            red={red}
+            sport={sport}
+            market={market[index]}
+            key={index}
+            spec={spec[index + 1]}
+          />
+        );
+      }
+      }
     if (redovi.length === 1 && red.length && index !== 0) {
       redovi.unshift(
         <div

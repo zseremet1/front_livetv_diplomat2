@@ -105,9 +105,9 @@
     right: 0;
     top: 49%;
     height: 0;
-    // width: 100%;
-    // border-top: 2px solid #a16440;
-    border: none;
+     width: 93%;
+     border-top: 2px solid #a16440;
+    // border: none;
 } 
 
 // .live-match__hov.sport3 .live-match__name::after
@@ -132,10 +132,12 @@
 
 .live-match__name.sport3 .live-name-v__team
 {
-    width: 1%;
-    // background-color: #000;
-    //  border-top: 2px solid #606060;
-   
+//     width: 20%;
+//     padding-top: 7px;
+//     text-align: left;
+//    overflow-x: hidden;
+//     white-space: nowrap;
+  
 }
 
 .live-match__name.sport20 .live-name-v__team

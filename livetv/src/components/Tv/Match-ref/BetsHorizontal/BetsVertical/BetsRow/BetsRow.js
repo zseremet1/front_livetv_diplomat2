@@ -14,7 +14,7 @@ const BetsRow = (props) => {
 
   //vrte se svi mogući tipovi i pune kvote za taj tip
   //ako nema kvote za taj tip puni se prazna kućica
-  const red = new Array(redData.length)
+  const red = new Array(market.possTypEng.length)
     .fill(0)
     .map((_, ix) => <PraznaKucica key={ix} sport={sport} />);
   redData.forEach((data, index) => {
@@ -23,7 +23,6 @@ const BetsRow = (props) => {
       red[inx] = <Bet key={index} data={data} sport={sport} market={market} />;
     }
   });
-
 
   //1 x 2 prvo vrtiti tipove iz marketa ,onda unutar njega kvote puniti koje ima , ako je nadje stavlja se kvota ako ne onda prazna
   //
@@ -38,10 +37,6 @@ const BetsRow = (props) => {
   // let specVal = spec.length
   //   ? Object.fromEntries(spec.split("|").map((x) => x.split("=")))
   //   : {};
-
-  
-
- 
 
   // odds = props.market.typs.map((typsItem) => {
   //   // const keyTip = Object.keys(typsItem)[0];
@@ -76,7 +71,7 @@ function PraznaKucica(props) {
   return (
     <div
       className={["Bet", props.sport.ID].join(" ")}
-      style={{ backgroundColor: "blue" }}
-    />
+      style={{ backgroundColor: "transparent" }}
+    >&nbsp;</div>
   );
 }

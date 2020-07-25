@@ -138,7 +138,11 @@ const LiveFetch = (props) => {
                   idEvent: msgValue.idEvent,
                   eventStatus: msgValue.eSt,
                 });
-                console.log("msgValue.idEvent,msgValue.eSt" ,msgValue.idEvent,msgValue.eSt);
+                console.log(
+                  "msgValue.idEvent,msgValue.eSt",
+                  msgValue.idEvent,
+                  msgValue.eSt
+                );
                 break;
               case "2": //new match            //testing
                 newEvents.events.push({
@@ -166,8 +170,7 @@ const LiveFetch = (props) => {
                   bets: tmpBet,
                 });
 
-            //  console.log("livefetch.js", tmpBet);
-
+                //  console.log("livefetch.js", tmpBet);
 
                 // console.log("keyMatchOdd",updateEvents) //testing
                 break;

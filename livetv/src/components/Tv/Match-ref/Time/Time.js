@@ -4,6 +4,7 @@ import { DisplayTimeByStatus } from "../../../../hooks/custom/displayTimeByStatu
 
 const Time = (props) => {
   let printDatchTime = null;
+  console.log("timeee", props);
 
   if (props.time) {
     // printDatchTime = DateFormat(
@@ -16,7 +17,8 @@ const Time = (props) => {
       props.time
     );
   }
-  // console.log(props.eventStatus.c.mtT);
+
+  // console.log("printtt",printDatchTime);
   // if (props.eventStatus && props.eventStatus.c) {
   //   //console.log("time",props.idEvent, props.eventStatus);
   //   printDatchTime =

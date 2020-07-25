@@ -137,7 +137,7 @@ const configureStore = () => {
             } else if (element.bets) {
               //EDO console.log(element.idEvent, element.bets);
               //TODO ako je marketstatus <> 1,6 tada treba brisati klađenje iz para
-             //REVIEW removed
+              //REVIEW removed
               // returnEvents[indExist].bets = Object.fromEntries(
               //   //testing
               //   Object.values({
@@ -155,7 +155,6 @@ const configureStore = () => {
                 ...returnEvents[indExist].bets,
                 ...element.bets,
               };
-
             } else {
               returnEvents[indExist] = {
                 ...returnEvents[indExist],

@@ -9,9 +9,9 @@ const CurrentServer = (props) => {
     case 6:
       ballName = "ico-tennis-serve";
       break;
-      case 25:
-        ballName = "ico-voleyball-serve";
-        break;
+    case 25:
+      ballName = "ico-voleyball-serve";
+      break;
     // case ostali sportovi //
     case 20:
       ballName = "ico-voleyball-serve";

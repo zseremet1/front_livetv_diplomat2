@@ -7,9 +7,10 @@ const MarketName = (props) => {
   const [] = useTranslation();
   let text =
     props.nHead.length > 25 ? `${props.nHead.slice(0, 22)}...` : props.nHead;
+  //sa servera kad se posalje prijevod u ovom dijelu koda uzima i sirinu props.nHead
   /*soccer-header translation*/
 
-   text= (props.nHead);
+  //  text= (props.nHead);
 
   return (
     <div className={["column1", `sport${props.sportId}`].join(" ")}>
