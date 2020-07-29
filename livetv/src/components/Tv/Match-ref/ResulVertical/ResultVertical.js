@@ -9,9 +9,11 @@ const ResultVertical = (props) => {
   switch (props.sport.ID) {
     case 5: //hokej
       brPolja = 3;
+      case 18: //hokej
+      brPolja = 6;
       break;
     case 20: //hokej
-      brPolja = 4;
+      brPolja = 5;
       break;
     case 3: //hokej
       brPolja = 3;
@@ -33,6 +35,7 @@ const ResultVertical = (props) => {
       {props.eventStatus && props.eventStatus.cuSer ? (
         <CurrentServer
           current={props.eventStatus.cuSer}
+
           sportId={props.sport.ID}
         />
       ) : null}
@@ -54,6 +57,8 @@ const ResultVertical = (props) => {
               { num: 14 },
               { num: 15 },
               { num: 16 },
+              {num: 17},
+              {num:18}
             ],
           ]
             .slice(0, brPolja)

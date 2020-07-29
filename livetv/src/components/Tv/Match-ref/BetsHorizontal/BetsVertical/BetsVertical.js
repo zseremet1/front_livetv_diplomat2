@@ -10,7 +10,7 @@ const BetsVertical = (props) => {
   Object.values(redoviData).forEach((red, index) => {
     // ako u redu ima vrijednosti, dodaj taj red
     if (red.length) {
-      if (red[0]?.id === 0) { //provjera ako je prazan red dodati prazne kucice
+      if (red[0]?.id === 0)  { //provjera ako je prazan red dodati prazne kucice
         redovi.push(
           <BetsRow
             red={[]}

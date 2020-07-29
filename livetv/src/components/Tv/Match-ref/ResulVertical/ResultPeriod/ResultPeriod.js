@@ -25,7 +25,7 @@ const ResultPeriod = (props) => {
       awayCss.push("wcurrent");
     }
   }
-  if ([6, 3, 25].includes(props.sportId) && props.isYellow) {
+  if ([18,6, 3, 25,20].includes(props.sportId) && props.isYellow) {
     homeCss.push("yellow");
     awayCss.push("yellow");
   }

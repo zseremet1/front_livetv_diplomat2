@@ -17,9 +17,12 @@ const Tv = (props) => {
   // console.log("primjer1", t("title"));
   // console.log("primjer1", t("example1", { name: "Stanko" }));
   // console.log("Primjer 3", t('name',{name: "hahu"}));
-  const { spEvents = [], sports } = liveState;
+  const { spEvents = [], sports , red=[] , spec=" "} = liveState;
 
   if ((sports && sports.length === 0) || !sports) return null;
+
+
+  // if ((red.length !==0 && !spec)) return null;
 
   const eventsBySport = {};
 

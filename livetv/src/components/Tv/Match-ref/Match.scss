@@ -35,7 +35,7 @@
     right: 0;
     top: 49%;
     height: 0;
-    width: 92.6%;
+    width: 95%;
      border-top: 2px solid #426089;
 
 } 
@@ -77,7 +77,7 @@
     right: 0;
     top: 48%;
     height: 0;
-     width: 88.8%;
+     width: 98%;
      border-top: 2px solid #426089;
 
 } 
@@ -94,6 +94,18 @@
       width: 99%;
       border-top: 2px solid #a16440;
  }
+ .live-match__hov.sport18 .live-match__name::after
+ {
+     position: absolute;
+     content: "";
+     display: flex;
+     left:2% ;
+     right: 0;
+     top: 49%;
+     height: 0;
+      width: 97%;
+      border-top: 2px solid #7c8dbf;
+ }
 
  .live-match__hov.sport3  .live-match__name::after
  {
@@ -102,8 +114,6 @@
     content: "";
     // display: flex;
     display: inline-block;
-
-    display: block;
     left:2% ;
     right: 0;
     top: 49%;
@@ -141,7 +151,13 @@
 //    overflow-x: hidden;
   
 }
+.live-match__name.sport18 .live-name-v__team
+{
+    width: 1%;
+    padding-top: 5px;
+    text-align: left;
 
+}
 .live-match__name.sport20 .live-name-v__team
 {
     width: 40%;
@@ -183,6 +199,17 @@
     //  border-bottom: 1px solid #C0C0C0;
      color:#fff5d9;
     
+     &.sport18
+     {
+         width: 100%;
+         text-align: center;
+         flex: 1 1;
+         background-color: #3e4d7d;
+         border-bottom: 1px solid #7c8dbf;
+         border-left: 1px solid #7c8dbf;
+         border-right: 1px solid #7c8dbf;
+         //  border-top: 1px solid #426089;
+     }
 
     &.sport25
     {
@@ -193,7 +220,7 @@
         border-bottom: 1px solid #e5a56a;
         border-left: 1px solid #e5a56a;
         border-right: 1px solid #e5a56a;
-         border-top: 1px solid #426089;
+        //  border-top: 1px solid #426089;
     }
     &.sport5
     {
@@ -254,7 +281,15 @@
         border-right: 1px solid #e5a56a;
         // border-top: 1px solid #426089;
     }
- 
+    &.sport18
+     {
+       
+        background-color: #313D62;
+         border-bottom:1px solid #7c8dbf;
+       
+         //  border-top: 1px solid #426089;
+     }
+
 
     &.sport20
     {

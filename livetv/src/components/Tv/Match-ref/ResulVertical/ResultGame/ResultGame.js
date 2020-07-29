@@ -2,6 +2,9 @@ import React from "react";
 import "./ResultGame.scss";
 
 const ResultGame = (props) => {
+
+ 
+
   return (
     <div className="live-result-game">
       <div className="live-result-game__item">

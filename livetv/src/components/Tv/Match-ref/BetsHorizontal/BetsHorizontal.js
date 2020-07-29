@@ -38,7 +38,7 @@ const BetsHorizontal = (props) => {
   Object.values(bets).forEach((odd) => {
     //  console.log("BetsHorizontal", odd.id, odd);
     const { id, idBt, red, odds, spec, idmSt } = odd;
-    //  if(idmSt !== 1 && idmSt !== 6) return;  //koment-nknd
+     if(idmSt !== 1 && idmSt !== 6) return;  //koment-nknd
     // if((idBt === 2 || idBt===97) && props.sport.ID === 2){
     //   console.log(props.sport.Name, props.spEvent.awayTeam,odd  )
     // }

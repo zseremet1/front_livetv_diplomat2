@@ -12,7 +12,12 @@
     width: 100%;
 
     // border-bottom: 1px solid grey;
- 
+    &.sport18
+    {
+        border-bottom:1px solid #7c8dbf;
+        padding: 4px  4px 3px 3px;
+
+    }
     &.sport25
     {
         border-bottom:1px solid #e5a56a;

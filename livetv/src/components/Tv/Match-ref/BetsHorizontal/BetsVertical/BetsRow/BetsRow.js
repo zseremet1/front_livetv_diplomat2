@@ -24,6 +24,13 @@ const BetsRow = (props) => {
     }
   });
 
+
+  // if(red.length === 0)
+  // {
+  //   console.log("red.length", red.length)
+  //  return <div style={{ backgroundColor: "red" }}></div>
+  // }
+
   //1 x 2 prvo vrtiti tipove iz marketa ,onda unutar njega kvote puniti koje ima , ako je nadje stavlja se kvota ako ne onda prazna
   //
   //generisemo red
@@ -43,7 +50,7 @@ const BetsRow = (props) => {
   //   indOdd = props.bet.odds.findIndex(
   //     (betItem) => betItem.t === Object.keys(typsItem)[0] });
 
-  if (spec.length && !specBet) {
+  if (spec.length  && !specBet) {
     specBet = mapMarketSpecifier(market.nps, spec);
   }
   // if(sport.ID === 6 && red === 1)
@@ -51,15 +58,22 @@ const BetsRow = (props) => {
   //   return <div className="testnaklasa">{red}</div>
   // }
   // ako specBet postoji dodajemo ga na pocetak reda
-  if (specBet && red.length !== 0) {
+
+  
+
+  if (specBet && red.length !== 0)  {
+
+    // console.log("specBet" ,specBet)
     red.unshift(
       <div className="BetSpec" key={-1}>
         <div className="bet-spec-value"> {specBet}</div>
+
       </div>
     );
   } else if (red.length === 2) {
     red.unshift(<PraznaKucica sport={sport} key={-3} />);
   }
+   
   // console.log("red", red);
 
   return <div className={["BetsRow", `sport${sport.ID}`].join(" ")}>{red}</div>;

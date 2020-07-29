@@ -6,6 +6,9 @@ import "./CurrentServer.scss";
 const CurrentServer = (props) => {
   let ballName = "";
   switch (props.sportId) {
+    case 18:
+      ballName = "ico-tennis-serve";
+      break;
     case 6:
       ballName = "ico-tennis-serve";
       break;

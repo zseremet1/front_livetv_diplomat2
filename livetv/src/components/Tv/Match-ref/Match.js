@@ -65,7 +65,8 @@ const Match = (props) => {
     props.spEvent.idSport === 3 ||
     props.spEvent.idSport === 20 ||
     props.spEvent.idSport === 5 ||
-    props.spEvent.idSport === 25
+    props.spEvent.idSport === 25 || 
+    props.spEvent.idSport === 18 
   ) {
     extraCode.push("A");
   }

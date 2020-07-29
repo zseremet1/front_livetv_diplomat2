@@ -24,6 +24,11 @@
 
     }
 
+    &.sport18
+    {
+        border-bottom: 1px solid #7c8dbf;
+    }
+
 }
 // .column >div{
 //     // flex: 1;
@@ -48,7 +53,7 @@
      border-left: 1.5px solid #C0C0C0;
 
     &.sport20{
-        border: 1px solid #426089;  
+        border: 1px solid #7c8dbf;  
         background-color: #262f34;
         border-bottom:none;
     //     border-top:   1px solid #426089;
@@ -56,6 +61,15 @@
     //   border-right: 1.5px solid #426089; 
 
 }
+
+&.sport18
+{
+    border: 1px solid #7c8dbf;
+    background-color: #262f34;
+border-bottom: none;
+
+}
+
 
 &.sport25
 {
@@ -107,6 +121,13 @@ border-bottom: none;
     display: flex;
     flex-wrap: nowrap;
     
+    &.sport18
+    {
+        background-color: #2f3443;
+        color:#fff;
+
+    }
+
     &.sport2
     {
         background-color: #000;

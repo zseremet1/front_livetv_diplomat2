@@ -13,6 +13,13 @@
       display: none;
 
     }
+    &.sport18
+    {
+      color: yellow;
+      padding: 0px 0px 0px 3px;
+
+    }
+    
     &.sport20
     {
       background-color: #577aa8;
@@ -37,6 +44,7 @@
       background-color: #89582d;
      font-size: 1rem;
      padding: 0px 0px 0px 3px;
+     right: 10px;
 
     }
     &.sport3
@@ -55,6 +63,10 @@
     &.sport3
     {
       width: 30%;
+      padding: 0px 0px 0px 3px;
+    }
+    &.sport25
+    {
       padding: 0px 0px 0px 3px;
     }
   }
@@ -77,6 +89,10 @@
     background-color: var(--bojaCrtica, #a16440);
       
   }
+&.sport18
+{
+  --bojaCrtica:#7c8dbf
+}
 
 &.sport5
 {
