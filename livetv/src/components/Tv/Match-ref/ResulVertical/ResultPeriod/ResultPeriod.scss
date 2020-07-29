@@ -1,27 +1,31 @@
 @import "../../../../../styles/colors";
 
 .live-result-period {
-   font-size: 1.125rem;
+   font-size: 1.1rem;
   text-align: center;
   position: relative;
-  
+
 
   &.wmain {
     // font-weight: bold;
     // display: none;
     &.sport6{
       display: none;
+
     }
     &.sport20
     {
       background-color: #577aa8;
-    font-size: 1rem;
+       font-size: 1rem;
+       padding: 0px 0px 0px 3px;
+
     }
     &.sport5
     {
       // background-color: #577aa8;
-    font-size: 1.125rem;
+    font-size: 1rem;
     background-color: #577aa8;
+    padding: 0px 0px 0px 3px;
 
     right: 12px;
     color: yellow;
@@ -32,16 +36,27 @@
     {
       background-color: #89582d;
      font-size: 1rem;
+     padding: 0px 0px 0px 3px;
+
     }
     &.sport3
     {
       background-color: #fba75f;
-     font-size: 1rem;
-     color: #000;
+      font-size: 0.90rem;
+      color: #000;
+      padding: 0px 0px 0px 3px;
+     width: 10%;
+
     }
   }
   &.size20 {
     width: 20px;
+
+    &.sport3
+    {
+      width: 30%;
+      padding: 0px 0px 0px 3px;
+    }
   }
   &.size16 {
     width: 16px;
@@ -102,7 +117,7 @@
 
   &.wlost &.wcurrent{
   border-bottom: 1px solid black;    
-
+ 
   }
 
   .wgrass &.wcurrent {

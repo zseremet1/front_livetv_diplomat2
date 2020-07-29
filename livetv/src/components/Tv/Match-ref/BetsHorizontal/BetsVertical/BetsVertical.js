@@ -17,7 +17,7 @@ const BetsVertical = (props) => {
             sport={sport}
             market={market[index]}
             key={index}
-            spec={spec[index + 1]}
+            spec={spec[index +1 ]}
           />
         );
       } else {
@@ -32,11 +32,23 @@ const BetsVertical = (props) => {
         );
       }
       }
-    if (redovi.length === 1 && red.length && index !== 0) {
+      // if (redovi.length === 1 && red.length && index !== 0) {
+      //   spec.unshift(
+      //     <div
+      //       key={-3}
+      //       className={["BetsRow", `sport${props.sport.ID}`].join("")}
+      //     />
+      //   );
+      // }
+    
+
+    
+    if (redovi.length === 1  && red.length && index !== 0) {
       redovi.unshift(
         <div
           key={-2}
           className={["BetsRow", `sport${props.sport.ID}`].join("")}
+          spec=""
         />
       );
     }

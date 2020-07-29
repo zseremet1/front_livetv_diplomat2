@@ -2,8 +2,8 @@ import React from "react";
 import { useLive } from "../../hooks/useLive";
 import Header from "./Header/Header";
 import Match from "./Match-ref/Match";
-
-import EmptyImg from './Slike/empty.jpg'
+ import EmptyImg from './Slike/empty.jpg'
+// import Tv from "./Tv.scss";
 
 //import hook for translate
 import { useTranslation } from "react-i18next";
@@ -32,9 +32,13 @@ const Tv = (props) => {
       eventsBySport[ev.idSport].push(ev);
     }
   });
+
+  const mystyle = {
+    width: "100%",
+  };
 //ako nema nista ide slika 
   if(Object.values(eventsBySport).reduce((total,current)=>total+=current.length,0) === 0){
-    return <img src={EmptyImg} alt={"empty"}/>
+     return <img  src={EmptyImg} alt={"empty"} style={mystyle}/>
   }
 
   console.log("liveState", liveState);

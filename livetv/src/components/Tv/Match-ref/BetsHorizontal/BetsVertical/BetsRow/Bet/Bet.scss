@@ -61,12 +61,15 @@
     // animation: color 2s both;
     &::before {
         padding: 2px 5px 2px 2px;
+        position: absolute;
       }
  .Bet.ico-tri-up{
     //  color: green;
     //  animation: color 2s both;
     &::before {
         padding: 2px 5px 2px 2px;
+        position: absolute;
+
       }
  }
 

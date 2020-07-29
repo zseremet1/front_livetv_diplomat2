@@ -51,7 +51,7 @@ const BetsRow = (props) => {
   //   return <div className="testnaklasa">{red}</div>
   // }
   // ako specBet postoji dodajemo ga na pocetak reda
-  if (specBet) {
+  if (specBet && red.length !== 0) {
     red.unshift(
       <div className="BetSpec" key={-1}>
         <div className="bet-spec-value"> {specBet}</div>

@@ -38,8 +38,9 @@ export function DisplayTimeByStatus(sport, status, time) {
       if (status.c.stoT) {
         printDatchTime =
           parseInt(status.c.mtT.split(":", 1)) +
-          "'+" +
-          (parseInt(status.c.stoT.split(":", 1)) + 1);
+          "'+" 
+          // +
+          // (parseInt(status.c.stoT.split(":", 1)) + 1);
       } else {
         printDatchTime = parseInt(status.c.mtT.split(":", 1)) + 1 + "'"; // minuta utakmice
       }
