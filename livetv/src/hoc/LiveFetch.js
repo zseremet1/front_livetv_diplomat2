@@ -37,7 +37,7 @@ const LiveFetch = (props) => {
       .get("staticContentTV?key=hr") //1static dohvatiti //oklade ,tipovi , prijevodi,  zbroj golova pobjeda meca itd
       .then((response) => {
         // let returnSports; // = response.data;
-        const headMarkets = [];
+        // const headMarkets = [];
         // const markets = {};
         console.log("staticContentTV", response.data);
         // dispatch(actionTypes.ADD_STATIC_LIVE, {
@@ -50,7 +50,7 @@ const LiveFetch = (props) => {
         dispatch(actionTypes.ADD_STATIC_LIVE, {
           sports: data.sports,
           all: data.markets,
-          head: headMarkets,
+         // head: headMarkets,
           possTyp: data.possTyp,
           typTrans: data.typTrans,
         });

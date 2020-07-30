@@ -3,6 +3,7 @@
   "example1": "Ovo je primjer varijable {{name}} u tekstu.",
   "exampleText2": "Naziv ključeva je na engleskom, camil case",
   "name" :"Ovo je ime od kljuca ime {{name}}",
+  "Meč":"Match",
  
   "ngol": "{{n}} gol",
   "goalnr.gol" :"{{gol}}.gol"

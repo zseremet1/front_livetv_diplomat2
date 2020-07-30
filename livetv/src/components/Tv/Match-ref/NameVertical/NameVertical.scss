@@ -45,7 +45,7 @@
     padding-bottom: -2px;
     z-index: 3;
     color: yellow;
-    font-size: 1rem;
+    font-size: 1vw;
     margin-left: 2%;
 }
 
@@ -77,8 +77,13 @@
 
 
 
-// .live-name-v__home
-// {
-//     // border-bottom: 1px solid #a16440;
+.live-name-v__home
+  {
+          // border-bottom: 1px solid #a1644
+          font-size: 1vw;
+ }
 
-// }
+ .live-name-v__away
+ {
+     font-size: 1vw;
+ }

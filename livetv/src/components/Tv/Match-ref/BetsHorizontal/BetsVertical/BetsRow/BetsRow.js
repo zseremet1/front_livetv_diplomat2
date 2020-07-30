@@ -22,6 +22,7 @@ const BetsRow = (props) => {
     if (inx !== -1) {
       red[inx] = <Bet key={index} data={data} sport={sport} market={market} />;
     }
+  
   });
 
 
@@ -50,9 +51,17 @@ const BetsRow = (props) => {
   //   indOdd = props.bet.odds.findIndex(
   //     (betItem) => betItem.t === Object.keys(typsItem)[0] });
 
-  if (spec.length  && !specBet) {
+  // if (spec.length  && !specBet) {
+    if(market.nps.length){
     specBet = mapMarketSpecifier(market.nps, spec);
+    
   }
+
+
+  
+  // if(market.id === 254){
+  //   console.log(market, specBet)
+  // }
   // if(sport.ID === 6 && red === 1)
   // {
   //   return <div className="testnaklasa">{red}</div>

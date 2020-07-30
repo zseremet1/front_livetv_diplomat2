@@ -113,6 +113,8 @@ const Match = (props) => {
           display: "block",
           color: "#fff",
           paddingRight: "1rem",
+          fontSize : "0.85vw"
+
         }}
       >
         {t("1.Poluvrijeme", { n: 1 })}

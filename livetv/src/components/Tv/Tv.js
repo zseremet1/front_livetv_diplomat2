@@ -21,7 +21,6 @@ const Tv = (props) => {
 
   if ((sports && sports.length === 0) || !sports) return null;
 
-
   // if ((red.length !==0 && !spec)) return null;
 
   const eventsBySport = {};

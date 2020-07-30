@@ -1,10 +1,16 @@
 import { initStore } from "../useLive";
+// import { useTranslation } from "react-i18next";
 
 const configureStore = () => {
+  // const [t] = useTranslation();
+
+
   const actions = {
-    /*akcija*/ ADD_STATIC_LIVE: (curState, newMarkets) => {
+    /*akcija*/ ADD_STATIC_LIVE:
+    (curState, newMarkets) => {
+
       //curstate nove podatke puniti ,
-      const headMarkets = [...newMarkets.head]; // ;
+      // const headMarkets = [...newMarkets.head]; // ;
       // const markets = {...newMarkets.all}; // ;
       let markets = {};
 
@@ -30,11 +36,25 @@ const configureStore = () => {
 
       // Ubacivanje possTyp u market i dobijamo objekat
       const marketSaPossTypNiz = Object.values(newMarkets.all).map(
-        (market) => ({
-          ...market,
-          possTyp: possTypPrevedeno[market.idtip],
-          possTypEng: possTypBezPrevoda[market.idtip],
-        })
+
+        (market) => {
+          let nps = market.nps;
+          switch (market.id) {
+            case 254:
+            case 261:
+              case 170:
+                case 294:
+              // nps = {t("Meč" )}; //todo prevesti <= prevod
+              //  nps = t("Meč");
+               nps ="Meč";
+              break;
+          }
+          return ({
+            ...market, ...{ nps: nps },
+            possTyp: possTypPrevedeno[market.idtip],
+            possTypEng: possTypBezPrevoda[market.idtip],
+          })
+        }
       );
 
       // niz marketa sa possTyp pretvaramo nazad u objekat
@@ -56,7 +76,6 @@ const configureStore = () => {
         }
         indSport++;
       });
-
       // console.log("markets", markets);
       let indMarket = 0;
       // ovdje je zamjenjeno newMarkets.all (markete sa servisa), sa marketima sa possType koje su iznad  napraviljene
@@ -70,7 +89,7 @@ const configureStore = () => {
 
       return {
         markets: markets,
-        headMarkets: headMarkets,
+        // headMarkets: headMarkets,
         sports: sports,
         possTyp: possTypPrevedeno,
       };

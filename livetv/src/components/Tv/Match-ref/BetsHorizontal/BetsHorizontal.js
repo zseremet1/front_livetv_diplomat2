@@ -56,6 +56,7 @@ const BetsHorizontal = (props) => {
     specRows[red][pozId] = spec;
   });
 
+  
   // console.log(props.market, betsRows);
 
   // console.log(props.sport.Name, props.spEvent.awayTeam,betsRows  )

@@ -1,10 +1,12 @@
 import React from "react";
 import "./BetsVertical.scss";
 import BetsRow from "./BetsRow/BetsRow";
+import { useTranslation } from "react-i18next";
 
 const BetsVertical = (props) => {
   const { market, redovi: redoviData, sport, spec } = props;
   const redovi = [];
+  const [t] = useTranslation();
 
   // prolazimo kroz svaki red
   Object.values(redoviData).forEach((red, index) => {
