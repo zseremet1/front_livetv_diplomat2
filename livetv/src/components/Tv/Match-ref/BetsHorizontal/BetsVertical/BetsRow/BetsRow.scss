@@ -6,7 +6,7 @@
     // padding-top:4px;
 
     display: flex;
-    flex: auto;
+    // flex: auto;
     flex-wrap: nowrap;
     justify-content: flex-end;
     width: 100%;
@@ -15,40 +15,40 @@
     &.sport18
     {
         border-bottom:1px solid #7c8dbf;
-        padding: 4px  4px 3px 3px;
+        // padding: 4px  4px 3px 3px;
         // border-top: 1px solid red;
 
     }
     &.sport25
     {
         border-bottom:1px solid #e5a56a;
-        padding: 4px  4px 3px 3px;
+        // padding: 4px  4px 3px 3px;
 
     }
 
     &.sport20
     {
-      border-bottom: 1px solid #426089;
-      padding: 4px  4px 3px 3px;
+      border-bottom: 1px solid #577aa8;;
+    //   padding: 4px  4px 3px 3px;
 
     }
     &.sport5
     {
         border-bottom: 1px solid #426089;
-        padding: 4px 4px 2px 3px
+        // padding: 4px 4px 2px 3px
 
     }
 
     &.sport6
     {
         border-bottom: 1px solid #e68E5B;
-        padding: 4px 4px 2px 3px
+        // padding: 4px 4px 2px 3px
 
     }
      &.sport2{
   
           border-bottom: 1px solid #406a23;
-          padding: 4px  4px 3px 3px;
+        //   padding: 4px  4px 3px 3px;
         //   border-top: 1px solid #406a23;
 
         // border-bottom: 1px solid red;
@@ -58,7 +58,7 @@
         border-bottom: 1px solid #e68E5B;
         // border-bottom: none;
         // border-top: 1px solid #e68E5B;
-        padding: 4px 4px 2px 3px
+        // padding: 4px 4px 2px 3px
 
 
     }
@@ -89,11 +89,12 @@
 
     text-align: center;
     white-space: nowrap;
-    align-items: center;
-    font-size: 0.9111vw;
+    /* align-items: center; */
+    font-size: 1.1vw;
     width: 33.33%;
-    padding-right: 2px;
+    /* padding-right: 2px; */
     overflow: hidden;
+    display: flex;
 
 
     .four-items &{
@@ -104,17 +105,15 @@
     }
     
     & .bet-spec-value{
-        margin: 0.0490vw;
-    background-color: #e0f900;
-    // padding: 0 2px;
-    color: #000;
-    padding-right: 2px;
-    // white-space: nowrap;
-    white-space: nowrap;
-    overflow: hidden;
+        margin: 1px;
+        background-color: #e0f900;
+        color: #000;
+        /* padding-right: 2px; */
+        padding: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+    }
 
-
-
-}
 }
 

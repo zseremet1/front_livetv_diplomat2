@@ -29,23 +29,20 @@
         padding-top: 7px;
 
     }
-    &.sport5
-    {
-        padding-top: 7px;
+    // &.sport5
+    // {
+    //     padding-top: 7px;
 
-    }
-
-
+    // }
 
 }
-
 
 .live-name-v__timer{
     height: 100%;
     padding-bottom: -2px;
     z-index: 3;
     color: yellow;
-    font-size: 1vw;
+    font-size: 0.90vw;
     margin-left: 2%;
 }
 
@@ -68,6 +65,7 @@
         overflow-x: hidden;
     }
   
+  
 }
 .live-name-v__result {
     width: 7.8125vw;
@@ -81,6 +79,11 @@
   {
           // border-bottom: 1px solid #a1644
           font-size: 1vw;
+          &.sport5
+          {
+              padding-top: 0px;
+      
+          }
  }
 
  .live-name-v__away

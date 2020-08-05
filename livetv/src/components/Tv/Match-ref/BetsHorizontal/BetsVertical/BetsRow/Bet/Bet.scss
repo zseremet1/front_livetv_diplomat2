@@ -16,13 +16,15 @@
 .Bet{
     text-align: center;
     width: 33.33%;
+    display: flex;
 
     & .bet-odd-value{
-    background-color: #fff;
-        margin: 0.0490vw;
-        text-align:right;
-        font-size: 0.98vw; 
-        padding-right: 2px;
+        background-color: #fff;
+        margin-left: 1px;
+        text-align: right;
+        font-size: 1.1vw;
+        padding: 2px;
+        width: 100%;
     }
 
     .four-items &{
@@ -36,13 +38,13 @@
 
 
 
- .live-match__hov:nth-child(2n+1) .Bet.hide .bet-odd-value {
-           background-color: #404040;
- }      
+//  .live-match__hov:nth-child(2n+1) .Bet.hide .bet-odd-value {
+//            background-color: #404040;
+//  }      
       
 .Bet.hide {
 
-    color: yellow;
+    color: transparent;
     
 }
 

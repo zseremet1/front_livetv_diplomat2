@@ -4,31 +4,55 @@
     flex-direction: row;
     width: 100vw;
     // border-bottom: 1px solid grey;
- 
+    &.sport3
+    {
+        border-top: 1px solid #e68e5b; 
+        border-bottom: 1px solid #e68e5b;
+        margin-top: 0.4vw;
+
+    }
     &.sport2
     {
         border-bottom: 1px solid grey;
     }
     &.sport6
     {
+        border-top: 1px solid #e68e5b; 
         border-bottom: 1px solid #e68e5b;
+        margin-top: 0.4vw;
+
     }
     &.sport20
     {
+
+        border-top:  1px solid #426089;
       border-bottom: 1px solid #426089;
+      margin-top: 0.4vw;
+
 
     }
     &.sport5
     {
+        border-top:  1px solid #426089;;
       border-bottom: 1px solid #426089;
+      margin-top: 0.4vw;
+
 
     }
 
     &.sport18
     {
+        border-top: 1px solid #7c8dbf;;
         border-bottom: 1px solid #7c8dbf;
+        margin-top: 0.4vw;
+
     }
 
+    &.sport25
+    {
+        margin-top: 0.4vw;
+        border-top: 1px solid #e5a56a;
+    }
 }
 // .column >div{
 //     // flex: 1;
