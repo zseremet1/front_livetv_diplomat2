@@ -13,6 +13,5 @@ pipelines:
           - node
         script:
           - npm install 
-          - npm test
         artifacts:
           - build/**
