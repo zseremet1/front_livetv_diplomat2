@@ -1,0 +1,11 @@
+image: node:8.9.4
+
+pipelines:
+  default:
+    - step:
+      name: Build and test
+      caches:
+        - node
+      script: # install packages and run tests
+        - npm install
+        - npm test
