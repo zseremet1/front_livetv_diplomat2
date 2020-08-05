@@ -1,0 +1,16 @@
+image: node:8.9.4
+
+pipelines:
+  default:
+    - step:
+      name: Build and test
+      caches:
+        - node
+      script: # install packages and run tests
+        - npm install
+        - npm test
+    - step:
+      name: Deploy to Azure
+      deployment: staging
+      script:
+      - git push https://$AZURE_LOGIN:$AZURE_PASSWORD@$AZURE_APP_NAME.scm.azurewebsites.net:443/$AZURE_APP_NAME.git master
