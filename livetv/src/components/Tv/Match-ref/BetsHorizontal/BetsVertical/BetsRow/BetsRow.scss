@@ -16,6 +16,7 @@
     {
         border-bottom:1px solid #7c8dbf;
         padding: 4px  4px 3px 3px;
+        // border-top: 1px solid red;
 
     }
     &.sport25
@@ -46,8 +47,11 @@
     }
      &.sport2{
   
-         border-bottom: 1px solid #406a23;
-         padding: 4px  4px 3px 3px;
+          border-bottom: 1px solid #406a23;
+          padding: 4px  4px 3px 3px;
+        //   border-top: 1px solid #406a23;
+
+        // border-bottom: 1px solid red;
         }
     &.sport3
     {
@@ -100,7 +104,7 @@
     }
     
     & .bet-spec-value{
-        margin: 1px;
+        margin: 0.0490vw;
     background-color: #e0f900;
     // padding: 0 2px;
     color: #000;

@@ -19,7 +19,7 @@
 
     & .bet-odd-value{
     background-color: #fff;
-        margin: 1px;
+        margin: 0.0490vw;
         text-align:right;
         font-size: 0.98vw; 
         padding-right: 2px;
@@ -36,15 +36,13 @@
 
 
 
-// .live-match__hov:nth-child(2n+1) .Bet.hide .bet-odd-value {
-//           background-color: #404040;
-// }
-        
-//      }
+ .live-match__hov:nth-child(2n+1) .Bet.hide .bet-odd-value {
+           background-color: #404040;
+ }      
+      
 .Bet.hide {
 
-    color: transparent;
-  color: none;
+    color: yellow;
     
 }
 

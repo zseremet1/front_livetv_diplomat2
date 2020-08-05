@@ -1,12 +1,13 @@
  .live-result-game {
-     width: 16px;
+     width:  0.8333333333333334vw;
      display: flex;
      flex-direction: column;
-     margin-right: 14px;
+     margin-right: 0.6551240056153487vw;
+    // margin-right: 15px;
     }
    .live-result-game__item {
-     padding: 2px 0;
-     font-size: 1.125rem;
+     padding: 2px;
+     font-size: 0.98vw;
      text-align: center;
      color: #ffee79;
      border-width: 3px solid black;
