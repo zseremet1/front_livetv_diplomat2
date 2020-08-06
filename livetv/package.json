@@ -18,10 +18,12 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "npm start",
-    "build": "npm run build",
-    "test": "npm test",
-    "eject": "npm run eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write **/*.js",
+    "format:watch": "nodemon -w . -x npm run format"
   },
   "eslintConfig": {
     "extends": "react-app"
