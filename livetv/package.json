@@ -18,9 +18,11 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "postinstall": "npm run build",
-    "format": "prettier --write **/*.js",
-    "format:watch": "nodemon -w . -x npm run format"
+  "postinstall": "npm run build",
+  "dev": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test --env=jsdom",
+  "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
